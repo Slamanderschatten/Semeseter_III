@@ -1,0 +1,29 @@
+1:
+
+Ein Float Wert wurde in einen uint_16 wert convertiert, der Wert passte nicht in die 16 bit was zu einem falschen eintrag führte.
+
+Die sensor werte wurden überschrieben und führten zu einer Kursanpassung in die Falsche Richtung.
+
+Der daraus entstandene Fehler fürte zu einem Systemabsturzt da er nicht richtig abgefangen wurde und keine Fehlerbehandlung im falle eines Hardware Ausfalls festgelegt wurde
+
+Ergebnis wahr die Zerstörung der Ariane 5
+
+
+
+2:
+
+Hardware interlocks wurden bei der neuen Version von Therac-25 durch Software interlocks ersetzt, aber nicht vollständig umgesetzt
+
+Fehlerhafte Synchronisation von verschiedenen Threads die zu Race Conditions führten wordurch Messinformationen falsch vermischt wurden
+Das führte zu einer Aktivierung der Strahlenkomponenten bevor ein Ziel festgelegt wurde.
+
+Überlauf von Speicherplätzen die dazu führten das ein signal "data entry complete" = true wahr obwohl der wert noch nicht beschrieben wurde
+
+Nichtssagende Fehlercodes auf die der Benutzer nicht reagieren konnte.
+
+Das System wurde nicht ausreichend getestet worduch die Fehler erst in der Nutzung aufgekommen sind wo sie zu einer ÜBerdosis an Ionenstrahlen bei Patienten führte.
+
+
+
+3:
+
