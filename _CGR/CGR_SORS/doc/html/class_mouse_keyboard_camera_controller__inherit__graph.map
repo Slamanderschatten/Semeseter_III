@@ -1,0 +1,7 @@
+<map id="MouseKeyboardCameraController" name="MouseKeyboardCameraController">
+<area shape="rect" id="node1" title="Realisierung einer Kamera, bei der die Blickrichtung über die Bewegung der Maus gesteuert werden kann..." alt="" coords="5,304,224,331"/>
+<area shape="rect" id="node2" href="$class_keyboard_camera_controller.html" title="Eine klassische Kamerasteuerung über a, s, d, w, den Cursortasten sowie x, y, z für eine Drehung um d..." alt="" coords="25,229,204,256"/>
+<area shape="rect" id="node3" href="$class_camera_controller.html" title="Auch die Kamera kann mit den üblichen MoveController kontrolliert werden. Diese Klasse stellt die Ver..." alt="" coords="53,155,177,181"/>
+<area shape="rect" id="node4" href="$class_move_controller.html" title="Basisklasse aller Klassen, die die Orientierung oder Position eines Entity verändern wollen...." alt="" coords="59,80,170,107"/>
+<area shape="rect" id="node5" href="$class_wants_tick.html" title="Basisklasse für alle Objekte, die bei idle fuer Animationen gerufen werden wollen Gerufen wird die Me..." alt="" coords="73,5,157,32"/>
+</map>

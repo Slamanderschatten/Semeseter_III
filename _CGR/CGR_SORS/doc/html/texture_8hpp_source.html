@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: SORS/rendering/texture.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('texture_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">texture.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="texture_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef TEXTURE_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define TEXTURE_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QImage&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QMap&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="irenderableproperty_8hpp.html">irenderableproperty.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="textureimageformat_8hpp.html">textureimageformat.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_texture.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_texture.html">Texture</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_i_renderable_property.html">IRenderableProperty</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_texture.html#aab0b5bf9d9eccdfbabab7a923210e3f3">   13</a></span>    <a class="code hl_function" href="class_texture.html#aab0b5bf9d9eccdfbabab7a923210e3f3">Texture</a>(<span class="keywordtype">int</span> unit = 0) {<a class="code hl_function" href="class_texture.html#a99e2d09f5d1e237ee231de9d92b4d2a5">initMembers</a>();<a class="code hl_variable" href="class_texture.html#acb12cae0054cf9dee34ae566a2c5a5e7">mTextureUnit</a> = unit;}</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_function" href="class_texture.html#aab0b5bf9d9eccdfbabab7a923210e3f3">Texture</a>(<span class="keyword">const</span> QString&amp; pfad, <span class="keywordtype">int</span> unit = 0);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a1cc45e1c09ea0b18552497e5065b915b">loadPicture</a>(QString pfad);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a0891e7ec3749b1e2dbe113411d5cc7cc">init</a>(<a class="code hl_class" href="class_shader.html">Shader</a> &amp;shader) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a53e6b584a84c27de62108c6641c5b576">preRender</a>(<a class="code hl_class" href="class_shader.html">Shader</a> &amp;shader) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#ab66308d3883f4d1d75bbadeb7413c4de">postRender</a>(<a class="code hl_class" href="class_shader.html">Shader</a> &amp;shader) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_texture.html#a2fce0ede0c4f3df328c6dc264c1418b7">   26</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a2fce0ede0c4f3df328c6dc264c1418b7">setUnit</a>(<span class="keywordtype">int</span> unit) {<a class="code hl_variable" href="class_texture.html#acb12cae0054cf9dee34ae566a2c5a5e7">mTextureUnit</a> = unit;}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a928ff16bafd2ed9dc384bd892e67ec18">setDimMode</a>(<span class="keywordtype">int</span> mode);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_texture.html#a9f46d1246b7d3741d9c6ac10761f74b6">   28</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a9f46d1246b7d3741d9c6ac10761f74b6">setMaxFilter</a>(<span class="keywordtype">int</span> mode) {<a class="code hl_variable" href="class_texture.html#a1e29a06eb9969bcf79af560fd5b5ab61">mMaxFilter</a> = mode;}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_texture.html#a2686145fea7cf5d6007e5123112e2f93">   29</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a2686145fea7cf5d6007e5123112e2f93">setMinFilter</a>(<span class="keywordtype">int</span> mode) {<a class="code hl_variable" href="class_texture.html#ae1c5cced8b20995eeb885bf278ca72d9">mMinFilter</a> = mode;}</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_texture.html#a8371ad0923899acd2607e03f31b98507">   30</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a8371ad0923899acd2607e03f31b98507">setWrapMode</a>(<span class="keywordtype">int</span> mode) {<a class="code hl_variable" href="class_texture.html#a811cfe6a12942e0bd375a37c5ceb266c">mWrapMode</a> = mode;}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_texture.html#abb47625590d30d2231187af2009069e7">   31</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#abb47625590d30d2231187af2009069e7">setAnisotropyLevel</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> level) {<a class="code hl_variable" href="class_texture.html#a5a8985ba7f95833b42ada6fed1599cdb">mAnisotropyLevel</a> = std::max((<span class="keywordtype">int</span>)std::min((<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)<a class="code hl_variable" href="class_texture.html#ad2d4f5c287f225fd35bf27f332d7f21a">mMaximumAnisotropy</a>, level), 1);}</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_texture.html#a1a631f6ca03864d4c984b18d5be20781">   32</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a1a631f6ca03864d4c984b18d5be20781">setNameString</a>(QString pName) {<a class="code hl_variable" href="class_texture.html#abf614897a01275bb9326bd84cd13b20b">mTexNameString</a>=pName;}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#af43d7bb8cbd81c493328b32a65b2cdd1">makeStripes</a>(<span class="keywordtype">int</span> size, <span class="keywordtype">int</span> thickness, <span class="keywordtype">bool</span> buildmipmaps = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a4dbe7edbaac81647102e7abf156c40f7">makeDummy</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_texture.html#a09c4bcb7462f64c1d20fa69dba3cee8a">~Texture</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_texture.html#a874a8830ffa237e22702e0b0330dfc1a">   36</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a874a8830ffa237e22702e0b0330dfc1a">setForceInitialize</a>(<span class="keywordtype">bool</span> pForceInitialize) {<a class="code hl_variable" href="class_texture.html#a3c94b196cc3a71fed7b9dc7e853aaed6">mForceInitialize</a> = pForceInitialize;}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_texture.html#aa06bf4f6509d31569b79cdf50c9cd537">hasAlphaChannel</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    QImage::Format <a class="code hl_function" href="class_texture.html#a96ab8a29cadbfcf118c905200476c0ed">getqImageConversionFormat</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a5521a92be57b6b704a2ec9616a3e2fa2">setQImageConversionFormat</a>(<span class="keyword">const</span> QImage::Format &amp;pQImageConversionFormat);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_struct" href="struct_tex_image_format.html">TexImageFormat</a> <a class="code hl_function" href="class_texture.html#a8cbcadbd20c8c3585ba68bf2b5539fe0">gettexImageFormat</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#aad0e51b2e8da07326006b99e00be4974">setTexImageFormat</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_tex_image_format.html">TexImageFormat</a> &amp;pTexImageFormat);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#ac6268fd445bdf56dece3b9ea8eecea5a">textureInit</a>(<span class="keywordtype">bool</span> buildmipmaps = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#aae28879efe63b5a21b7c792f93d83c7b">loadImageToGPU</a>(<span class="keywordtype">bool</span> buildmipmaps = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a99e2d09f5d1e237ee231de9d92b4d2a5">initMembers</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#adced261fac2e20505948e18fcc3d4db0">convertImageToOpenGL</a>(std::shared_ptr&lt;QImage&gt; pImage);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_texture.html#ab3825ded8b18ce388946dea564dc169f">   59</a></span>    GLuint <a class="code hl_variable" href="class_texture.html#ab3825ded8b18ce388946dea564dc169f">mTexName</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_texture.html#abf614897a01275bb9326bd84cd13b20b">   60</a></span>    QString <a class="code hl_variable" href="class_texture.html#abf614897a01275bb9326bd84cd13b20b">mTexNameString</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_texture.html#a39e2840a08ee9e1bb6e08d68163a358c">   61</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_texture.html#a39e2840a08ee9e1bb6e08d68163a358c">mTexDim</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_texture.html#acb12cae0054cf9dee34ae566a2c5a5e7">   62</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_texture.html#acb12cae0054cf9dee34ae566a2c5a5e7">mTextureUnit</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_texture.html#af6bec0aca0f6cd18600b97f29c716e7a">   63</a></span>    <a class="code hl_struct" href="struct_tex_image_format.html">TexImageFormat</a> <a class="code hl_variable" href="class_texture.html#af6bec0aca0f6cd18600b97f29c716e7a">mTexImageFormat</a>{GL_RGBA, GL_RGBA, GL_UNSIGNED_BYTE};</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_texture.html#aba11be8567e91bfebaae1b9555880438">   64</a></span>    QImage::Format <a class="code hl_variable" href="class_texture.html#aba11be8567e91bfebaae1b9555880438">mQImageConversionFormat</a>{QImage::Format_RGBA8888};</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_texture.html#ae1c5cced8b20995eeb885bf278ca72d9">   65</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_texture.html#ae1c5cced8b20995eeb885bf278ca72d9">mMinFilter</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_texture.html#a1e29a06eb9969bcf79af560fd5b5ab61">   66</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_texture.html#a1e29a06eb9969bcf79af560fd5b5ab61">mMaxFilter</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_texture.html#a811cfe6a12942e0bd375a37c5ceb266c">   67</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_texture.html#a811cfe6a12942e0bd375a37c5ceb266c">mWrapMode</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_texture.html#ad2d4f5c287f225fd35bf27f332d7f21a">   68</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_texture.html#ad2d4f5c287f225fd35bf27f332d7f21a">mMaximumAnisotropy</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_texture.html#a5a8985ba7f95833b42ada6fed1599cdb">   69</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_texture.html#a5a8985ba7f95833b42ada6fed1599cdb">mAnisotropyLevel</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_texture.html#a603ef9762d6f601e6f9c0a37f1cde088">   70</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_texture.html#a603ef9762d6f601e6f9c0a37f1cde088">mInitialized</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_texture.html#a3c94b196cc3a71fed7b9dc7e853aaed6">   71</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_texture.html#a3c94b196cc3a71fed7b9dc7e853aaed6">mForceInitialize</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_texture.html#a60b9cba4acda04f830d3cc8fac23840f">   72</a></span>    std::shared_ptr&lt;QImage&gt; <a class="code hl_variable" href="class_texture.html#a60b9cba4acda04f830d3cc8fac23840f">mImage</a>;     <span class="comment">// Benutzt bei TEXTURE_2D</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_texture.html#a93af39d4b0c112a73d5d60bab611007a">   73</a></span>    std::shared_ptr&lt;QImage&gt; <a class="code hl_variable" href="class_texture.html#a93af39d4b0c112a73d5d60bab611007a">mImages</a>[6]; <span class="comment">// Benutzt fuer CubeTexture</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_texture.html#a6b961e0fb755f487495fffe5b00dd117">   74</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_texture.html#a6b961e0fb755f487495fffe5b00dd117">mTexImageDefined</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif </span><span class="comment">// TEXTURE_HPP</span></div>
+<div class="ttc" id="aclass_i_renderable_property_html"><div class="ttname"><a href="class_i_renderable_property.html">IRenderableProperty</a></div><div class="ttdoc">Interface für alle Eigenschaften, die ein Renderable haben kann. Alle Eigenschaften werden entspreche...</div><div class="ttdef"><b>Definition:</b> irenderableproperty.hpp:9</div></div>
+<div class="ttc" id="aclass_shader_html"><div class="ttname"><a href="class_shader.html">Shader</a></div><div class="ttdoc">Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...</div><div class="ttdef"><b>Definition:</b> shader.hpp:11</div></div>
+<div class="ttc" id="aclass_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">Klasse zum Rendering von Texturen.</div><div class="ttdef"><b>Definition:</b> texture.hpp:11</div></div>
+<div class="ttc" id="aclass_texture_html_a0891e7ec3749b1e2dbe113411d5cc7cc"><div class="ttname"><a href="class_texture.html#a0891e7ec3749b1e2dbe113411d5cc7cc">Texture::init</a></div><div class="ttdeci">virtual void init(Shader &amp;shader) override</div><div class="ttdoc">Von IRenderableProperty abgeleitete Methoden implementieren.</div><div class="ttdef"><b>Definition:</b> texture.cpp:190</div></div>
+<div class="ttc" id="aclass_texture_html_a09c4bcb7462f64c1d20fa69dba3cee8a"><div class="ttname"><a href="class_texture.html#a09c4bcb7462f64c1d20fa69dba3cee8a">Texture::~Texture</a></div><div class="ttdeci">virtual ~Texture()</div><div class="ttdef"><b>Definition:</b> texture.cpp:272</div></div>
+<div class="ttc" id="aclass_texture_html_a1a631f6ca03864d4c984b18d5be20781"><div class="ttname"><a href="class_texture.html#a1a631f6ca03864d4c984b18d5be20781">Texture::setNameString</a></div><div class="ttdeci">void setNameString(QString pName)</div><div class="ttdef"><b>Definition:</b> texture.hpp:32</div></div>
+<div class="ttc" id="aclass_texture_html_a1cc45e1c09ea0b18552497e5065b915b"><div class="ttname"><a href="class_texture.html#a1cc45e1c09ea0b18552497e5065b915b">Texture::loadPicture</a></div><div class="ttdeci">void loadPicture(QString pfad)</div><div class="ttdoc">Bild aus Datei laden.</div><div class="ttdef"><b>Definition:</b> texture.cpp:132</div></div>
+<div class="ttc" id="aclass_texture_html_a1e29a06eb9969bcf79af560fd5b5ab61"><div class="ttname"><a href="class_texture.html#a1e29a06eb9969bcf79af560fd5b5ab61">Texture::mMaxFilter</a></div><div class="ttdeci">int mMaxFilter</div><div class="ttdef"><b>Definition:</b> texture.hpp:66</div></div>
+<div class="ttc" id="aclass_texture_html_a2686145fea7cf5d6007e5123112e2f93"><div class="ttname"><a href="class_texture.html#a2686145fea7cf5d6007e5123112e2f93">Texture::setMinFilter</a></div><div class="ttdeci">void setMinFilter(int mode)</div><div class="ttdef"><b>Definition:</b> texture.hpp:29</div></div>
+<div class="ttc" id="aclass_texture_html_a2fce0ede0c4f3df328c6dc264c1418b7"><div class="ttname"><a href="class_texture.html#a2fce0ede0c4f3df328c6dc264c1418b7">Texture::setUnit</a></div><div class="ttdeci">void setUnit(int unit)</div><div class="ttdef"><b>Definition:</b> texture.hpp:26</div></div>
+<div class="ttc" id="aclass_texture_html_a39e2840a08ee9e1bb6e08d68163a358c"><div class="ttname"><a href="class_texture.html#a39e2840a08ee9e1bb6e08d68163a358c">Texture::mTexDim</a></div><div class="ttdeci">int mTexDim</div><div class="ttdef"><b>Definition:</b> texture.hpp:61</div></div>
+<div class="ttc" id="aclass_texture_html_a3c94b196cc3a71fed7b9dc7e853aaed6"><div class="ttname"><a href="class_texture.html#a3c94b196cc3a71fed7b9dc7e853aaed6">Texture::mForceInitialize</a></div><div class="ttdeci">bool mForceInitialize</div><div class="ttdef"><b>Definition:</b> texture.hpp:71</div></div>
+<div class="ttc" id="aclass_texture_html_a4dbe7edbaac81647102e7abf156c40f7"><div class="ttname"><a href="class_texture.html#a4dbe7edbaac81647102e7abf156c40f7">Texture::makeDummy</a></div><div class="ttdeci">void makeDummy()</div><div class="ttdef"><b>Definition:</b> texture.cpp:227</div></div>
+<div class="ttc" id="aclass_texture_html_a53e6b584a84c27de62108c6641c5b576"><div class="ttname"><a href="class_texture.html#a53e6b584a84c27de62108c6641c5b576">Texture::preRender</a></div><div class="ttdeci">virtual void preRender(Shader &amp;shader) override</div><div class="ttdoc">Rendering der Textur aktivieren.</div><div class="ttdef"><b>Definition:</b> texture.cpp:251</div></div>
+<div class="ttc" id="aclass_texture_html_a5521a92be57b6b704a2ec9616a3e2fa2"><div class="ttname"><a href="class_texture.html#a5521a92be57b6b704a2ec9616a3e2fa2">Texture::setQImageConversionFormat</a></div><div class="ttdeci">void setQImageConversionFormat(const QImage::Format &amp;pQImageConversionFormat)</div><div class="ttdef"><b>Definition:</b> texture.cpp:41</div></div>
+<div class="ttc" id="aclass_texture_html_a5a8985ba7f95833b42ada6fed1599cdb"><div class="ttname"><a href="class_texture.html#a5a8985ba7f95833b42ada6fed1599cdb">Texture::mAnisotropyLevel</a></div><div class="ttdeci">unsigned int mAnisotropyLevel</div><div class="ttdef"><b>Definition:</b> texture.hpp:69</div></div>
+<div class="ttc" id="aclass_texture_html_a603ef9762d6f601e6f9c0a37f1cde088"><div class="ttname"><a href="class_texture.html#a603ef9762d6f601e6f9c0a37f1cde088">Texture::mInitialized</a></div><div class="ttdeci">bool mInitialized</div><div class="ttdef"><b>Definition:</b> texture.hpp:70</div></div>
+<div class="ttc" id="aclass_texture_html_a60b9cba4acda04f830d3cc8fac23840f"><div class="ttname"><a href="class_texture.html#a60b9cba4acda04f830d3cc8fac23840f">Texture::mImage</a></div><div class="ttdeci">std::shared_ptr&lt; QImage &gt; mImage</div><div class="ttdef"><b>Definition:</b> texture.hpp:72</div></div>
+<div class="ttc" id="aclass_texture_html_a6b961e0fb755f487495fffe5b00dd117"><div class="ttname"><a href="class_texture.html#a6b961e0fb755f487495fffe5b00dd117">Texture::mTexImageDefined</a></div><div class="ttdeci">bool mTexImageDefined</div><div class="ttdef"><b>Definition:</b> texture.hpp:74</div></div>
+<div class="ttc" id="aclass_texture_html_a811cfe6a12942e0bd375a37c5ceb266c"><div class="ttname"><a href="class_texture.html#a811cfe6a12942e0bd375a37c5ceb266c">Texture::mWrapMode</a></div><div class="ttdeci">int mWrapMode</div><div class="ttdef"><b>Definition:</b> texture.hpp:67</div></div>
+<div class="ttc" id="aclass_texture_html_a8371ad0923899acd2607e03f31b98507"><div class="ttname"><a href="class_texture.html#a8371ad0923899acd2607e03f31b98507">Texture::setWrapMode</a></div><div class="ttdeci">void setWrapMode(int mode)</div><div class="ttdef"><b>Definition:</b> texture.hpp:30</div></div>
+<div class="ttc" id="aclass_texture_html_a874a8830ffa237e22702e0b0330dfc1a"><div class="ttname"><a href="class_texture.html#a874a8830ffa237e22702e0b0330dfc1a">Texture::setForceInitialize</a></div><div class="ttdeci">void setForceInitialize(bool pForceInitialize)</div><div class="ttdef"><b>Definition:</b> texture.hpp:36</div></div>
+<div class="ttc" id="aclass_texture_html_a8cbcadbd20c8c3585ba68bf2b5539fe0"><div class="ttname"><a href="class_texture.html#a8cbcadbd20c8c3585ba68bf2b5539fe0">Texture::gettexImageFormat</a></div><div class="ttdeci">TexImageFormat gettexImageFormat() const</div><div class="ttdef"><b>Definition:</b> texture.cpp:26</div></div>
+<div class="ttc" id="aclass_texture_html_a928ff16bafd2ed9dc384bd892e67ec18"><div class="ttname"><a href="class_texture.html#a928ff16bafd2ed9dc384bd892e67ec18">Texture::setDimMode</a></div><div class="ttdeci">void setDimMode(int mode)</div><div class="ttdef"><b>Definition:</b> texture.cpp:46</div></div>
+<div class="ttc" id="aclass_texture_html_a93af39d4b0c112a73d5d60bab611007a"><div class="ttname"><a href="class_texture.html#a93af39d4b0c112a73d5d60bab611007a">Texture::mImages</a></div><div class="ttdeci">std::shared_ptr&lt; QImage &gt; mImages[6]</div><div class="ttdef"><b>Definition:</b> texture.hpp:73</div></div>
+<div class="ttc" id="aclass_texture_html_a96ab8a29cadbfcf118c905200476c0ed"><div class="ttname"><a href="class_texture.html#a96ab8a29cadbfcf118c905200476c0ed">Texture::getqImageConversionFormat</a></div><div class="ttdeci">QImage::Format getqImageConversionFormat() const</div><div class="ttdef"><b>Definition:</b> texture.cpp:36</div></div>
+<div class="ttc" id="aclass_texture_html_a99e2d09f5d1e237ee231de9d92b4d2a5"><div class="ttname"><a href="class_texture.html#a99e2d09f5d1e237ee231de9d92b4d2a5">Texture::initMembers</a></div><div class="ttdeci">void initMembers()</div><div class="ttdoc">Dummy Textur erzeugen.</div><div class="ttdef"><b>Definition:</b> texture.cpp:7</div></div>
+<div class="ttc" id="aclass_texture_html_a9f46d1246b7d3741d9c6ac10761f74b6"><div class="ttname"><a href="class_texture.html#a9f46d1246b7d3741d9c6ac10761f74b6">Texture::setMaxFilter</a></div><div class="ttdeci">void setMaxFilter(int mode)</div><div class="ttdef"><b>Definition:</b> texture.hpp:28</div></div>
+<div class="ttc" id="aclass_texture_html_aa06bf4f6509d31569b79cdf50c9cd537"><div class="ttname"><a href="class_texture.html#aa06bf4f6509d31569b79cdf50c9cd537">Texture::hasAlphaChannel</a></div><div class="ttdeci">bool hasAlphaChannel() const</div><div class="ttdoc">Gibt true zurück wenn das geladene Bild einen Alpha-Kanal besitzt.</div><div class="ttdef"><b>Definition:</b> texture.cpp:280</div></div>
+<div class="ttc" id="aclass_texture_html_aab0b5bf9d9eccdfbabab7a923210e3f3"><div class="ttname"><a href="class_texture.html#aab0b5bf9d9eccdfbabab7a923210e3f3">Texture::Texture</a></div><div class="ttdeci">Texture(int unit=0)</div><div class="ttdef"><b>Definition:</b> texture.hpp:13</div></div>
+<div class="ttc" id="aclass_texture_html_aad0e51b2e8da07326006b99e00be4974"><div class="ttname"><a href="class_texture.html#aad0e51b2e8da07326006b99e00be4974">Texture::setTexImageFormat</a></div><div class="ttdeci">void setTexImageFormat(const TexImageFormat &amp;pTexImageFormat)</div><div class="ttdef"><b>Definition:</b> texture.cpp:31</div></div>
+<div class="ttc" id="aclass_texture_html_aae28879efe63b5a21b7c792f93d83c7b"><div class="ttname"><a href="class_texture.html#aae28879efe63b5a21b7c792f93d83c7b">Texture::loadImageToGPU</a></div><div class="ttdeci">virtual void loadImageToGPU(bool buildmipmaps=true)</div><div class="ttdoc">Maps bauen und in OpenGL laden.</div><div class="ttdef"><b>Definition:</b> texture.cpp:51</div></div>
+<div class="ttc" id="aclass_texture_html_ab3825ded8b18ce388946dea564dc169f"><div class="ttname"><a href="class_texture.html#ab3825ded8b18ce388946dea564dc169f">Texture::mTexName</a></div><div class="ttdeci">GLuint mTexName</div><div class="ttdef"><b>Definition:</b> texture.hpp:59</div></div>
+<div class="ttc" id="aclass_texture_html_ab66308d3883f4d1d75bbadeb7413c4de"><div class="ttname"><a href="class_texture.html#ab66308d3883f4d1d75bbadeb7413c4de">Texture::postRender</a></div><div class="ttdeci">virtual void postRender(Shader &amp;shader) override</div><div class="ttdoc">Rendering der Textur ausschalten.</div><div class="ttdef"><b>Definition:</b> texture.cpp:265</div></div>
+<div class="ttc" id="aclass_texture_html_aba11be8567e91bfebaae1b9555880438"><div class="ttname"><a href="class_texture.html#aba11be8567e91bfebaae1b9555880438">Texture::mQImageConversionFormat</a></div><div class="ttdeci">QImage::Format mQImageConversionFormat</div><div class="ttdef"><b>Definition:</b> texture.hpp:64</div></div>
+<div class="ttc" id="aclass_texture_html_abb47625590d30d2231187af2009069e7"><div class="ttname"><a href="class_texture.html#abb47625590d30d2231187af2009069e7">Texture::setAnisotropyLevel</a></div><div class="ttdeci">void setAnisotropyLevel(unsigned int level)</div><div class="ttdef"><b>Definition:</b> texture.hpp:31</div></div>
+<div class="ttc" id="aclass_texture_html_abf614897a01275bb9326bd84cd13b20b"><div class="ttname"><a href="class_texture.html#abf614897a01275bb9326bd84cd13b20b">Texture::mTexNameString</a></div><div class="ttdeci">QString mTexNameString</div><div class="ttdef"><b>Definition:</b> texture.hpp:60</div></div>
+<div class="ttc" id="aclass_texture_html_ac6268fd445bdf56dece3b9ea8eecea5a"><div class="ttname"><a href="class_texture.html#ac6268fd445bdf56dece3b9ea8eecea5a">Texture::textureInit</a></div><div class="ttdeci">virtual void textureInit(bool buildmipmaps=true)</div><div class="ttdoc">Textur initialisieren und laden - im Fehlerfall Dummy erzeugen.</div><div class="ttdef"><b>Definition:</b> texture.cpp:83</div></div>
+<div class="ttc" id="aclass_texture_html_acb12cae0054cf9dee34ae566a2c5a5e7"><div class="ttname"><a href="class_texture.html#acb12cae0054cf9dee34ae566a2c5a5e7">Texture::mTextureUnit</a></div><div class="ttdeci">int mTextureUnit</div><div class="ttdef"><b>Definition:</b> texture.hpp:62</div></div>
+<div class="ttc" id="aclass_texture_html_ad2d4f5c287f225fd35bf27f332d7f21a"><div class="ttname"><a href="class_texture.html#ad2d4f5c287f225fd35bf27f332d7f21a">Texture::mMaximumAnisotropy</a></div><div class="ttdeci">float mMaximumAnisotropy</div><div class="ttdef"><b>Definition:</b> texture.hpp:68</div></div>
+<div class="ttc" id="aclass_texture_html_adced261fac2e20505948e18fcc3d4db0"><div class="ttname"><a href="class_texture.html#adced261fac2e20505948e18fcc3d4db0">Texture::convertImageToOpenGL</a></div><div class="ttdeci">void convertImageToOpenGL(std::shared_ptr&lt; QImage &gt; pImage)</div><div class="ttdef"><b>Definition:</b> texture.cpp:20</div></div>
+<div class="ttc" id="aclass_texture_html_ae1c5cced8b20995eeb885bf278ca72d9"><div class="ttname"><a href="class_texture.html#ae1c5cced8b20995eeb885bf278ca72d9">Texture::mMinFilter</a></div><div class="ttdeci">int mMinFilter</div><div class="ttdef"><b>Definition:</b> texture.hpp:65</div></div>
+<div class="ttc" id="aclass_texture_html_af43d7bb8cbd81c493328b32a65b2cdd1"><div class="ttname"><a href="class_texture.html#af43d7bb8cbd81c493328b32a65b2cdd1">Texture::makeStripes</a></div><div class="ttdeci">virtual void makeStripes(int size, int thickness, bool buildmipmaps=true)</div><div class="ttdef"><b>Definition:</b> texture.cpp:195</div></div>
+<div class="ttc" id="aclass_texture_html_af6bec0aca0f6cd18600b97f29c716e7a"><div class="ttname"><a href="class_texture.html#af6bec0aca0f6cd18600b97f29c716e7a">Texture::mTexImageFormat</a></div><div class="ttdeci">TexImageFormat mTexImageFormat</div><div class="ttdef"><b>Definition:</b> texture.hpp:63</div></div>
+<div class="ttc" id="airenderableproperty_8hpp_html"><div class="ttname"><a href="irenderableproperty_8hpp.html">irenderableproperty.hpp</a></div></div>
+<div class="ttc" id="astruct_tex_image_format_html"><div class="ttname"><a href="struct_tex_image_format.html">TexImageFormat</a></div><div class="ttdef"><b>Definition:</b> textureimageformat.hpp:7</div></div>
+<div class="ttc" id="atextureimageformat_8hpp_html"><div class="ttname"><a href="textureimageformat_8hpp.html">textureimageformat.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_cda996fc916ed27d80e8cee84a8ca5c5.html">SORS</a></li><li class="navelem"><a class="el" href="dir_6f8a73d58f15ae90033e36c24ed6e8ca.html">rendering</a></li><li class="navelem"><a class="el" href="texture_8hpp.html">texture.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

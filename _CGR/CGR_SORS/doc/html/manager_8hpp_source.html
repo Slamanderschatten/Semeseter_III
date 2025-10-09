@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: SORS/manager.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('manager_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">manager.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="manager_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef MANAGER_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define MANAGER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="openglwidget_8hpp.html">win_oglbase/openglwidget.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="movecontroller_8hpp.html">transformation/movecontroller.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="transformation_8hpp.html">transformation/transformation.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="geometrybase_8hpp.html">geometry/geometrybase.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="renderable_8hpp.html">rendering/renderable.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span><a class="code hl_class" href="class_i_geometry_implementation.html">IGeometryImplementation</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span><a class="code hl_class" href="class_shader.html">Shader</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span><a class="code hl_class" href="class_mouse_keyboard_camera_controller.html">MouseKeyboardCameraController</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span><a class="code hl_class" href="class_camera.html">Camera</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_manager.html">   22</a></span><span class="keyword">class </span><a class="code hl_class" href="class_manager.html">Manager</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_manager.html#aa9e1d309899af35842d21ebfd66dcf16">   25</a></span>    <a class="code hl_function" href="class_manager.html#aa9e1d309899af35842d21ebfd66dcf16">Manager</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_manager.html#a3cb686919af232127c1b32c90b9b87f9">initialize</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> GeometryBaseClass, <span class="keyword">typename</span> GeometryImplementationClass&gt;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">static</span> entt::entity <a class="code hl_function" href="class_manager.html#aac001f5cde0770d43e4de4a974a814dc">addRenderable</a>(<span class="keyword">const</span> GeometryImplementationClass &amp;lGeoImplementation, std::shared_ptr&lt;Shader&gt; pShader=<span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">static</span> entt::entity <a class="code hl_function" href="class_manager.html#ad87dc677b26a3615f34b648e150084c6">addRenderableSharedGeometry</a>(entt::entity pEntWithSharedGeometry, std::shared_ptr&lt;Shader&gt; pShader=<span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">static</span> <a class="code hl_class" href="class_transformation.html">Transformation</a> &amp;<a class="code hl_function" href="class_manager.html#a2528da4c45026694223bd10284b1ad55">addTransformationEntity</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> TController&gt;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_manager.html#a30e93c51a5578e7bd37ec89b9723f4f2">   44</a></span>    <span class="keyword">static</span> std::shared_ptr&lt;TController&gt; <a class="code hl_function" href="class_manager.html#a30e93c51a5578e7bd37ec89b9723f4f2">addController</a>(entt::entity pEnt = entt::null) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">static_assert</span>(std::is_base_of&lt;MoveController, TController&gt;::value, <span class="stringliteral">&quot;Controller must be derived from MoveController&quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">auto</span> lController = std::make_shared&lt;TController&gt;(pEnt);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_function" href="class_open_g_l_widget.html#a270e20bcca5b6723c4bdc54d7e35c378">OpenGLWidget::getInstance</a>()-&gt;<a class="code hl_function" href="class_open_g_l_widget.html#a5dd75325425be2457a90453d02dd5c72">addTickObject</a>(lController);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> lController;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">static</span> entt::entity addRenderableBase(std::shared_ptr&lt;Shader&gt; pShader);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> GeometryBaseClass, <span class="keyword">typename</span> GeometryImplementationClass&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_manager.html#aac001f5cde0770d43e4de4a974a814dc">   58</a></span>entt::entity <a class="code hl_function" href="class_manager.html#aac001f5cde0770d43e4de4a974a814dc">Manager::addRenderable</a>(<span class="keyword">const</span> GeometryImplementationClass &amp;lGeoImplementation, std::shared_ptr&lt;Shader&gt; pShader)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>{</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">auto</span> lEntity = addRenderableBase(pShader);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    GeometryBase::emplaceToEntity&lt;GeometryBaseClass, GeometryImplementationClass&gt;(lEntity, lGeoImplementation);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">return</span> lEntity;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif </span><span class="comment">// MANAGER_H</span></div>
+<div class="ttc" id="aclass_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdoc">Realisierung einer einfachen virtuellen Kamera.</div><div class="ttdef"><b>Definition:</b> camera.hpp:23</div></div>
+<div class="ttc" id="aclass_i_geometry_implementation_html"><div class="ttname"><a href="class_i_geometry_implementation.html">IGeometryImplementation</a></div><div class="ttdoc">Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien....</div><div class="ttdef"><b>Definition:</b> igeometryimplementation.hpp:12</div></div>
+<div class="ttc" id="aclass_manager_html"><div class="ttname"><a href="class_manager.html">Manager</a></div><div class="ttdoc">Enthält alle Methoden, in denen übergeordnete/unabhängige Entities/Objekte angelegt werden....</div><div class="ttdef"><b>Definition:</b> manager.hpp:23</div></div>
+<div class="ttc" id="aclass_manager_html_a2528da4c45026694223bd10284b1ad55"><div class="ttname"><a href="class_manager.html#a2528da4c45026694223bd10284b1ad55">Manager::addTransformationEntity</a></div><div class="ttdeci">static Transformation &amp; addTransformationEntity()</div><div class="ttdoc">Legt eine Transformation als eigenes Entity an. Das wird verwendet, um Hierarchien (siehe Relationhip...</div><div class="ttdef"><b>Definition:</b> manager.cpp:7</div></div>
+<div class="ttc" id="aclass_manager_html_a30e93c51a5578e7bd37ec89b9723f4f2"><div class="ttname"><a href="class_manager.html#a30e93c51a5578e7bd37ec89b9723f4f2">Manager::addController</a></div><div class="ttdeci">static std::shared_ptr&lt; TController &gt; addController(entt::entity pEnt=entt::null)</div><div class="ttdoc">Fügt einem Entity einen Controller hinzu, der die Lage steuern kann. Das können alle von MoveControll...</div><div class="ttdef"><b>Definition:</b> manager.hpp:44</div></div>
+<div class="ttc" id="aclass_manager_html_a3cb686919af232127c1b32c90b9b87f9"><div class="ttname"><a href="class_manager.html#a3cb686919af232127c1b32c90b9b87f9">Manager::initialize</a></div><div class="ttdeci">static void initialize()</div><div class="ttdef"><b>Definition:</b> myscene.cpp:10</div></div>
+<div class="ttc" id="aclass_manager_html_aa9e1d309899af35842d21ebfd66dcf16"><div class="ttname"><a href="class_manager.html#aa9e1d309899af35842d21ebfd66dcf16">Manager::Manager</a></div><div class="ttdeci">Manager()=delete</div></div>
+<div class="ttc" id="aclass_manager_html_aac001f5cde0770d43e4de4a974a814dc"><div class="ttname"><a href="class_manager.html#aac001f5cde0770d43e4de4a974a814dc">Manager::addRenderable</a></div><div class="ttdeci">static entt::entity addRenderable(const GeometryImplementationClass &amp;lGeoImplementation, std::shared_ptr&lt; Shader &gt; pShader=nullptr)</div><div class="ttdoc">Fügt ein Renderable hinzu. Dabei wird Shader (ggf. Default-Shader), die Geometriebasis (siehe Templat...</div><div class="ttdef"><b>Definition:</b> manager.hpp:58</div></div>
+<div class="ttc" id="aclass_manager_html_ad87dc677b26a3615f34b648e150084c6"><div class="ttname"><a href="class_manager.html#ad87dc677b26a3615f34b648e150084c6">Manager::addRenderableSharedGeometry</a></div><div class="ttdeci">static entt::entity addRenderableSharedGeometry(entt::entity pEntWithSharedGeometry, std::shared_ptr&lt; Shader &gt; pShader=nullptr)</div><div class="ttdoc">Fügt ein Renderable hinzu, dass die Geometrie mit einem anderen Entity teilt Wichtig: Das Entity mit ...</div><div class="ttdef"><b>Definition:</b> manager.cpp:26</div></div>
+<div class="ttc" id="aclass_mouse_keyboard_camera_controller_html"><div class="ttname"><a href="class_mouse_keyboard_camera_controller.html">MouseKeyboardCameraController</a></div><div class="ttdoc">Realisierung einer Kamera, bei der die Blickrichtung über die Bewegung der Maus gesteuert werden kann...</div><div class="ttdef"><b>Definition:</b> mousekeyboardcameracontroller.hpp:12</div></div>
+<div class="ttc" id="aclass_open_g_l_widget_html_a270e20bcca5b6723c4bdc54d7e35c378"><div class="ttname"><a href="class_open_g_l_widget.html#a270e20bcca5b6723c4bdc54d7e35c378">OpenGLWidget::getInstance</a></div><div class="ttdeci">static OpenGLWidget * getInstance()</div><div class="ttdoc">Instanz des OpenGLWidgets holen, dort kann OpenGL gerendert werden.</div><div class="ttdef"><b>Definition:</b> openglwidget.cpp:207</div></div>
+<div class="ttc" id="aclass_open_g_l_widget_html_a5dd75325425be2457a90453d02dd5c72"><div class="ttname"><a href="class_open_g_l_widget.html#a5dd75325425be2457a90453d02dd5c72">OpenGLWidget::addTickObject</a></div><div class="ttdeci">void addTickObject(std::shared_ptr&lt; WantsTick &gt; pTickObject)</div><div class="ttdoc">Objekte registrieren, die timergesteuert aufgerufen werden wollen.</div><div class="ttdef"><b>Definition:</b> openglwidget.cpp:183</div></div>
+<div class="ttc" id="aclass_shader_html"><div class="ttname"><a href="class_shader.html">Shader</a></div><div class="ttdoc">Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...</div><div class="ttdef"><b>Definition:</b> shader.hpp:11</div></div>
+<div class="ttc" id="aclass_transformation_html"><div class="ttname"><a href="class_transformation.html">Transformation</a></div><div class="ttdoc">Basisklasse für Transformations-Klassen implementiert die eigentlichen Transformationen.</div><div class="ttdef"><b>Definition:</b> transformation.hpp:9</div></div>
+<div class="ttc" id="ageometrybase_8hpp_html"><div class="ttname"><a href="geometrybase_8hpp.html">geometrybase.hpp</a></div></div>
+<div class="ttc" id="amovecontroller_8hpp_html"><div class="ttname"><a href="movecontroller_8hpp.html">movecontroller.hpp</a></div></div>
+<div class="ttc" id="aopenglwidget_8hpp_html"><div class="ttname"><a href="openglwidget_8hpp.html">openglwidget.hpp</a></div></div>
+<div class="ttc" id="arenderable_8hpp_html"><div class="ttname"><a href="renderable_8hpp.html">renderable.hpp</a></div></div>
+<div class="ttc" id="atransformation_8hpp_html"><div class="ttname"><a href="transformation_8hpp.html">transformation.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_cda996fc916ed27d80e8cee84a8ca5c5.html">SORS</a></li><li class="navelem"><a class="el" href="manager_8hpp.html">manager.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

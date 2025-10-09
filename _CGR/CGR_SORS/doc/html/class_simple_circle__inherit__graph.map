@@ -1,0 +1,5 @@
+<map id="SimpleCircle" name="SimpleCircle">
+<area shape="rect" id="node1" title="Eine einfache Klasse zum Zeichnen eines Kreises um den Ursprung in der xy&#45;Ebene Zeigt auch die Verwen..." alt="" coords="43,80,139,107"/>
+<area shape="rect" id="node3" href="$class_simple_circle_filled.html" title=" " alt="" coords="28,155,155,181"/>
+<area shape="rect" id="node2" href="$class_i_geometry_implementation.html" title="Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien...." alt="" coords="5,5,177,32"/>
+</map>

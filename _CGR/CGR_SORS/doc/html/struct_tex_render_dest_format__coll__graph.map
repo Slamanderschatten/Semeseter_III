@@ -1,0 +1,4 @@
+<map id="TexRenderDestFormat" name="TexRenderDestFormat">
+<area shape="rect" id="node1" title="Beschreibung der Texturen und des/der Targets, in die gerendert werden soll." alt="" coords="5,95,160,121"/>
+<area shape="rect" id="node2" href="$struct_tex_image_format.html" title=" " alt="" coords="23,5,143,32"/>
+</map>

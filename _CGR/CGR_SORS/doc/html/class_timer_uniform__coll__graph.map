@@ -1,0 +1,4 @@
+<map id="TimerUniform" name="TimerUniform">
+<area shape="rect" id="node1" title="Diese Klasse realisiert einen einfachen Timer, der als RenderableProperty an Renderables angehängt we..." alt="" coords="25,80,127,107"/>
+<area shape="rect" id="node2" href="$class_i_renderable_property.html" title="Interface für alle Eigenschaften, die ein Renderable haben kann. Alle Eigenschaften werden entspreche..." alt="" coords="5,5,147,32"/>
+</map>

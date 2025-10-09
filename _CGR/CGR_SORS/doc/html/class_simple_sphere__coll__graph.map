@@ -1,0 +1,5 @@
+<map id="SimpleSphere" name="SimpleSphere">
+<area shape="rect" id="node1" title="Einfache Klasse zum Zeichnen einer tesselierten Kugel mit indexed geometry." alt="" coords="63,155,166,181"/>
+<area shape="rect" id="node2" href="$class_i_geometry_indexed_implementation.html" title="Spezialisierung der Klasse IGeometryImplementation, um indexed geometries zu unterstützen." alt="" coords="5,80,224,107"/>
+<area shape="rect" id="node3" href="$class_i_geometry_implementation.html" title="Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien...." alt="" coords="29,5,201,32"/>
+</map>

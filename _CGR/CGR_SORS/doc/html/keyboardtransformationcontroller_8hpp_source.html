@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: SORS/transformation/keyboardtransformationcontroller.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('keyboardtransformationcontroller_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">keyboardtransformationcontroller.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="keyboardtransformationcontroller_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef KEYBOARDTRANSFORMATIONCONTROLLER_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define KEYBOARDTRANSFORMATIONCONTROLLER_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;thirdparty/entt/single_include/entt/entt.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="movecontroller_8hpp.html">movecontroller.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="transformation_8hpp.html">transformation/transformation.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="inputregistry_8hpp.html">input/inputregistry.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_keyboard_transformation_controller.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_keyboard_transformation_controller.html">KeyboardTransformationController</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_move_controller.html">MoveController</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_function" href="class_keyboard_transformation_controller.html#a65da7842f8ee7d3afd6fb7f20ad9202e">KeyboardTransformationController</a>(entt::entity pEntity = entt::null);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_keyboard_transformation_controller.html#a82a9377002539396a0cd609296cec597">   17</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_keyboard_transformation_controller.html#a82a9377002539396a0cd609296cec597">setTransModifier</a>(<span class="keywordtype">int</span> s);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_keyboard_transformation_controller.html#a882408da04e8231512d569d12e4ef516">setRotModifier</a>(<span class="keywordtype">int</span> s);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_keyboard_transformation_controller.html#a37fd5e2cafc2f61a69ad613d3ab0d754">setTransKeysUpper</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> z);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_keyboard_transformation_controller.html#ab22789c367aa559ade31a7f12e9c05ec">setTransKeys</a>(<span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> x2, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> y2, <span class="keywordtype">int</span> z1, <span class="keywordtype">int</span> z2);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_keyboard_transformation_controller.html#a0d983b81d0e4e7c882f29442a1b3fef8">setRotKeysUpper</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> z);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_keyboard_transformation_controller.html#ab1708e2ef5f5fe5d48dac2108e0496d6">setRotKeys</a>(<span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> x2, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> y2, <span class="keywordtype">int</span> z1, <span class="keywordtype">int</span> z2);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_keyboard_transformation_controller.html#a1add8cdca669aace116d0923c6abd220">setTransspeed</a>(<span class="keywordtype">float</span> s);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_keyboard_transformation_controller.html#a1f711ef1f3e5e9df2491de990a2708a1">setRotspeed</a>(<span class="keywordtype">float</span> s);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_keyboard_transformation_controller.html#a14424149755ad6d6a321a8bc27519999">doControl</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">   44</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">NoKey</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_keyboard_transformation_controller.html#a4f7459b435260dd0b00b1ba86ea3e6e5">   47</a></span>    entt::entity <a class="code hl_variable" href="class_keyboard_transformation_controller.html#a4f7459b435260dd0b00b1ba86ea3e6e5">mEntity</a>{entt::null};</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_keyboard_transformation_controller.html#af13104f09fc2a4a8ef7a3e8c4e380eb5">   48</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_keyboard_transformation_controller.html#af13104f09fc2a4a8ef7a3e8c4e380eb5">mTranskeys</a>[6]{<a class="code hl_variable" href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">NoKey</a>, <a class="code hl_variable" href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">NoKey</a>, <a class="code hl_variable" href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">NoKey</a>, <a class="code hl_variable" href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">NoKey</a>, <a class="code hl_variable" href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">NoKey</a>, <a class="code hl_variable" href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">NoKey</a>};</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_keyboard_transformation_controller.html#a14d914c7787d41e03b022a001c09d0eb">   49</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_keyboard_transformation_controller.html#a14d914c7787d41e03b022a001c09d0eb">mTransmodifier</a>{0};</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_keyboard_transformation_controller.html#ad2e019950962b97d26d3b5433818707e">   50</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_keyboard_transformation_controller.html#ad2e019950962b97d26d3b5433818707e">mRotkeys</a>[6]{<a class="code hl_variable" href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">NoKey</a>, <a class="code hl_variable" href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">NoKey</a>, <a class="code hl_variable" href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">NoKey</a>, <a class="code hl_variable" href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">NoKey</a>, <a class="code hl_variable" href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">NoKey</a>, <a class="code hl_variable" href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">NoKey</a>};</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_keyboard_transformation_controller.html#a92d281e8c772fc95b3d2af2a7f8a1f68">   51</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_keyboard_transformation_controller.html#a92d281e8c772fc95b3d2af2a7f8a1f68">mRotmodifier</a>{0};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_keyboard_transformation_controller.html#a8781bc4ed7b1fa9bf2e34946053a658f">selectandActTrans</a>(<a class="code hl_class" href="class_transformation.html">Transformation</a> &amp;pTrans, std::shared_ptr&lt;KeyboardInput&gt; pKeyIn);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_keyboard_transformation_controller.html#a9cdc445ef492fadd0e6be1288590cfdf">selectandActRot</a>(<a class="code hl_class" href="class_transformation.html">Transformation</a> &amp;pTrans, std::shared_ptr&lt;KeyboardInput&gt; pKeyIn);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif </span><span class="comment">// KEYBOARDTRANSFORMATIONCONTROLLER_HPP</span></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html"><div class="ttname"><a href="class_keyboard_transformation_controller.html">KeyboardTransformationController</a></div><div class="ttdoc">Eine Klasse, die ein Entity mit Tastatureingaben steuern kann.</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.hpp:12</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_a0d983b81d0e4e7c882f29442a1b3fef8"><div class="ttname"><a href="class_keyboard_transformation_controller.html#a0d983b81d0e4e7c882f29442a1b3fef8">KeyboardTransformationController::setRotKeysUpper</a></div><div class="ttdeci">void setRotKeysUpper(int x, int y, int z)</div><div class="ttdoc">Setzen der Rotkeys, wobei die Umkehrrichtung immer der passende Großbuchstabe ist.</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.cpp:74</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_a14424149755ad6d6a321a8bc27519999"><div class="ttname"><a href="class_keyboard_transformation_controller.html#a14424149755ad6d6a321a8bc27519999">KeyboardTransformationController::doControl</a></div><div class="ttdeci">virtual void doControl() override</div><div class="ttdoc">Callback zum Auswerten des Inputs.</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.cpp:146</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_a14d914c7787d41e03b022a001c09d0eb"><div class="ttname"><a href="class_keyboard_transformation_controller.html#a14d914c7787d41e03b022a001c09d0eb">KeyboardTransformationController::mTransmodifier</a></div><div class="ttdeci">int mTransmodifier</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.hpp:49</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_a1add8cdca669aace116d0923c6abd220"><div class="ttname"><a href="class_keyboard_transformation_controller.html#a1add8cdca669aace116d0923c6abd220">KeyboardTransformationController::setTransspeed</a></div><div class="ttdeci">void setTransspeed(float s)</div><div class="ttdoc">Wie schnell (also um welchen Offset) wird jeweils bei Tastendruck verschoben?</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.cpp:18</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_a1f711ef1f3e5e9df2491de990a2708a1"><div class="ttname"><a href="class_keyboard_transformation_controller.html#a1f711ef1f3e5e9df2491de990a2708a1">KeyboardTransformationController::setRotspeed</a></div><div class="ttdeci">void setRotspeed(float s)</div><div class="ttdoc">Wie schnell (also um welchen Winkel) wird jeweils bei Tastendruck rotiert.</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.cpp:24</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_a2204cd13a822b9def0487df7f93684c8"><div class="ttname"><a href="class_keyboard_transformation_controller.html#a2204cd13a822b9def0487df7f93684c8">KeyboardTransformationController::NoKey</a></div><div class="ttdeci">static const int NoKey</div><div class="ttdoc">Bezeichner für Keys, die man nicht belegen will (Parameter für SetRotKeys, etc.)</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.hpp:44</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_a37fd5e2cafc2f61a69ad613d3ab0d754"><div class="ttname"><a href="class_keyboard_transformation_controller.html#a37fd5e2cafc2f61a69ad613d3ab0d754">KeyboardTransformationController::setTransKeysUpper</a></div><div class="ttdeci">void setTransKeysUpper(int x, int y, int z)</div><div class="ttdoc">Setzen der Translationskeys, wobei die Umkehrrichtung immer der passende Großbuchstabe ist.</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.cpp:51</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_a4f7459b435260dd0b00b1ba86ea3e6e5"><div class="ttname"><a href="class_keyboard_transformation_controller.html#a4f7459b435260dd0b00b1ba86ea3e6e5">KeyboardTransformationController::mEntity</a></div><div class="ttdeci">entt::entity mEntity</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.hpp:47</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_a65da7842f8ee7d3afd6fb7f20ad9202e"><div class="ttname"><a href="class_keyboard_transformation_controller.html#a65da7842f8ee7d3afd6fb7f20ad9202e">KeyboardTransformationController::KeyboardTransformationController</a></div><div class="ttdeci">KeyboardTransformationController(entt::entity pEntity=entt::null)</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.cpp:7</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_a82a9377002539396a0cd609296cec597"><div class="ttname"><a href="class_keyboard_transformation_controller.html#a82a9377002539396a0cd609296cec597">KeyboardTransformationController::setTransModifier</a></div><div class="ttdeci">void setTransModifier(int s)</div><div class="ttdoc">Ist für die Translationskeys ein Modifier (ALT, ...) erforderlich?</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_a8781bc4ed7b1fa9bf2e34946053a658f"><div class="ttname"><a href="class_keyboard_transformation_controller.html#a8781bc4ed7b1fa9bf2e34946053a658f">KeyboardTransformationController::selectandActTrans</a></div><div class="ttdeci">void selectandActTrans(Transformation &amp;pTrans, std::shared_ptr&lt; KeyboardInput &gt; pKeyIn)</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.cpp:84</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_a882408da04e8231512d569d12e4ef516"><div class="ttname"><a href="class_keyboard_transformation_controller.html#a882408da04e8231512d569d12e4ef516">KeyboardTransformationController::setRotModifier</a></div><div class="ttdeci">void setRotModifier(int s)</div><div class="ttdoc">Ist für die Rotationskeys ein Modifier (ALT, ...) erforderlich?</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.cpp:79</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_a92d281e8c772fc95b3d2af2a7f8a1f68"><div class="ttname"><a href="class_keyboard_transformation_controller.html#a92d281e8c772fc95b3d2af2a7f8a1f68">KeyboardTransformationController::mRotmodifier</a></div><div class="ttdeci">int mRotmodifier</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.hpp:51</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_a9cdc445ef492fadd0e6be1288590cfdf"><div class="ttname"><a href="class_keyboard_transformation_controller.html#a9cdc445ef492fadd0e6be1288590cfdf">KeyboardTransformationController::selectandActRot</a></div><div class="ttdeci">void selectandActRot(Transformation &amp;pTrans, std::shared_ptr&lt; KeyboardInput &gt; pKeyIn)</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.cpp:115</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_ab1708e2ef5f5fe5d48dac2108e0496d6"><div class="ttname"><a href="class_keyboard_transformation_controller.html#ab1708e2ef5f5fe5d48dac2108e0496d6">KeyboardTransformationController::setRotKeys</a></div><div class="ttdeci">void setRotKeys(int x1, int x2, int y1, int y2, int z1, int z2)</div><div class="ttdoc">Setzen des Keys für die Rotation.</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.cpp:63</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_ab22789c367aa559ade31a7f12e9c05ec"><div class="ttname"><a href="class_keyboard_transformation_controller.html#ab22789c367aa559ade31a7f12e9c05ec">KeyboardTransformationController::setTransKeys</a></div><div class="ttdeci">void setTransKeys(int x1, int x2, int y1, int y2, int z1, int z2)</div><div class="ttdoc">Setzen der Keys für die Translation.</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.cpp:38</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_ad2e019950962b97d26d3b5433818707e"><div class="ttname"><a href="class_keyboard_transformation_controller.html#ad2e019950962b97d26d3b5433818707e">KeyboardTransformationController::mRotkeys</a></div><div class="ttdeci">int mRotkeys[6]</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.hpp:50</div></div>
+<div class="ttc" id="aclass_keyboard_transformation_controller_html_af13104f09fc2a4a8ef7a3e8c4e380eb5"><div class="ttname"><a href="class_keyboard_transformation_controller.html#af13104f09fc2a4a8ef7a3e8c4e380eb5">KeyboardTransformationController::mTranskeys</a></div><div class="ttdeci">int mTranskeys[6]</div><div class="ttdef"><b>Definition:</b> keyboardtransformationcontroller.hpp:48</div></div>
+<div class="ttc" id="aclass_move_controller_html"><div class="ttname"><a href="class_move_controller.html">MoveController</a></div><div class="ttdoc">Basisklasse aller Klassen, die die Orientierung oder Position eines Entity verändern wollen....</div><div class="ttdef"><b>Definition:</b> movecontroller.hpp:9</div></div>
+<div class="ttc" id="aclass_transformation_html"><div class="ttname"><a href="class_transformation.html">Transformation</a></div><div class="ttdoc">Basisklasse für Transformations-Klassen implementiert die eigentlichen Transformationen.</div><div class="ttdef"><b>Definition:</b> transformation.hpp:9</div></div>
+<div class="ttc" id="ainputregistry_8hpp_html"><div class="ttname"><a href="inputregistry_8hpp.html">inputregistry.hpp</a></div></div>
+<div class="ttc" id="amovecontroller_8hpp_html"><div class="ttname"><a href="movecontroller_8hpp.html">movecontroller.hpp</a></div></div>
+<div class="ttc" id="atransformation_8hpp_html"><div class="ttname"><a href="transformation_8hpp.html">transformation.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_cda996fc916ed27d80e8cee84a8ca5c5.html">SORS</a></li><li class="navelem"><a class="el" href="dir_196a93b07937a74a595d5939044d08d2.html">transformation</a></li><li class="navelem"><a class="el" href="keyboardtransformationcontroller_8hpp.html">keyboardtransformationcontroller.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

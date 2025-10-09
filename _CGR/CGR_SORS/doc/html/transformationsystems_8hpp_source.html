@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: SORS/transformation/transformationsystems.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('transformationsystems_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">transformationsystems.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="transformationsystems_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef TRANSFORMATIONSYSTEMS_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define TRANSFORMATIONSYSTEMS_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QMatrix4x4&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="relationship_8hpp.html">relationship.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="system_8hpp.html">system.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_transformation_hierarchy_visitor.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_transformation_hierarchy_visitor.html">TransformationHierarchyVisitor</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_relationship_visitor.html">RelationshipVisitor</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_transformation_hierarchy_visitor.html#a4484eca45871ebc8e97b62766a3645ab">   12</a></span>    <a class="code hl_function" href="class_transformation_hierarchy_visitor.html#a4484eca45871ebc8e97b62766a3645ab">TransformationHierarchyVisitor</a>(): <a class="code hl_variable" href="class_transformation_hierarchy_visitor.html#af4c10adba07f1ea305ae5cd3a8e8bd90">mMatrix</a>() {}</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_transformation_hierarchy_visitor.html#a53b4e189ccdf2da8cab5b5846595e42e">beforeTraverseChilds</a>(entt::entity pEnt) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_transformation_hierarchy_visitor.html#a2b9bff3d4022577aca1984e091919a6c">afterTraverseChilds</a>(entt::entity pEnt) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_transformation_hierarchy_visitor.html#accfca0f274886ec2560db115d8bb9eaf">   15</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_transformation_hierarchy_visitor.html#accfca0f274886ec2560db115d8bb9eaf">resetMatrix</a>() {<a class="code hl_variable" href="class_transformation_hierarchy_visitor.html#af4c10adba07f1ea305ae5cd3a8e8bd90">mMatrix</a>.setToIdentity();}</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_transformation_hierarchy_visitor.html#af4c10adba07f1ea305ae5cd3a8e8bd90">   18</a></span>    QMatrix4x4 <a class="code hl_variable" href="class_transformation_hierarchy_visitor.html#af4c10adba07f1ea305ae5cd3a8e8bd90">mMatrix</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_transformation_systems.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="class_transformation_systems.html">TransformationSystems</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_system.html">System</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_function" href="class_transformation_systems.html#ac660baffd82d50e0d57f2a98adde2c3b">TransformationSystems</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_transformation_systems.html#ae39200d8e7c4dbbefcc7202ac464c3fe">visitHierarchy</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_transformation_systems.html#abb774d0d6e811dff1b31ce9cba46a160">preRender</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif </span><span class="comment">// TRANSFORMATIONSYSTEMS_HPP</span></div>
+<div class="ttc" id="aclass_relationship_visitor_html"><div class="ttname"><a href="class_relationship_visitor.html">RelationshipVisitor</a></div><div class="ttdoc">Basisklasse der Visitors, in etwa dem entsprechenden Visitor-Pattern folgend.</div><div class="ttdef"><b>Definition:</b> relationship.hpp:9</div></div>
+<div class="ttc" id="aclass_system_html"><div class="ttname"><a href="class_system.html">System</a></div><div class="ttdoc">Von dieser Klasse leiten alle systems ab, die Klasse GameSystem sorgt dafür, dass die Methoden der &quot;s...</div><div class="ttdef"><b>Definition:</b> system.hpp:9</div></div>
+<div class="ttc" id="aclass_transformation_hierarchy_visitor_html"><div class="ttname"><a href="class_transformation_hierarchy_visitor.html">TransformationHierarchyVisitor</a></div><div class="ttdoc">Visitor-Klasse, die die Hierarchien von Relationship durchläuft, um zusammengesetzte Transformationen...</div><div class="ttdef"><b>Definition:</b> transformationsystems.hpp:10</div></div>
+<div class="ttc" id="aclass_transformation_hierarchy_visitor_html_a2b9bff3d4022577aca1984e091919a6c"><div class="ttname"><a href="class_transformation_hierarchy_visitor.html#a2b9bff3d4022577aca1984e091919a6c">TransformationHierarchyVisitor::afterTraverseChilds</a></div><div class="ttdeci">virtual void afterTraverseChilds(entt::entity pEnt) override</div><div class="ttdoc">Wird aufgerufen nachdem die Childs traversiert wurden.</div><div class="ttdef"><b>Definition:</b> transformationsystems.cpp:36</div></div>
+<div class="ttc" id="aclass_transformation_hierarchy_visitor_html_a4484eca45871ebc8e97b62766a3645ab"><div class="ttname"><a href="class_transformation_hierarchy_visitor.html#a4484eca45871ebc8e97b62766a3645ab">TransformationHierarchyVisitor::TransformationHierarchyVisitor</a></div><div class="ttdeci">TransformationHierarchyVisitor()</div><div class="ttdef"><b>Definition:</b> transformationsystems.hpp:12</div></div>
+<div class="ttc" id="aclass_transformation_hierarchy_visitor_html_a53b4e189ccdf2da8cab5b5846595e42e"><div class="ttname"><a href="class_transformation_hierarchy_visitor.html#a53b4e189ccdf2da8cab5b5846595e42e">TransformationHierarchyVisitor::beforeTraverseChilds</a></div><div class="ttdeci">virtual void beforeTraverseChilds(entt::entity pEnt) override</div><div class="ttdoc">Wird aufgerufen wenn das Entity traversiert wird, bevor die kinder des Entities traversiert werden.</div><div class="ttdef"><b>Definition:</b> transformationsystems.cpp:27</div></div>
+<div class="ttc" id="aclass_transformation_hierarchy_visitor_html_accfca0f274886ec2560db115d8bb9eaf"><div class="ttname"><a href="class_transformation_hierarchy_visitor.html#accfca0f274886ec2560db115d8bb9eaf">TransformationHierarchyVisitor::resetMatrix</a></div><div class="ttdeci">virtual void resetMatrix()</div><div class="ttdef"><b>Definition:</b> transformationsystems.hpp:15</div></div>
+<div class="ttc" id="aclass_transformation_hierarchy_visitor_html_af4c10adba07f1ea305ae5cd3a8e8bd90"><div class="ttname"><a href="class_transformation_hierarchy_visitor.html#af4c10adba07f1ea305ae5cd3a8e8bd90">TransformationHierarchyVisitor::mMatrix</a></div><div class="ttdeci">QMatrix4x4 mMatrix</div><div class="ttdoc">Enthält jeweils die Matrix, die aus der übergeordneteten Hierarchie &quot;mitkommt&quot;.</div><div class="ttdef"><b>Definition:</b> transformationsystems.hpp:18</div></div>
+<div class="ttc" id="aclass_transformation_systems_html"><div class="ttname"><a href="class_transformation_systems.html">TransformationSystems</a></div><div class="ttdoc">Systemklasse des Moduls transformation. Kümmert sich v.a. um das Berechnen von zusammengesetzten Tran...</div><div class="ttdef"><b>Definition:</b> transformationsystems.hpp:24</div></div>
+<div class="ttc" id="aclass_transformation_systems_html_abb774d0d6e811dff1b31ce9cba46a160"><div class="ttname"><a href="class_transformation_systems.html#abb774d0d6e811dff1b31ce9cba46a160">TransformationSystems::preRender</a></div><div class="ttdeci">static void preRender()</div><div class="ttdef"><b>Definition:</b> transformationsystems.cpp:10</div></div>
+<div class="ttc" id="aclass_transformation_systems_html_ac660baffd82d50e0d57f2a98adde2c3b"><div class="ttname"><a href="class_transformation_systems.html#ac660baffd82d50e0d57f2a98adde2c3b">TransformationSystems::TransformationSystems</a></div><div class="ttdeci">TransformationSystems()</div><div class="ttdef"><b>Definition:</b> transformationsystems.cpp:8</div></div>
+<div class="ttc" id="aclass_transformation_systems_html_ae39200d8e7c4dbbefcc7202ac464c3fe"><div class="ttname"><a href="class_transformation_systems.html#ae39200d8e7c4dbbefcc7202ac464c3fe">TransformationSystems::visitHierarchy</a></div><div class="ttdeci">static void visitHierarchy()</div><div class="ttdef"><b>Definition:</b> transformationsystems.cpp:14</div></div>
+<div class="ttc" id="arelationship_8hpp_html"><div class="ttname"><a href="relationship_8hpp.html">relationship.hpp</a></div></div>
+<div class="ttc" id="asystem_8hpp_html"><div class="ttname"><a href="system_8hpp.html">system.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_cda996fc916ed27d80e8cee84a8ca5c5.html">SORS</a></li><li class="navelem"><a class="el" href="dir_196a93b07937a74a595d5939044d08d2.html">transformation</a></li><li class="navelem"><a class="el" href="transformationsystems_8hpp.html">transformationsystems.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

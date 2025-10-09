@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: SORS/shader.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('shader_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">shader.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="shader_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SHADER_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SHADER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QOpenGLShaderProgram&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="opengl_8hpp.html">opengl.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_shader.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_shader.html">Shader</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_function" href="class_shader.html#a0d654ebaca4e0555197c0724c6d30610">Shader</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_shader.html#aff01df87e8a102f270b5b135a295e59d">~Shader</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shader.html#a537720c8635f679c74d843d02c2dc98d">enableShader</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shader.html#a7eaa9884532f40b2269ddeea6a1e8227">setShaderUniforms</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_shader.html#a858693041864f93142536850be5963dd">disableShader</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_shader.html#a49943681a6e2318728c73522765c4ccc">   22</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="class_shader.html#a49943681a6e2318728c73522765c4ccc">shaderProgram</a>() {<span class="keywordflow">return</span> <a class="code hl_variable" href="class_shader.html#ac0465b12abc0ad41f0ebaa72a57028e1">mShaderProgram</a>;}</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_shader.html#a7beeb5343cc3d0ac93ec4304edff0ebd">listActiveUniforms</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_shader.html#a1e1d0b0108be82805969db0bb1d9a664">   25</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shader.html#a1e1d0b0108be82805969db0bb1d9a664">isValid</a>() {<span class="keywordflow">return</span> <a class="code hl_variable" href="class_shader.html#a8d438d6c222986f263f4a5ebefe4fd65">mCompLinkOK</a>;}</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    QString <a class="code hl_function" href="class_shader.html#a2c7bc9e34bf29a18aacca547b60df341">getKey</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_shader.html#a5c6c071dfb12649093c1cad0c6b005da">setKey</a>(<span class="keyword">const</span> QString &amp;pKey);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_shader.html#a59d907be04f933e9c3c64c0d390fe638">   33</a></span>    QString <a class="code hl_variable" href="class_shader.html#a59d907be04f933e9c3c64c0d390fe638">mKey</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_shader.html#ac0465b12abc0ad41f0ebaa72a57028e1">   34</a></span>    std::shared_ptr&lt;QOpenGLShaderProgram&gt; <a class="code hl_variable" href="class_shader.html#ac0465b12abc0ad41f0ebaa72a57028e1">mShaderProgram</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_shader.html#a8d920bc97a04332d02fd797107fe7bd3">compileLinkShader</a>(<span class="keyword">const</span> QList&lt;QString&gt; pShaderFilePaths);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_shader.html#a8d438d6c222986f263f4a5ebefe4fd65">   37</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_shader.html#a8d438d6c222986f263f4a5ebefe4fd65">mCompLinkOK</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">auto</span> <a class="code hl_function" href="class_shader.html#a6051478d4efe9999bd4dd751bfcca68a">loadShaderFile</a>(QString pPath);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> initialize();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> initialize(<span class="keyword">const</span> QVector&lt;QString&gt; pShaderFilePaths);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">static</span> QString sStringToPrepend;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_shader.html#ab6133bdad6d5735bb88b3263b9e4b513">   45</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_shader_manager.html">ShaderManager</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">// SHADER_H</span></div>
+<div class="ttc" id="aclass_shader_html"><div class="ttname"><a href="class_shader.html">Shader</a></div><div class="ttdoc">Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...</div><div class="ttdef"><b>Definition:</b> shader.hpp:11</div></div>
+<div class="ttc" id="aclass_shader_html_a0d654ebaca4e0555197c0724c6d30610"><div class="ttname"><a href="class_shader.html#a0d654ebaca4e0555197c0724c6d30610">Shader::Shader</a></div><div class="ttdeci">Shader()</div><div class="ttdef"><b>Definition:</b> shader.cpp:9</div></div>
+<div class="ttc" id="aclass_shader_html_a1e1d0b0108be82805969db0bb1d9a664"><div class="ttname"><a href="class_shader.html#a1e1d0b0108be82805969db0bb1d9a664">Shader::isValid</a></div><div class="ttdeci">bool isValid()</div><div class="ttdef"><b>Definition:</b> shader.hpp:25</div></div>
+<div class="ttc" id="aclass_shader_html_a2c7bc9e34bf29a18aacca547b60df341"><div class="ttname"><a href="class_shader.html#a2c7bc9e34bf29a18aacca547b60df341">Shader::getKey</a></div><div class="ttdeci">QString getKey() const</div><div class="ttdef"><b>Definition:</b> shader.cpp:127</div></div>
+<div class="ttc" id="aclass_shader_html_a49943681a6e2318728c73522765c4ccc"><div class="ttname"><a href="class_shader.html#a49943681a6e2318728c73522765c4ccc">Shader::shaderProgram</a></div><div class="ttdeci">auto shaderProgram()</div><div class="ttdef"><b>Definition:</b> shader.hpp:22</div></div>
+<div class="ttc" id="aclass_shader_html_a537720c8635f679c74d843d02c2dc98d"><div class="ttname"><a href="class_shader.html#a537720c8635f679c74d843d02c2dc98d">Shader::enableShader</a></div><div class="ttdeci">virtual void enableShader()</div><div class="ttdoc">Aktivieren dieses Shaderprogramms.</div><div class="ttdef"><b>Definition:</b> shader.cpp:86</div></div>
+<div class="ttc" id="aclass_shader_html_a59d907be04f933e9c3c64c0d390fe638"><div class="ttname"><a href="class_shader.html#a59d907be04f933e9c3c64c0d390fe638">Shader::mKey</a></div><div class="ttdeci">QString mKey</div><div class="ttdoc">Wird an verschiedenen Stellen benutzt, um einen Shader zu identifizieren Wird vom ShaderManager verge...</div><div class="ttdef"><b>Definition:</b> shader.hpp:33</div></div>
+<div class="ttc" id="aclass_shader_html_a5c6c071dfb12649093c1cad0c6b005da"><div class="ttname"><a href="class_shader.html#a5c6c071dfb12649093c1cad0c6b005da">Shader::setKey</a></div><div class="ttdeci">void setKey(const QString &amp;pKey)</div><div class="ttdef"><b>Definition:</b> shader.cpp:132</div></div>
+<div class="ttc" id="aclass_shader_html_a6051478d4efe9999bd4dd751bfcca68a"><div class="ttname"><a href="class_shader.html#a6051478d4efe9999bd4dd751bfcca68a">Shader::loadShaderFile</a></div><div class="ttdeci">auto loadShaderFile(QString pPath)</div><div class="ttdef"><b>Definition:</b> shader.cpp:13</div></div>
+<div class="ttc" id="aclass_shader_html_a7beeb5343cc3d0ac93ec4304edff0ebd"><div class="ttname"><a href="class_shader.html#a7beeb5343cc3d0ac93ec4304edff0ebd">Shader::listActiveUniforms</a></div><div class="ttdeci">void listActiveUniforms()</div><div class="ttdef"><b>Definition:</b> shader.cpp:110</div></div>
+<div class="ttc" id="aclass_shader_html_a7eaa9884532f40b2269ddeea6a1e8227"><div class="ttname"><a href="class_shader.html#a7eaa9884532f40b2269ddeea6a1e8227">Shader::setShaderUniforms</a></div><div class="ttdeci">virtual void setShaderUniforms()</div><div class="ttdoc">Setzen der Uniforms des Shaders, muss gerufen werden, wenn dieses Shaderprogramm aktiv ist.</div><div class="ttdef"><b>Definition:</b> shader.cpp:100</div></div>
+<div class="ttc" id="aclass_shader_html_a858693041864f93142536850be5963dd"><div class="ttname"><a href="class_shader.html#a858693041864f93142536850be5963dd">Shader::disableShader</a></div><div class="ttdeci">void disableShader()</div><div class="ttdoc">Deaktivieren dieses Shaderprogramms.</div><div class="ttdef"><b>Definition:</b> shader.cpp:105</div></div>
+<div class="ttc" id="aclass_shader_html_a8d438d6c222986f263f4a5ebefe4fd65"><div class="ttname"><a href="class_shader.html#a8d438d6c222986f263f4a5ebefe4fd65">Shader::mCompLinkOK</a></div><div class="ttdeci">bool mCompLinkOK</div><div class="ttdef"><b>Definition:</b> shader.hpp:37</div></div>
+<div class="ttc" id="aclass_shader_html_a8d920bc97a04332d02fd797107fe7bd3"><div class="ttname"><a href="class_shader.html#a8d920bc97a04332d02fd797107fe7bd3">Shader::compileLinkShader</a></div><div class="ttdeci">void compileLinkShader(const QList&lt; QString &gt; pShaderFilePaths)</div><div class="ttdef"><b>Definition:</b> shader.cpp:43</div></div>
+<div class="ttc" id="aclass_shader_html_ac0465b12abc0ad41f0ebaa72a57028e1"><div class="ttname"><a href="class_shader.html#ac0465b12abc0ad41f0ebaa72a57028e1">Shader::mShaderProgram</a></div><div class="ttdeci">std::shared_ptr&lt; QOpenGLShaderProgram &gt; mShaderProgram</div><div class="ttdef"><b>Definition:</b> shader.hpp:34</div></div>
+<div class="ttc" id="aclass_shader_html_aff01df87e8a102f270b5b135a295e59d"><div class="ttname"><a href="class_shader.html#aff01df87e8a102f270b5b135a295e59d">Shader::~Shader</a></div><div class="ttdeci">virtual ~Shader()</div><div class="ttdef"><b>Definition:</b> shader.cpp:11</div></div>
+<div class="ttc" id="aclass_shader_manager_html"><div class="ttname"><a href="class_shader_manager.html">ShaderManager</a></div><div class="ttdoc">Die ShaderManager Klasse erzeugt und verwaltet Shader. Sie sorgt dafür, dass nur eine Instanz eines S...</div><div class="ttdef"><b>Definition:</b> shadermanager.hpp:25</div></div>
+<div class="ttc" id="aopengl_8hpp_html"><div class="ttname"><a href="opengl_8hpp.html">opengl.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_cda996fc916ed27d80e8cee84a8ca5c5.html">SORS</a></li><li class="navelem"><a class="el" href="shader_8hpp.html">shader.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

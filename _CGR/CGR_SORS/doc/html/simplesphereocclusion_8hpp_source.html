@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: ARTR_Uebungen/Uebung02OcclusionCR/simplesphereocclusion.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('simplesphereocclusion_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">simplesphereocclusion.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="simplesphereocclusion_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SIMPLESPHEREOCCLUSION_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SIMPLESPHEREOCCLUSION_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="simplesphere_8hpp.html">geometry/simplesphere.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="simplecube_8hpp.html">geometry/simplecube.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="geometrybase_8hpp.html">geometry/geometrybase.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="shadermanager_8hpp.html">shadermanager.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="inputregistry_8hpp.html">input/inputregistry.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="manager_8hpp.html">manager.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//Cube definieren, der CR und OC &quot;kann&quot;, d.h. an SimpleSphere zurückgibt, ob er als Hüllobjekt sichtbar ist</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_simple_cube_c_r___o_c.html">SimpleCubeCR_OC</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_simple_cube.html">SimpleCube</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#a71fd7760acaa884b1228b51334162bf4">   15</a></span>    <a class="code hl_function" href="class_simple_cube_c_r___o_c.html#a71fd7760acaa884b1228b51334162bf4">SimpleCubeCR_OC</a>(GLfloat pSize): <a class="code hl_class" href="class_simple_cube.html">SimpleCube</a>(pSize) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glGenQueries(1, &amp;<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a1f3cc94f437b801d9c76a16a78e840fe">mQuery</a>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glGenQueries(1, &amp;<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a2c4491075aa0bd2c643f8f08ec8ae546">mQueryCR</a>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#ae06816144d7f12b51b2e8fe46e090e32">mSamplesPassed</a> = GL_TRUE;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a91b16566f96dbdd20f80f61765706c72">mQueryReady</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a2338f08e4f64db6c47bd71201565b6f4">mDelayed</a> = 0;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#a6e8ada893459bee60530a7f1b5e36ebc">   23</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_simple_cube_c_r___o_c.html#a6e8ada893459bee60530a7f1b5e36ebc">render</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a0074f1c381239f52f534339d0f640a59">mWithQuery</a>) <span class="comment">//Hüllobjekt nur auswerten, wenn Queries aktiv</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#afbb1fd586fda6cdbe6732b6d90487369">mConditional</a>) <span class="comment">//Abfrage mit Queries ohne Conditional Rendering</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a2338f08e4f64db6c47bd71201565b6f4">mDelayed</a> == 0) <span class="comment">//neue Query auswerten</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                    <span class="comment">/*Begin Query*/</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                    <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glDepthMask(GL_FALSE);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                    <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glColorMask(GL_FALSE, GL_FALSE, GL_FALSE, GL_FALSE);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                    <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glBeginQuery(GL_ANY_SAMPLES_PASSED, <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a1f3cc94f437b801d9c76a16a78e840fe">mQuery</a>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                    <a class="code hl_function" href="class_simple_cube.html#a41ce09805436e42f7cc2c1313b930ef9">SimpleCube::render</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                    <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glEndQuery(GL_ANY_SAMPLES_PASSED);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glColorMask(GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                    <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glDepthMask(GL_TRUE);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    <span class="comment">/*End Query*/</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                    <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#ae06816144d7f12b51b2e8fe46e090e32">mSamplesPassed</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                <span class="comment">//status abfragen, non-blocking, wenn das Ergebnis nicht da ist, wird nichts in mSamplesPassed geschrieben</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glGetQueryObjectuiv(<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a1f3cc94f437b801d9c76a16a78e840fe">mQuery</a>, GL_QUERY_RESULT_NO_WAIT, &amp;<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#ae06816144d7f12b51b2e8fe46e090e32">mSamplesPassed</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <span class="keywordflow">if</span> (++<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a2338f08e4f64db6c47bd71201565b6f4">mDelayed</a> &gt; <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#ab0600a0010e01209ac4cb96495adf421">cNrOfDelayFrames</a>) <span class="comment">//Wenn genug Frames vorbei sind -&gt; neue Query starten</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                    <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a2338f08e4f64db6c47bd71201565b6f4">mDelayed</a> = 0;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">else</span> <span class="comment">//Rendern mit Query und Conditional Rendering</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glDepthMask(GL_FALSE);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glColorMask(GL_FALSE, GL_FALSE, GL_FALSE, GL_FALSE);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="comment">//Test, ob beim Rendern der Bounding Box Fragments den z-Test bestehen</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                <span class="comment">//Auswertung dann beim Rendern des eigentlichen Objekts (s.u.)</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glBeginQuery(GL_ANY_SAMPLES_PASSED, <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a2c4491075aa0bd2c643f8f08ec8ae546">mQueryCR</a>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <a class="code hl_function" href="class_simple_cube.html#a41ce09805436e42f7cc2c1313b930ef9">SimpleCube::render</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glEndQuery(GL_ANY_SAMPLES_PASSED);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#a47b88a68baff10b2bc017b4593025d7a">   65</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_simple_cube_c_r___o_c.html#a47b88a68baff10b2bc017b4593025d7a">~SimpleCubeCR_OC</a>() {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a1f3cc94f437b801d9c76a16a78e840fe">mQuery</a>)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glDeleteQueries(1, &amp;<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a1f3cc94f437b801d9c76a16a78e840fe">mQuery</a>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a2c4491075aa0bd2c643f8f08ec8ae546">mQueryCR</a>)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glDeleteQueries(1, &amp;<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a2c4491075aa0bd2c643f8f08ec8ae546">mQueryCR</a>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">//Getter/Setter für eigentliches Objekt</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">//Entweder sind Samples des Hüllobjekts sichtbar oder wir machen gar keine Queries</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#af88cacfa6b5afc1a01e1afeaec3dabe0">   74</a></span>    <span class="keyword">inline</span> GLuint <a class="code hl_function" href="class_simple_cube_c_r___o_c.html#af88cacfa6b5afc1a01e1afeaec3dabe0">shouldRender</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> ( (<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#ae06816144d7f12b51b2e8fe46e090e32">mSamplesPassed</a> == GL_TRUE) || !<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a0074f1c381239f52f534339d0f640a59">mWithQuery</a>);}</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#a1d5b96498c5f03ef57fbad5f7baf6d59">   75</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_simple_cube_c_r___o_c.html#a1d5b96498c5f03ef57fbad5f7baf6d59">setConditional</a>(<span class="keywordtype">bool</span> pConditional) {<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#afbb1fd586fda6cdbe6732b6d90487369">mConditional</a> = pConditional;}</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#a5ef761d84a2888736b2e22e68b55d002">   76</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_simple_cube_c_r___o_c.html#a5ef761d84a2888736b2e22e68b55d002">getConditional</a>() {<span class="keywordflow">return</span>(<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#afbb1fd586fda6cdbe6732b6d90487369">mConditional</a>);}</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#ac13f6e40e4fa1e75af7dd0ff3b6313ca">   77</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_simple_cube_c_r___o_c.html#ac13f6e40e4fa1e75af7dd0ff3b6313ca">setDoQuery</a>(<span class="keywordtype">bool</span> pDoQuery) {<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a0074f1c381239f52f534339d0f640a59">mWithQuery</a> = pDoQuery;}</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#ae18273a86cc7a43f1dfb6d49819f6b52">   78</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_simple_cube_c_r___o_c.html#ae18273a86cc7a43f1dfb6d49819f6b52">getDoQuery</a>() {<span class="keywordflow">return</span>(<a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a0074f1c381239f52f534339d0f640a59">mWithQuery</a>);}</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#a6a5502a6c6267a4aad7e1e49b9211241">   79</a></span>    <span class="keyword">inline</span> GLuint <a class="code hl_function" href="class_simple_cube_c_r___o_c.html#a6a5502a6c6267a4aad7e1e49b9211241">getQueryCR</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a2c4491075aa0bd2c643f8f08ec8ae546">mQueryCR</a>;}</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#ae06816144d7f12b51b2e8fe46e090e32">   83</a></span>    GLuint <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#ae06816144d7f12b51b2e8fe46e090e32">mSamplesPassed</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#a1f3cc94f437b801d9c76a16a78e840fe">   84</a></span>    GLuint <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a1f3cc94f437b801d9c76a16a78e840fe">mQuery</a>, <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a2c4491075aa0bd2c643f8f08ec8ae546">mQueryCR</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#afbb1fd586fda6cdbe6732b6d90487369">   85</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#afbb1fd586fda6cdbe6732b6d90487369">mConditional</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#a0074f1c381239f52f534339d0f640a59">   86</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a0074f1c381239f52f534339d0f640a59">mWithQuery</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#ab0600a0010e01209ac4cb96495adf421">   87</a></span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#ab0600a0010e01209ac4cb96495adf421">cNrOfDelayFrames</a> = 10;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#a2338f08e4f64db6c47bd71201565b6f4">   88</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a2338f08e4f64db6c47bd71201565b6f4">mDelayed</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#a527b75c40bb886ed153958d38d1ddad2">   89</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a527b75c40bb886ed153958d38d1ddad2">mNewQueryStarted</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_simple_cube_c_r___o_c.html#a91b16566f96dbdd20f80f61765706c72">   90</a></span>    GLuint <a class="code hl_variable" href="class_simple_cube_c_r___o_c.html#a91b16566f96dbdd20f80f61765706c72">mQueryReady</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_simple_sphere_occlusion.html">   93</a></span><span class="keyword">class </span><a class="code hl_class" href="class_simple_sphere_occlusion.html">SimpleSphereOcclusion</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_simple_sphere.html">SimpleSphere</a> {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_simple_sphere_occlusion.html#af5e31dbe366fe3b6e338850c6bdc3a74">   97</a></span>    <a class="code hl_function" href="class_simple_sphere_occlusion.html#af5e31dbe366fe3b6e338850c6bdc3a74">SimpleSphereOcclusion</a>(<span class="keywordtype">float</span> pSize = 1.0, <span class="keywordtype">int</span> pSubdivisionHorizontal = 25, <span class="keywordtype">int</span> pSubdivisionVertical = 25):</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_class" href="class_simple_sphere.html">SimpleSphere</a>(pSize, pSubdivisionHorizontal, pSubdivisionVertical)   {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        qDebug() &lt;&lt; <span class="stringliteral">&quot;Toggle conditional rendering by pressing c/C.&quot;</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        qDebug() &lt;&lt; <span class="stringliteral">&quot;Toggle use of queries (manual or CR) by pressing n/N.&quot;</span>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_variable" href="class_simple_sphere_occlusion.html#a2e0e04d35fae979d288dc83c8aa648b2">mBoundingBox</a> = Manager::addRenderable&lt;GeometryBase, SimpleCubeCR_OC&gt;(<a class="code hl_class" href="class_simple_cube_c_r___o_c.html">SimpleCubeCR_OC</a>(pSize), <a class="code hl_function" href="class_shader_manager.html#a879a6f85cdf57d91939144714e62b3d9">ShaderManager::getDefaultShader</a>());</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_simple_sphere_occlusion.html#a81173cfa65274f8c636b6d581b00dde9">  104</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_simple_sphere_occlusion.html#a81173cfa65274f8c636b6d581b00dde9">render</a>()<span class="keyword"> override</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keyword">auto</span> lBoundingCube = static_pointer_cast&lt;SimpleCubeCR_OC&gt;(<a class="code hl_function" href="class_geometry_base.html#a1abac12803f60a8e1802301278bca8dd">GeometryBase::getGeometry</a>(<a class="code hl_variable" href="class_simple_sphere_occlusion.html#a2e0e04d35fae979d288dc83c8aa648b2">mBoundingBox</a>)-&gt;getImplementation());</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <a class="code hl_function" href="class_simple_sphere_occlusion.html#a8916b55bdc6f0c5e3b5f61f953221c89">keyboard</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">if</span> (lBoundingCube-&gt;shouldRender() )</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glDrawElements(GL_TRIANGLES, <a class="code hl_variable" href="class_i_geometry_indexed_implementation.html#a8fe8712a17bbe6f5bd9ef1182d2bb02b">mNrOfIndices</a>, GL_UNSIGNED_INT, 0);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">else</span>  <span class="keywordflow">if</span> (lBoundingCube-&gt;getConditional()) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="comment">//Wenn Fragments sichtbar sind, eigentliches Objekt rendern</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="comment">//Die Verwendung von GL_QUERY_NO_WAIT führt - je nach GPU - dazu, dass</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="comment">//kein Performance-Gewinne erreicht werden kann (weil die Query nicht schnell genug fertig wird)</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glBeginConditionalRender(lBoundingCube-&gt;getQueryCR(), GL_QUERY_BY_REGION_NO_WAIT);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glColorMask(GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glDepthMask(GL_TRUE);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glDrawElements(GL_TRIANGLES, <a class="code hl_variable" href="class_i_geometry_indexed_implementation.html#a8fe8712a17bbe6f5bd9ef1182d2bb02b">mNrOfIndices</a>, GL_UNSIGNED_INT, 0);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glEndConditionalRender();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="comment">//Einfache Abfrage von Tastaturevents, wird in der render()-Methode explizit gerufen</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_simple_sphere_occlusion.html#a8916b55bdc6f0c5e3b5f61f953221c89">  124</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_simple_sphere_occlusion.html#a8916b55bdc6f0c5e3b5f61f953221c89">keyboard</a>() {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keyword">auto</span> keyIn = <a class="code hl_function" href="class_input_registry.html#a2947541085e41a21aa2e67f38cb13f1e">InputRegistry::getInstance</a>().<a class="code hl_function" href="class_input_registry.html#ac26e612e7dc7159189c1cfb57c74e09b">getKeyboardInput</a>();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <a class="code hl_variable" href="class_i_geometry_implementation.html#abd49a4900d45b6e9dc8cbbc7a634d29a">mNeedsInit</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keyword">auto</span> lBoundingCube = static_pointer_cast&lt;SimpleCubeCR_OC&gt;(<a class="code hl_function" href="class_geometry_base.html#a1abac12803f60a8e1802301278bca8dd">GeometryBase::getGeometry</a>(<a class="code hl_variable" href="class_simple_sphere_occlusion.html#a2e0e04d35fae979d288dc83c8aa648b2">mBoundingBox</a>)-&gt;getImplementation());</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordflow">if</span> (keyIn-&gt;isKeyPressed(<span class="charliteral">&#39;c&#39;</span>)) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            lBoundingCube-&gt;setConditional(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            qDebug() &lt;&lt; <span class="stringliteral">&quot;Rendering is now without CR.&quot;</span>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">if</span> (keyIn-&gt;isKeyPressed(<span class="charliteral">&#39;C&#39;</span>)) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            lBoundingCube-&gt;setConditional(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            lBoundingCube-&gt;setDoQuery(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            qDebug() &lt;&lt; <span class="stringliteral">&quot;Rendering is now with Queries&amp;CR.&quot;</span>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">if</span> (keyIn-&gt;isKeyPressed(<span class="charliteral">&#39;n&#39;</span>)) {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            lBoundingCube-&gt;setDoQuery(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            qDebug() &lt;&lt; <span class="stringliteral">&quot;Rendering is now without Queries.&quot;</span>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">if</span> (keyIn-&gt;isKeyPressed(<span class="charliteral">&#39;N&#39;</span>)) {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            lBoundingCube-&gt;setDoQuery(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            qDebug() &lt;&lt; <span class="stringliteral">&quot;Rendering is now with Queries.&quot;</span>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_simple_sphere_occlusion.html#ad6e23e3317176addcd61ca2e22f5c847">  149</a></span>    entt::entity <a class="code hl_function" href="class_simple_sphere_occlusion.html#ad6e23e3317176addcd61ca2e22f5c847">getBoundingBox</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="class_simple_sphere_occlusion.html#a2e0e04d35fae979d288dc83c8aa648b2">mBoundingBox</a>;};</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="class_simple_sphere_occlusion.html#a2e0e04d35fae979d288dc83c8aa648b2">  152</a></span>    entt::entity <a class="code hl_variable" href="class_simple_sphere_occlusion.html#a2e0e04d35fae979d288dc83c8aa648b2">mBoundingBox</a>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>};</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="preprocessor">#endif </span><span class="comment">// SIMPLESPHEREOCCLUSION_HPP</span></div>
+<div class="ttc" id="aclass_geometry_base_html_a1abac12803f60a8e1802301278bca8dd"><div class="ttname"><a href="class_geometry_base.html#a1abac12803f60a8e1802301278bca8dd">GeometryBase::getGeometry</a></div><div class="ttdeci">static GeometryBase * getGeometry(entt::entity pEnt)</div><div class="ttdoc">Findet die passende Geometrie (Component von einer der Basisklassen in sRenderableGeometryClasses abg...</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:26</div></div>
+<div class="ttc" id="aclass_i_geometry_implementation_html_abd49a4900d45b6e9dc8cbbc7a634d29a"><div class="ttname"><a href="class_i_geometry_implementation.html#abd49a4900d45b6e9dc8cbbc7a634d29a">IGeometryImplementation::mNeedsInit</a></div><div class="ttdeci">bool mNeedsInit</div><div class="ttdoc">Sagt aus, ob die Geometrie neu initialisiert und die GeometryBase neu befüllt werden muss Nicht ganz ...</div><div class="ttdef"><b>Definition:</b> igeometryimplementation.hpp:41</div></div>
+<div class="ttc" id="aclass_i_geometry_indexed_implementation_html_a8fe8712a17bbe6f5bd9ef1182d2bb02b"><div class="ttname"><a href="class_i_geometry_indexed_implementation.html#a8fe8712a17bbe6f5bd9ef1182d2bb02b">IGeometryIndexedImplementation::mNrOfIndices</a></div><div class="ttdeci">unsigned int mNrOfIndices</div><div class="ttdef"><b>Definition:</b> igeometryindexedimplementation.hpp:21</div></div>
+<div class="ttc" id="aclass_input_registry_html_a2947541085e41a21aa2e67f38cb13f1e"><div class="ttname"><a href="class_input_registry.html#a2947541085e41a21aa2e67f38cb13f1e">InputRegistry::getInstance</a></div><div class="ttdeci">static InputRegistry &amp; getInstance()</div><div class="ttdoc">getInstance Singleton-Abruf, Thread sicher</div><div class="ttdef"><b>Definition:</b> inputregistry.cpp:10</div></div>
+<div class="ttc" id="aclass_input_registry_html_ac26e612e7dc7159189c1cfb57c74e09b"><div class="ttname"><a href="class_input_registry.html#ac26e612e7dc7159189c1cfb57c74e09b">InputRegistry::getKeyboardInput</a></div><div class="ttdeci">std::shared_ptr&lt; KeyboardInput &gt; getKeyboardInput()</div><div class="ttdoc">getKeyboardInput Erstellt eine KeyboardInput-Instanz, falls nicht vorhanden, und gibt diese zurück</div><div class="ttdef"><b>Definition:</b> inputregistry.cpp:16</div></div>
+<div class="ttc" id="aclass_shader_manager_html_a879a6f85cdf57d91939144714e62b3d9"><div class="ttname"><a href="class_shader_manager.html#a879a6f85cdf57d91939144714e62b3d9">ShaderManager::getDefaultShader</a></div><div class="ttdeci">static std::shared_ptr&lt; Shader &gt; getDefaultShader()</div><div class="ttdef"><b>Definition:</b> shadermanager.cpp:17</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html">SimpleCubeCR_OC</a></div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:12</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_a0074f1c381239f52f534339d0f640a59"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#a0074f1c381239f52f534339d0f640a59">SimpleCubeCR_OC::mWithQuery</a></div><div class="ttdeci">bool mWithQuery</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:86</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_a1d5b96498c5f03ef57fbad5f7baf6d59"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#a1d5b96498c5f03ef57fbad5f7baf6d59">SimpleCubeCR_OC::setConditional</a></div><div class="ttdeci">void setConditional(bool pConditional)</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:75</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_a1f3cc94f437b801d9c76a16a78e840fe"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#a1f3cc94f437b801d9c76a16a78e840fe">SimpleCubeCR_OC::mQuery</a></div><div class="ttdeci">GLuint mQuery</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:84</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_a2338f08e4f64db6c47bd71201565b6f4"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#a2338f08e4f64db6c47bd71201565b6f4">SimpleCubeCR_OC::mDelayed</a></div><div class="ttdeci">unsigned int mDelayed</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:88</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_a2c4491075aa0bd2c643f8f08ec8ae546"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#a2c4491075aa0bd2c643f8f08ec8ae546">SimpleCubeCR_OC::mQueryCR</a></div><div class="ttdeci">GLuint mQueryCR</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:84</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_a47b88a68baff10b2bc017b4593025d7a"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#a47b88a68baff10b2bc017b4593025d7a">SimpleCubeCR_OC::~SimpleCubeCR_OC</a></div><div class="ttdeci">virtual ~SimpleCubeCR_OC()</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:65</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_a527b75c40bb886ed153958d38d1ddad2"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#a527b75c40bb886ed153958d38d1ddad2">SimpleCubeCR_OC::mNewQueryStarted</a></div><div class="ttdeci">bool mNewQueryStarted</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:89</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_a5ef761d84a2888736b2e22e68b55d002"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#a5ef761d84a2888736b2e22e68b55d002">SimpleCubeCR_OC::getConditional</a></div><div class="ttdeci">bool getConditional()</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:76</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_a6a5502a6c6267a4aad7e1e49b9211241"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#a6a5502a6c6267a4aad7e1e49b9211241">SimpleCubeCR_OC::getQueryCR</a></div><div class="ttdeci">GLuint getQueryCR() const</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:79</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_a6e8ada893459bee60530a7f1b5e36ebc"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#a6e8ada893459bee60530a7f1b5e36ebc">SimpleCubeCR_OC::render</a></div><div class="ttdeci">void render() override</div><div class="ttdoc">Objekt zeichnen.</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:23</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_a71fd7760acaa884b1228b51334162bf4"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#a71fd7760acaa884b1228b51334162bf4">SimpleCubeCR_OC::SimpleCubeCR_OC</a></div><div class="ttdeci">SimpleCubeCR_OC(GLfloat pSize)</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:15</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_a91b16566f96dbdd20f80f61765706c72"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#a91b16566f96dbdd20f80f61765706c72">SimpleCubeCR_OC::mQueryReady</a></div><div class="ttdeci">GLuint mQueryReady</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:90</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_ab0600a0010e01209ac4cb96495adf421"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#ab0600a0010e01209ac4cb96495adf421">SimpleCubeCR_OC::cNrOfDelayFrames</a></div><div class="ttdeci">const unsigned int cNrOfDelayFrames</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:87</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_ac13f6e40e4fa1e75af7dd0ff3b6313ca"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#ac13f6e40e4fa1e75af7dd0ff3b6313ca">SimpleCubeCR_OC::setDoQuery</a></div><div class="ttdeci">void setDoQuery(bool pDoQuery)</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:77</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_ae06816144d7f12b51b2e8fe46e090e32"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#ae06816144d7f12b51b2e8fe46e090e32">SimpleCubeCR_OC::mSamplesPassed</a></div><div class="ttdeci">GLuint mSamplesPassed</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:83</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_ae18273a86cc7a43f1dfb6d49819f6b52"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#ae18273a86cc7a43f1dfb6d49819f6b52">SimpleCubeCR_OC::getDoQuery</a></div><div class="ttdeci">bool getDoQuery()</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:78</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_af88cacfa6b5afc1a01e1afeaec3dabe0"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#af88cacfa6b5afc1a01e1afeaec3dabe0">SimpleCubeCR_OC::shouldRender</a></div><div class="ttdeci">GLuint shouldRender() const</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:74</div></div>
+<div class="ttc" id="aclass_simple_cube_c_r___o_c_html_afbb1fd586fda6cdbe6732b6d90487369"><div class="ttname"><a href="class_simple_cube_c_r___o_c.html#afbb1fd586fda6cdbe6732b6d90487369">SimpleCubeCR_OC::mConditional</a></div><div class="ttdeci">bool mConditional</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:85</div></div>
+<div class="ttc" id="aclass_simple_cube_html"><div class="ttname"><a href="class_simple_cube.html">SimpleCube</a></div><div class="ttdoc">Geometrie eines einfachen Würfels mit Normalen und Texturkoordinaten.</div><div class="ttdef"><b>Definition:</b> simplecube.hpp:9</div></div>
+<div class="ttc" id="aclass_simple_cube_html_a41ce09805436e42f7cc2c1313b930ef9"><div class="ttname"><a href="class_simple_cube.html#a41ce09805436e42f7cc2c1313b930ef9">SimpleCube::render</a></div><div class="ttdeci">virtual void render() override</div><div class="ttdoc">Objekt zeichnen.</div><div class="ttdef"><b>Definition:</b> simplecube.cpp:177</div></div>
+<div class="ttc" id="aclass_simple_sphere_html"><div class="ttname"><a href="class_simple_sphere.html">SimpleSphere</a></div><div class="ttdoc">Einfache Klasse zum Zeichnen einer tesselierten Kugel mit indexed geometry.</div><div class="ttdef"><b>Definition:</b> simplesphere.hpp:8</div></div>
+<div class="ttc" id="aclass_simple_sphere_occlusion_html"><div class="ttname"><a href="class_simple_sphere_occlusion.html">SimpleSphereOcclusion</a></div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:93</div></div>
+<div class="ttc" id="aclass_simple_sphere_occlusion_html_a2e0e04d35fae979d288dc83c8aa648b2"><div class="ttname"><a href="class_simple_sphere_occlusion.html#a2e0e04d35fae979d288dc83c8aa648b2">SimpleSphereOcclusion::mBoundingBox</a></div><div class="ttdeci">entt::entity mBoundingBox</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:152</div></div>
+<div class="ttc" id="aclass_simple_sphere_occlusion_html_a81173cfa65274f8c636b6d581b00dde9"><div class="ttname"><a href="class_simple_sphere_occlusion.html#a81173cfa65274f8c636b6d581b00dde9">SimpleSphereOcclusion::render</a></div><div class="ttdeci">void render() override</div><div class="ttdoc">Objekt zeichnen.</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:104</div></div>
+<div class="ttc" id="aclass_simple_sphere_occlusion_html_a8916b55bdc6f0c5e3b5f61f953221c89"><div class="ttname"><a href="class_simple_sphere_occlusion.html#a8916b55bdc6f0c5e3b5f61f953221c89">SimpleSphereOcclusion::keyboard</a></div><div class="ttdeci">void keyboard()</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:124</div></div>
+<div class="ttc" id="aclass_simple_sphere_occlusion_html_ad6e23e3317176addcd61ca2e22f5c847"><div class="ttname"><a href="class_simple_sphere_occlusion.html#ad6e23e3317176addcd61ca2e22f5c847">SimpleSphereOcclusion::getBoundingBox</a></div><div class="ttdeci">entt::entity getBoundingBox() const</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:149</div></div>
+<div class="ttc" id="aclass_simple_sphere_occlusion_html_af5e31dbe366fe3b6e338850c6bdc3a74"><div class="ttname"><a href="class_simple_sphere_occlusion.html#af5e31dbe366fe3b6e338850c6bdc3a74">SimpleSphereOcclusion::SimpleSphereOcclusion</a></div><div class="ttdeci">SimpleSphereOcclusion(float pSize=1.0, int pSubdivisionHorizontal=25, int pSubdivisionVertical=25)</div><div class="ttdef"><b>Definition:</b> simplesphereocclusion.hpp:97</div></div>
+<div class="ttc" id="ageometrybase_8hpp_html"><div class="ttname"><a href="geometrybase_8hpp.html">geometrybase.hpp</a></div></div>
+<div class="ttc" id="ainputregistry_8hpp_html"><div class="ttname"><a href="inputregistry_8hpp.html">inputregistry.hpp</a></div></div>
+<div class="ttc" id="amanager_8hpp_html"><div class="ttname"><a href="manager_8hpp.html">manager.hpp</a></div></div>
+<div class="ttc" id="aopengl_8hpp_html_aa4b69e25f84fb24882f8889fb7238b03"><div class="ttname"><a href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a></div><div class="ttdeci">QOpenGLFunctions_4_0_Core * glFunctions</div><div class="ttdoc">Aktuell wird OpenGL 4.0 verwendet und somit eine instanz von QOpenGLFunctions_4_0_Core erstellt.</div><div class="ttdef"><b>Definition:</b> openglwidget.cpp:16</div></div>
+<div class="ttc" id="ashadermanager_8hpp_html"><div class="ttname"><a href="shadermanager_8hpp.html">shadermanager.hpp</a></div></div>
+<div class="ttc" id="asimplecube_8hpp_html"><div class="ttname"><a href="simplecube_8hpp.html">simplecube.hpp</a></div></div>
+<div class="ttc" id="asimplesphere_8hpp_html"><div class="ttname"><a href="simplesphere_8hpp.html">simplesphere.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_0994ba94015428f872a1a501c74bbd96.html">ARTR_Uebungen</a></li><li class="navelem"><a class="el" href="dir_f85fcf4b5428162bb0ec66ef04f63f92.html">Uebung02OcclusionCR</a></li><li class="navelem"><a class="el" href="simplesphereocclusion_8hpp.html">simplesphereocclusion.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

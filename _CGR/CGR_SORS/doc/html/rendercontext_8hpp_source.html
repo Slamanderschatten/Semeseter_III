@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: SORS/rendering/rendercontext.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('rendercontext_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">rendercontext.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="rendercontext_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by benne on 23.06.23.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef CGUEBUNGEN_RENDERCONTEXT_HPP</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define CGUEBUNGEN_RENDERCONTEXT_HPP</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="ecs_8hpp.html">ecs.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="camera_8hpp.html">camera/camera.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="shader_8hpp.html">shader.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="shadermanager_8hpp.html">shadermanager.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="mousekeyboardcameracontroller_8hpp.html">camera/mousekeyboardcameracontroller.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="openglwidget_8hpp.html">win_oglbase/openglwidget.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="rendertarget_8hpp.html">rendertarget.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008a7223ae76876829876cda6e550ab3a34f">   17</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008">RenderType</a> { <a class="code hl_enumvalue" href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008aa189fd2441b4641fd22168d017b3ee8d">PrePass</a>, <a class="code hl_enumvalue" href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008a7223ae76876829876cda6e550ab3a34f">MainPass</a>, <a class="code hl_enumvalue" href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008a42acd2f313231fa7ad8ee039925fe5b8">PostPass</a>};</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_render_context_priority.html">   19</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_render_context_priority.html">RenderContextPriority</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_render_context_priority.html#a9930714aac86799a5253a9299c5e3dad">   20</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_render_context_priority.html#a9930714aac86799a5253a9299c5e3dad">mPriority</a>{1};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_render_context.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="class_render_context.html">RenderContext</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_render_context.html#a9cfdeb19b37f590a7a9d5c1972b86259">   29</a></span>    <a class="code hl_function" href="class_render_context.html#a9cfdeb19b37f590a7a9d5c1972b86259">RenderContext</a>(<span class="keyword">const</span> entt::entity pCamera, std::shared_ptr&lt;CameraController&gt; pController, <a class="code hl_enumeration" href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008">RenderType</a> pType = <a class="code hl_enumvalue" href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008a7223ae76876829876cda6e550ab3a34f">MainPass</a>) :</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_variable" href="class_render_context.html#ab2a93c41ab0632b102f82fc77bd44251">mCamera</a>(pCamera), <a class="code hl_variable" href="class_render_context.html#af78f451ddf95ba7c26683a41aaf3e138">mCameraController</a>(pController), <a class="code hl_variable" href="class_render_context.html#abfd906d2362a5e5e8a1f580ad0878cdf">mActiveShader</a>(*<a class="code hl_class" href="class_shader_manager.html">ShaderManager</a>::getDefaultShader()),</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_variable" href="class_render_context.html#afc661f9127ebc88b85f383663bf2918e">mType</a>(pType) {}</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_render_context.html#a74dfd8c4a2227f986616d4eb479be200">   32</a></span>    <a class="code hl_function" href="class_render_context.html#a74dfd8c4a2227f986616d4eb479be200">RenderContext</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_render_context.html#aab76ec9347d2096cb3f1156b1844da17">   33</a></span>    <a class="code hl_class" href="class_camera.html">Camera</a> &amp;<a class="code hl_function" href="class_render_context.html#aab76ec9347d2096cb3f1156b1844da17">getCamera</a>() {<span class="keywordflow">return</span> <a class="code hl_define" href="ecs_8hpp.html#a4b0f3a988b0fc380a8841e8e2c7c0007">ECS</a>.get&lt;<a class="code hl_class" href="class_camera.html">Camera</a>&gt;(<a class="code hl_variable" href="class_render_context.html#ab2a93c41ab0632b102f82fc77bd44251">mCamera</a>);}</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_render_context.html#a4fd519adf7c2d6812e5eb94d75196fe7">   34</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_render_context.html#a4fd519adf7c2d6812e5eb94d75196fe7">setCamera</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_camera.html">Camera</a> &amp;pCamera){ <a class="code hl_define" href="ecs_8hpp.html#a4b0f3a988b0fc380a8841e8e2c7c0007">ECS</a>.emplace_or_replace&lt;<a class="code hl_class" href="class_camera.html">Camera</a>&gt;(<a class="code hl_variable" href="class_render_context.html#ab2a93c41ab0632b102f82fc77bd44251">mCamera</a>, pCamera);}</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_render_context.html#a250ee96a3389b2a098e5894ddc683aab">   35</a></span>    <a class="code hl_class" href="class_shader.html">Shader</a>&amp; <a class="code hl_function" href="class_render_context.html#a250ee96a3389b2a098e5894ddc683aab">getActiveShader</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="class_render_context.html#abfd906d2362a5e5e8a1f580ad0878cdf">mActiveShader</a>;}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_render_context.html#a88b7943af8ce9e6c386ca77d3468d717">   36</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_render_context.html#a88b7943af8ce9e6c386ca77d3468d717">setActiveShader</a>(<a class="code hl_class" href="class_shader.html">Shader</a>&amp; pActiveShader) {<a class="code hl_variable" href="class_render_context.html#abfd906d2362a5e5e8a1f580ad0878cdf">mActiveShader</a> = pActiveShader;}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = MouseKeyboardCameraController&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_render_context.html#a66d2435dca3ff5f60f1f8b4670bfb37a">   39</a></span>    <span class="keyword">static</span> entt::entity <a class="code hl_function" href="class_render_context.html#a66d2435dca3ff5f60f1f8b4670bfb37a">addRenderContext</a>(<a class="code hl_enumeration" href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008">RenderType</a> pType = <a class="code hl_enumvalue" href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008a7223ae76876829876cda6e550ab3a34f">MainPass</a>) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_class" href="class_camera.html">Camera</a> lCam;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_variable" href="class_render_context.html#aace7ea14a6bbf1e95968899117ce94d3">sActiveContextEnt</a> = <a class="code hl_define" href="ecs_8hpp.html#a4b0f3a988b0fc380a8841e8e2c7c0007">ECS</a>.create();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">static_assert</span>(std::is_base_of&lt;CameraController, T&gt;::value, <span class="stringliteral">&quot;Controller must be derived from CameraController&quot;</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">auto</span> lCoCam = std::make_shared&lt;T&gt;(lCam);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_function" href="class_open_g_l_widget.html#a270e20bcca5b6723c4bdc54d7e35c378">OpenGLWidget::getInstance</a>()-&gt;<a class="code hl_function" href="class_open_g_l_widget.html#a5dd75325425be2457a90453d02dd5c72">addTickObject</a>(lCoCam);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">auto</span> &amp;lContext = <a class="code hl_define" href="ecs_8hpp.html#a4b0f3a988b0fc380a8841e8e2c7c0007">ECS</a>.emplace&lt;<a class="code hl_class" href="class_render_context.html">RenderContext</a>&gt;(<a class="code hl_variable" href="class_render_context.html#aace7ea14a6bbf1e95968899117ce94d3">sActiveContextEnt</a>, lCoCam-&gt;getCameraEnt(), lCoCam, pType);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">auto</span> &amp;lPrio = <a class="code hl_define" href="ecs_8hpp.html#a4b0f3a988b0fc380a8841e8e2c7c0007">ECS</a>.emplace&lt;<a class="code hl_struct" href="struct_render_context_priority.html">RenderContextPriority</a>&gt;(<a class="code hl_variable" href="class_render_context.html#aace7ea14a6bbf1e95968899117ce94d3">sActiveContextEnt</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">return</span>(<a class="code hl_variable" href="class_render_context.html#aace7ea14a6bbf1e95968899117ce94d3">sActiveContextEnt</a>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_render_context.html#ae8a75a3ca2dc237e8ef1069afef9e99c">   50</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="class_render_context.html">RenderContext</a>&amp; <a class="code hl_function" href="class_render_context.html#ae8a75a3ca2dc237e8ef1069afef9e99c">getActiveRenderContext</a>() {<span class="keywordflow">return</span> <a class="code hl_define" href="ecs_8hpp.html#a4b0f3a988b0fc380a8841e8e2c7c0007">ECS</a>.get&lt;<a class="code hl_class" href="class_render_context.html">RenderContext</a>&gt;(<a class="code hl_variable" href="class_render_context.html#aace7ea14a6bbf1e95968899117ce94d3">RenderContext::sActiveContextEnt</a>);}</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_render_context.html#aafa782b03d9ab701ccf6aca6d3417ca5">   51</a></span>    <span class="keyword">const</span> std::shared_ptr&lt;CameraController&gt; &amp;<a class="code hl_function" href="class_render_context.html#aafa782b03d9ab701ccf6aca6d3417ca5">getCameraController</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="class_render_context.html#af78f451ddf95ba7c26683a41aaf3e138">mCameraController</a>;}</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_render_context.html#a7d38574804f521e27abea2930ae4cde9">setUniforms</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    std::shared_ptr&lt;RenderTarget&gt; <a class="code hl_function" href="class_render_context.html#a51f14570fa2e908c60c6265c512926be">getTarget</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_enumeration" href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008">RenderType</a> <a class="code hl_function" href="class_render_context.html#aa03f900ecdfe555e76dad08ed611d639">getType</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_render_context.html#adeffc882cbbb459d4d1a45be7ac02412">setTarget</a>(<span class="keyword">const</span> std::shared_ptr&lt;RenderTarget&gt; &amp;pTarget);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_render_context.html#a308e8391c16efda57591d8eece7ab303">setActiveContextEnt</a>(entt::entity pActiveContextEnt);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_render_context.html#a8f7f8242aee112e5d591cac7ec1d8c55">   61</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_render_context.html#a8f7f8242aee112e5d591cac7ec1d8c55">getSRendererActive</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_render_context.html#a997eb3b3e80b56e58bd8e90782c76c54">   62</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_render_context.html#a997eb3b3e80b56e58bd8e90782c76c54">setSRendererActive</a>(<span class="keywordtype">bool</span> pSRendererActive);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">static</span> entt::entity <a class="code hl_function" href="class_render_context.html#add3680384ef21d28acc876e08e81ab80">getSActiveContextEnt</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    std::shared_ptr&lt;Shader&gt; <a class="code hl_function" href="class_render_context.html#ad1e3beddfada46782954ac5c32004640">getOwnShader</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_render_context.html#aeb0c38575a73738295d965c59a964c26">setOwnShader</a>(<span class="keyword">const</span> std::shared_ptr&lt;Shader&gt; &amp;newOwnShader);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_render_context.html#a45901b68d74f328143aa5b60771eebc6">setType</a>(<a class="code hl_enumeration" href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008">RenderType</a> pType);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_render_context.html#a1ea1940aade49029f1b4602553189c81">getPriority</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_render_context.html#ae48eaaa0a1268c16fb13820a916fea04">setPriority</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pPriority);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_render_context.html#aace7ea14a6bbf1e95968899117ce94d3">   75</a></span>    <span class="keyword">static</span> entt::entity <a class="code hl_variable" href="class_render_context.html#aace7ea14a6bbf1e95968899117ce94d3">sActiveContextEnt</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_render_context.html#ab2a93c41ab0632b102f82fc77bd44251">   76</a></span>    entt::entity <a class="code hl_variable" href="class_render_context.html#ab2a93c41ab0632b102f82fc77bd44251">mCamera</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_render_context.html#af78f451ddf95ba7c26683a41aaf3e138">   77</a></span>    std::shared_ptr&lt;CameraController&gt; <a class="code hl_variable" href="class_render_context.html#af78f451ddf95ba7c26683a41aaf3e138">mCameraController</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_render_context.html#abfd906d2362a5e5e8a1f580ad0878cdf">   78</a></span>    <a class="code hl_class" href="class_shader.html">Shader</a>&amp; <a class="code hl_variable" href="class_render_context.html#abfd906d2362a5e5e8a1f580ad0878cdf">mActiveShader</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_render_context.html#afc661f9127ebc88b85f383663bf2918e">   80</a></span>    <a class="code hl_enumeration" href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008">RenderType</a> <a class="code hl_variable" href="class_render_context.html#afc661f9127ebc88b85f383663bf2918e">mType</a>{<a class="code hl_enumvalue" href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008a7223ae76876829876cda6e550ab3a34f">MainPass</a>};</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_render_context.html#a4e830efd809193bdfdc14c0a30dd9c6e">   82</a></span>    std::shared_ptr&lt;RenderTarget&gt; <a class="code hl_variable" href="class_render_context.html#a4e830efd809193bdfdc14c0a30dd9c6e">mTarget</a>{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_render_context.html#adb664638c8edcf17a5c0014c62f3cc2f">   85</a></span>    std::shared_ptr&lt;Shader&gt; <a class="code hl_variable" href="class_render_context.html#adb664638c8edcf17a5c0014c62f3cc2f">mOwnShader</a>{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_struct" href="struct_render_context_priority.html">RenderContextPriority</a>&amp; <a class="code hl_function" href="class_render_context.html#ac32a04c65d825ea8c122d6914b905fd2">ensurePriorityComponentisThere</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#endif </span><span class="comment">//CGUEBUNGEN_RENDERCONTEXT_HPP</span></div>
+<div class="ttc" id="acamera_8hpp_html"><div class="ttname"><a href="camera_8hpp.html">camera.hpp</a></div></div>
+<div class="ttc" id="aclass_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdoc">Realisierung einer einfachen virtuellen Kamera.</div><div class="ttdef"><b>Definition:</b> camera.hpp:23</div></div>
+<div class="ttc" id="aclass_open_g_l_widget_html_a270e20bcca5b6723c4bdc54d7e35c378"><div class="ttname"><a href="class_open_g_l_widget.html#a270e20bcca5b6723c4bdc54d7e35c378">OpenGLWidget::getInstance</a></div><div class="ttdeci">static OpenGLWidget * getInstance()</div><div class="ttdoc">Instanz des OpenGLWidgets holen, dort kann OpenGL gerendert werden.</div><div class="ttdef"><b>Definition:</b> openglwidget.cpp:207</div></div>
+<div class="ttc" id="aclass_open_g_l_widget_html_a5dd75325425be2457a90453d02dd5c72"><div class="ttname"><a href="class_open_g_l_widget.html#a5dd75325425be2457a90453d02dd5c72">OpenGLWidget::addTickObject</a></div><div class="ttdeci">void addTickObject(std::shared_ptr&lt; WantsTick &gt; pTickObject)</div><div class="ttdoc">Objekte registrieren, die timergesteuert aufgerufen werden wollen.</div><div class="ttdef"><b>Definition:</b> openglwidget.cpp:183</div></div>
+<div class="ttc" id="aclass_render_context_html"><div class="ttname"><a href="class_render_context.html">RenderContext</a></div><div class="ttdoc">Ein RenderContext hält alle Informationen, die für einen Renderdurchlauf über die Entities hinaus wic...</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:26</div></div>
+<div class="ttc" id="aclass_render_context_html_a1ea1940aade49029f1b4602553189c81"><div class="ttname"><a href="class_render_context.html#a1ea1940aade49029f1b4602553189c81">RenderContext::getPriority</a></div><div class="ttdeci">unsigned int getPriority() const</div><div class="ttdef"><b>Definition:</b> rendercontext.cpp:51</div></div>
+<div class="ttc" id="aclass_render_context_html_a250ee96a3389b2a098e5894ddc683aab"><div class="ttname"><a href="class_render_context.html#a250ee96a3389b2a098e5894ddc683aab">RenderContext::getActiveShader</a></div><div class="ttdeci">Shader &amp; getActiveShader() const</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:35</div></div>
+<div class="ttc" id="aclass_render_context_html_a308e8391c16efda57591d8eece7ab303"><div class="ttname"><a href="class_render_context.html#a308e8391c16efda57591d8eece7ab303">RenderContext::setActiveContextEnt</a></div><div class="ttdeci">static void setActiveContextEnt(entt::entity pActiveContextEnt)</div><div class="ttdef"><b>Definition:</b> rendercontext.cpp:63</div></div>
+<div class="ttc" id="aclass_render_context_html_a45901b68d74f328143aa5b60771eebc6"><div class="ttname"><a href="class_render_context.html#a45901b68d74f328143aa5b60771eebc6">RenderContext::setType</a></div><div class="ttdeci">void setType(RenderType pType)</div><div class="ttdef"><b>Definition:</b> rendercontext.cpp:46</div></div>
+<div class="ttc" id="aclass_render_context_html_a4e830efd809193bdfdc14c0a30dd9c6e"><div class="ttname"><a href="class_render_context.html#a4e830efd809193bdfdc14c0a30dd9c6e">RenderContext::mTarget</a></div><div class="ttdeci">std::shared_ptr&lt; RenderTarget &gt; mTarget</div><div class="ttdoc">Mit welcher Priorität wird der Kontext gerendert, d.h. die Renderkontexte einer Klasse (Pre,...</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:82</div></div>
+<div class="ttc" id="aclass_render_context_html_a4fd519adf7c2d6812e5eb94d75196fe7"><div class="ttname"><a href="class_render_context.html#a4fd519adf7c2d6812e5eb94d75196fe7">RenderContext::setCamera</a></div><div class="ttdeci">void setCamera(const Camera &amp;pCamera)</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:34</div></div>
+<div class="ttc" id="aclass_render_context_html_a51f14570fa2e908c60c6265c512926be"><div class="ttname"><a href="class_render_context.html#a51f14570fa2e908c60c6265c512926be">RenderContext::getTarget</a></div><div class="ttdeci">std::shared_ptr&lt; RenderTarget &gt; getTarget() const</div><div class="ttdef"><b>Definition:</b> rendercontext.cpp:15</div></div>
+<div class="ttc" id="aclass_render_context_html_a66d2435dca3ff5f60f1f8b4670bfb37a"><div class="ttname"><a href="class_render_context.html#a66d2435dca3ff5f60f1f8b4670bfb37a">RenderContext::addRenderContext</a></div><div class="ttdeci">static entt::entity addRenderContext(RenderType pType=MainPass)</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:39</div></div>
+<div class="ttc" id="aclass_render_context_html_a74dfd8c4a2227f986616d4eb479be200"><div class="ttname"><a href="class_render_context.html#a74dfd8c4a2227f986616d4eb479be200">RenderContext::RenderContext</a></div><div class="ttdeci">RenderContext()=delete</div></div>
+<div class="ttc" id="aclass_render_context_html_a7d38574804f521e27abea2930ae4cde9"><div class="ttname"><a href="class_render_context.html#a7d38574804f521e27abea2930ae4cde9">RenderContext::setUniforms</a></div><div class="ttdeci">void setUniforms()</div><div class="ttdef"><b>Definition:</b> rendercontext.cpp:8</div></div>
+<div class="ttc" id="aclass_render_context_html_a88b7943af8ce9e6c386ca77d3468d717"><div class="ttname"><a href="class_render_context.html#a88b7943af8ce9e6c386ca77d3468d717">RenderContext::setActiveShader</a></div><div class="ttdeci">void setActiveShader(Shader &amp;pActiveShader)</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:36</div></div>
+<div class="ttc" id="aclass_render_context_html_a8f7f8242aee112e5d591cac7ec1d8c55"><div class="ttname"><a href="class_render_context.html#a8f7f8242aee112e5d591cac7ec1d8c55">RenderContext::getSRendererActive</a></div><div class="ttdeci">static bool getSRendererActive()</div></div>
+<div class="ttc" id="aclass_render_context_html_a997eb3b3e80b56e58bd8e90782c76c54"><div class="ttname"><a href="class_render_context.html#a997eb3b3e80b56e58bd8e90782c76c54">RenderContext::setSRendererActive</a></div><div class="ttdeci">static void setSRendererActive(bool pSRendererActive)</div></div>
+<div class="ttc" id="aclass_render_context_html_a9cfdeb19b37f590a7a9d5c1972b86259"><div class="ttname"><a href="class_render_context.html#a9cfdeb19b37f590a7a9d5c1972b86259">RenderContext::RenderContext</a></div><div class="ttdeci">RenderContext(const entt::entity pCamera, std::shared_ptr&lt; CameraController &gt; pController, RenderType pType=MainPass)</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:29</div></div>
+<div class="ttc" id="aclass_render_context_html_aa03f900ecdfe555e76dad08ed611d639"><div class="ttname"><a href="class_render_context.html#aa03f900ecdfe555e76dad08ed611d639">RenderContext::getType</a></div><div class="ttdeci">RenderType getType() const</div><div class="ttdef"><b>Definition:</b> rendercontext.cpp:20</div></div>
+<div class="ttc" id="aclass_render_context_html_aab76ec9347d2096cb3f1156b1844da17"><div class="ttname"><a href="class_render_context.html#aab76ec9347d2096cb3f1156b1844da17">RenderContext::getCamera</a></div><div class="ttdeci">Camera &amp; getCamera()</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:33</div></div>
+<div class="ttc" id="aclass_render_context_html_aace7ea14a6bbf1e95968899117ce94d3"><div class="ttname"><a href="class_render_context.html#aace7ea14a6bbf1e95968899117ce94d3">RenderContext::sActiveContextEnt</a></div><div class="ttdeci">static entt::entity sActiveContextEnt</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:75</div></div>
+<div class="ttc" id="aclass_render_context_html_aafa782b03d9ab701ccf6aca6d3417ca5"><div class="ttname"><a href="class_render_context.html#aafa782b03d9ab701ccf6aca6d3417ca5">RenderContext::getCameraController</a></div><div class="ttdeci">const std::shared_ptr&lt; CameraController &gt; &amp; getCameraController() const</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:51</div></div>
+<div class="ttc" id="aclass_render_context_html_ab2a93c41ab0632b102f82fc77bd44251"><div class="ttname"><a href="class_render_context.html#ab2a93c41ab0632b102f82fc77bd44251">RenderContext::mCamera</a></div><div class="ttdeci">entt::entity mCamera</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:76</div></div>
+<div class="ttc" id="aclass_render_context_html_abfd906d2362a5e5e8a1f580ad0878cdf"><div class="ttname"><a href="class_render_context.html#abfd906d2362a5e5e8a1f580ad0878cdf">RenderContext::mActiveShader</a></div><div class="ttdeci">Shader &amp; mActiveShader</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:78</div></div>
+<div class="ttc" id="aclass_render_context_html_ac32a04c65d825ea8c122d6914b905fd2"><div class="ttname"><a href="class_render_context.html#ac32a04c65d825ea8c122d6914b905fd2">RenderContext::ensurePriorityComponentisThere</a></div><div class="ttdeci">RenderContextPriority &amp; ensurePriorityComponentisThere() const</div><div class="ttdoc">Sicherstellen, dass Priority-Component vorhanden ist, sonst hinzufügen.</div><div class="ttdef"><b>Definition:</b> rendercontext.cpp:68</div></div>
+<div class="ttc" id="aclass_render_context_html_ad1e3beddfada46782954ac5c32004640"><div class="ttname"><a href="class_render_context.html#ad1e3beddfada46782954ac5c32004640">RenderContext::getOwnShader</a></div><div class="ttdeci">std::shared_ptr&lt; Shader &gt; getOwnShader() const</div><div class="ttdef"><b>Definition:</b> rendercontext.cpp:36</div></div>
+<div class="ttc" id="aclass_render_context_html_adb664638c8edcf17a5c0014c62f3cc2f"><div class="ttname"><a href="class_render_context.html#adb664638c8edcf17a5c0014c62f3cc2f">RenderContext::mOwnShader</a></div><div class="ttdeci">std::shared_ptr&lt; Shader &gt; mOwnShader</div><div class="ttdoc">Für manche Pre-/Postrendering-Durchläufe werden andere Shader, als die von den Objekten vorgesehen ve...</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:85</div></div>
+<div class="ttc" id="aclass_render_context_html_add3680384ef21d28acc876e08e81ab80"><div class="ttname"><a href="class_render_context.html#add3680384ef21d28acc876e08e81ab80">RenderContext::getSActiveContextEnt</a></div><div class="ttdeci">static entt::entity getSActiveContextEnt()</div><div class="ttdef"><b>Definition:</b> rendercontext.cpp:31</div></div>
+<div class="ttc" id="aclass_render_context_html_adeffc882cbbb459d4d1a45be7ac02412"><div class="ttname"><a href="class_render_context.html#adeffc882cbbb459d4d1a45be7ac02412">RenderContext::setTarget</a></div><div class="ttdeci">void setTarget(const std::shared_ptr&lt; RenderTarget &gt; &amp;pTarget)</div><div class="ttdef"><b>Definition:</b> rendercontext.cpp:25</div></div>
+<div class="ttc" id="aclass_render_context_html_ae48eaaa0a1268c16fb13820a916fea04"><div class="ttname"><a href="class_render_context.html#ae48eaaa0a1268c16fb13820a916fea04">RenderContext::setPriority</a></div><div class="ttdeci">void setPriority(unsigned int pPriority)</div><div class="ttdef"><b>Definition:</b> rendercontext.cpp:57</div></div>
+<div class="ttc" id="aclass_render_context_html_ae8a75a3ca2dc237e8ef1069afef9e99c"><div class="ttname"><a href="class_render_context.html#ae8a75a3ca2dc237e8ef1069afef9e99c">RenderContext::getActiveRenderContext</a></div><div class="ttdeci">static RenderContext &amp; getActiveRenderContext()</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:50</div></div>
+<div class="ttc" id="aclass_render_context_html_aeb0c38575a73738295d965c59a964c26"><div class="ttname"><a href="class_render_context.html#aeb0c38575a73738295d965c59a964c26">RenderContext::setOwnShader</a></div><div class="ttdeci">void setOwnShader(const std::shared_ptr&lt; Shader &gt; &amp;newOwnShader)</div><div class="ttdef"><b>Definition:</b> rendercontext.cpp:41</div></div>
+<div class="ttc" id="aclass_render_context_html_af78f451ddf95ba7c26683a41aaf3e138"><div class="ttname"><a href="class_render_context.html#af78f451ddf95ba7c26683a41aaf3e138">RenderContext::mCameraController</a></div><div class="ttdeci">std::shared_ptr&lt; CameraController &gt; mCameraController</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:77</div></div>
+<div class="ttc" id="aclass_render_context_html_afc661f9127ebc88b85f383663bf2918e"><div class="ttname"><a href="class_render_context.html#afc661f9127ebc88b85f383663bf2918e">RenderContext::mType</a></div><div class="ttdeci">RenderType mType</div><div class="ttdoc">In welchem Pass wird der Kontext verwendet.</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:80</div></div>
+<div class="ttc" id="aclass_shader_html"><div class="ttname"><a href="class_shader.html">Shader</a></div><div class="ttdoc">Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...</div><div class="ttdef"><b>Definition:</b> shader.hpp:11</div></div>
+<div class="ttc" id="aclass_shader_manager_html"><div class="ttname"><a href="class_shader_manager.html">ShaderManager</a></div><div class="ttdoc">Die ShaderManager Klasse erzeugt und verwaltet Shader. Sie sorgt dafür, dass nur eine Instanz eines S...</div><div class="ttdef"><b>Definition:</b> shadermanager.hpp:25</div></div>
+<div class="ttc" id="aecs_8hpp_html"><div class="ttname"><a href="ecs_8hpp.html">ecs.hpp</a></div></div>
+<div class="ttc" id="aecs_8hpp_html_a4b0f3a988b0fc380a8841e8e2c7c0007"><div class="ttname"><a href="ecs_8hpp.html#a4b0f3a988b0fc380a8841e8e2c7c0007">ECS</a></div><div class="ttdeci">#define ECS</div><div class="ttdef"><b>Definition:</b> ecs.hpp:13</div></div>
+<div class="ttc" id="amousekeyboardcameracontroller_8hpp_html"><div class="ttname"><a href="mousekeyboardcameracontroller_8hpp.html">mousekeyboardcameracontroller.hpp</a></div></div>
+<div class="ttc" id="aopenglwidget_8hpp_html"><div class="ttname"><a href="openglwidget_8hpp.html">openglwidget.hpp</a></div></div>
+<div class="ttc" id="arendercontext_8hpp_html_a5aaed4dd67686dbac1c6b0cab53b2008"><div class="ttname"><a href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008">RenderType</a></div><div class="ttdeci">RenderType</div><div class="ttdoc">Verschiedene Typen der Renderer.</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:17</div></div>
+<div class="ttc" id="arendercontext_8hpp_html_a5aaed4dd67686dbac1c6b0cab53b2008a42acd2f313231fa7ad8ee039925fe5b8"><div class="ttname"><a href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008a42acd2f313231fa7ad8ee039925fe5b8">PostPass</a></div><div class="ttdeci">@ PostPass</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:17</div></div>
+<div class="ttc" id="arendercontext_8hpp_html_a5aaed4dd67686dbac1c6b0cab53b2008a7223ae76876829876cda6e550ab3a34f"><div class="ttname"><a href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008a7223ae76876829876cda6e550ab3a34f">MainPass</a></div><div class="ttdeci">@ MainPass</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:17</div></div>
+<div class="ttc" id="arendercontext_8hpp_html_a5aaed4dd67686dbac1c6b0cab53b2008aa189fd2441b4641fd22168d017b3ee8d"><div class="ttname"><a href="rendercontext_8hpp.html#a5aaed4dd67686dbac1c6b0cab53b2008aa189fd2441b4641fd22168d017b3ee8d">PrePass</a></div><div class="ttdeci">@ PrePass</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:17</div></div>
+<div class="ttc" id="arendertarget_8hpp_html"><div class="ttname"><a href="rendertarget_8hpp.html">rendertarget.hpp</a></div></div>
+<div class="ttc" id="ashader_8hpp_html"><div class="ttname"><a href="shader_8hpp.html">shader.hpp</a></div></div>
+<div class="ttc" id="ashadermanager_8hpp_html"><div class="ttname"><a href="shadermanager_8hpp.html">shadermanager.hpp</a></div></div>
+<div class="ttc" id="astruct_render_context_priority_html"><div class="ttname"><a href="struct_render_context_priority.html">RenderContextPriority</a></div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:19</div></div>
+<div class="ttc" id="astruct_render_context_priority_html_a9930714aac86799a5253a9299c5e3dad"><div class="ttname"><a href="struct_render_context_priority.html#a9930714aac86799a5253a9299c5e3dad">RenderContextPriority::mPriority</a></div><div class="ttdeci">unsigned int mPriority</div><div class="ttdef"><b>Definition:</b> rendercontext.hpp:20</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_cda996fc916ed27d80e8cee84a8ca5c5.html">SORS</a></li><li class="navelem"><a class="el" href="dir_6f8a73d58f15ae90033e36c24ed6e8ca.html">rendering</a></li><li class="navelem"><a class="el" href="rendercontext_8hpp.html">rendercontext.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

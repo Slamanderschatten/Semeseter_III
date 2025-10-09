@@ -1,0 +1,8 @@
+<map id="System" name="System">
+<area shape="rect" id="node1" title="Von dieser Klasse leiten alle systems ab, die Klasse GameSystem sorgt dafür, dass die Methoden der &quot;s..." alt="" coords="321,5,387,32"/>
+<area shape="rect" id="node2" href="$class_game_system.html" title="Implementiert den Loop der Anwendung und wird zyklisch von OpenGLWidget::paintGL gerufen." alt="" coords="5,80,108,107"/>
+<area shape="rect" id="node3" href="$class_geometry_systems.html" title="Enthält die systems des Moduls Geometry." alt="" coords="133,80,263,107"/>
+<area shape="rect" id="node4" href="$class_rendering_systems.html" title=" " alt="" coords="287,80,421,107"/>
+<area shape="rect" id="node5" href="$class_shader_systems.html" title="Sorgt dafür, dass alle angelegten Shader vor dem Renderpass im richtigen/definierten Zustand sind." alt="" coords="445,80,559,107"/>
+<area shape="rect" id="node6" href="$class_transformation_systems.html" title="Systemklasse des Moduls transformation. Kümmert sich v.a. um das Berechnen von zusammengesetzten Tran..." alt="" coords="584,80,745,107"/>
+</map>

@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: SORS/geometry/geometrybase.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('geometrybase_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">geometrybase.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="geometrybase_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Geometry.h</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef GEOMETRY_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define GEOMETRY_H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QMatrix4x4&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QOpenGLBuffer&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;QOpenGLVertexArrayObject&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="ecs_8hpp.html">ecs.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="opengl_8hpp.html">opengl.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="igeometryimplementation_8hpp.html">geometry/igeometryimplementation.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span><a class="code hl_class" href="class_shader.html">Shader</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_geometry_base.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="class_geometry_base.html">GeometryBase</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_function" href="class_geometry_base.html#af375d4b57e53946733243091afb85701">GeometryBase</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_function" href="class_geometry_base.html#af375d4b57e53946733243091afb85701">GeometryBase</a>(std::shared_ptr&lt;IGeometryImplementation&gt; pImplementation);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_geometry_base.html#af6254a208c6f20567eee32c9161fd2e9">~GeometryBase</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#a6193b3eb4eddfb70e5c126333808dc8a">bindBuffer</a>(<a class="code hl_class" href="class_shader.html">Shader</a>&amp; shader);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#a8e7fa06e06f25dd2894fbe0b604a47fe">unbindBuffer</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#a3c730016f5b5b6e48cb0a9189a56de7d">initializeGeometryBase</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#ab9bf97d5094d7ce803f768f2491c2c10">deInitGeometry</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_geometry_base.html#a147e7f0a1f424ac789402036eafd7182">   42</a></span>    <span class="keyword">const</span> QVector&lt;QVector4D&gt;&amp; <a class="code hl_function" href="class_geometry_base.html#a147e7f0a1f424ac789402036eafd7182">getVertices</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="class_geometry_base.html#ae17a521a7025011543147cad6f270db2">mVertices</a>;}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_geometry_base.html#acd41d40c05ac5ebd009598e0f026b67e">   45</a></span>    <span class="keyword">const</span> QVector&lt;QVector3D&gt;&amp; <a class="code hl_function" href="class_geometry_base.html#acd41d40c05ac5ebd009598e0f026b67e">getNormals</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="class_geometry_base.html#a4079cd39d0dbbfd58b7dcccb89cc5f3c">mVertexNormals</a>;}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_geometry_base.html#aed75d72e662136486dea45387ca0bbcf">   48</a></span>    <span class="keyword">const</span> QVector&lt;QVector2D&gt;&amp; <a class="code hl_function" href="class_geometry_base.html#aed75d72e662136486dea45387ca0bbcf">getTextureCoordinates</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="class_geometry_base.html#a33e8aa2963f42a5f4891555cd5c2dad4">mTextureCoordinates</a>;}</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_geometry_base.html#a56a8e65664c62f1ad4dc5275ca8603ba">   51</a></span>    <span class="keyword">const</span> QVector&lt;QVector4D&gt;&amp; <a class="code hl_function" href="class_geometry_base.html#a56a8e65664c62f1ad4dc5275ca8603ba">getVertexColors</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="class_geometry_base.html#af028246beee64526060a728c58ec3b5c">mVertexColors</a>;}</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#a06d302722e0b8dd706a326ebaa220ec0">render</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">virtual</span> QVector&lt;QVector4D&gt; <a class="code hl_function" href="class_geometry_base.html#a3a8dcfdb20c30a0b3457a4419a3381c6">getTriangleList</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#a9e802131ba4af3c20a88c952932c2795">setImplementation</a>(std::shared_ptr&lt;IGeometryImplementation&gt; pImplementation);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_geometry_base.html#ae2e82c9b17656ad7dd482e9458c5f516">   67</a></span>    <span class="keyword">virtual</span> std::shared_ptr&lt;IGeometryImplementation&gt; <a class="code hl_function" href="class_geometry_base.html#ae2e82c9b17656ad7dd482e9458c5f516">getImplementation</a>() {<span class="keywordflow">return</span> <a class="code hl_variable" href="class_geometry_base.html#a709019af322bef67d03a3d8042ec823b">mImplementation</a>;}</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    QMatrix4x4 <a class="code hl_function" href="class_geometry_base.html#aa1a2cfa779187c35f2f0544b1246dc4d">getmodelTransformation</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#a5aa0c0549284728cb967fd72e5b8ff77">setModelTransformation</a>(<span class="keyword">const</span> QMatrix4x4 &amp;pModelTransformation);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">static</span> <a class="code hl_class" href="class_geometry_base.html">GeometryBase</a> *<a class="code hl_function" href="class_geometry_base.html#a1abac12803f60a8e1802301278bca8dd">getGeometry</a>(entt::entity pEnt);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> GeometryBaseClass = GeometryBase, <span class="keyword">typename</span> IGeometryImplementationClass&gt;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#a8a2a179495c51f4795ad1e42e3a173da">emplaceToEntity</a>(entt::entity pEnt, IGeometryImplementationClass pImplementation);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_geometry_base.html#a0cd9137cd46cd7a25477452b69531bad">   82</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> QSet&lt;entt::id_type&gt; <a class="code hl_function" href="class_geometry_base.html#a0cd9137cd46cd7a25477452b69531bad">renderableGeometryClasses</a>() {<span class="keywordflow">return</span> <a class="code hl_variable" href="class_geometry_base.html#ae55b89fe940a6eb69d8e1a129f01084e">GeometryBase::sRenderableGeometryClasses</a>;}</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#a7eee7d64669f1e0eb9d1efcec1cec77f">prepareVertexBuffers</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#a21b49236f530cc7cb2dc1cc9fe229007">prepareVertexArrayObject</a>(<a class="code hl_class" href="class_shader.html">Shader</a>&amp; shader, QOpenGLVertexArrayObject&amp; vao);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#ad5657fbf29ed86046f0b47e950607d2c">destroyVertexBuffers</a>();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#a76ea763b67f9095edbe40714f30db91c">initBuffer</a>(QOpenGLBuffer&amp; buffer, <span class="keyword">const</span> QVector&lt;T&gt;&amp; elements);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_geometry_base.html#ae17a521a7025011543147cad6f270db2">  104</a></span>    QVector&lt;QVector4D&gt; <a class="code hl_variable" href="class_geometry_base.html#ae17a521a7025011543147cad6f270db2">mVertices</a>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_geometry_base.html#af028246beee64526060a728c58ec3b5c">  105</a></span>    QVector&lt;QVector4D&gt; <a class="code hl_variable" href="class_geometry_base.html#af028246beee64526060a728c58ec3b5c">mVertexColors</a>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_geometry_base.html#a4079cd39d0dbbfd58b7dcccb89cc5f3c">  106</a></span>    QVector&lt;QVector3D&gt; <a class="code hl_variable" href="class_geometry_base.html#a4079cd39d0dbbfd58b7dcccb89cc5f3c">mVertexNormals</a>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_geometry_base.html#a33e8aa2963f42a5f4891555cd5c2dad4">  107</a></span>    QVector&lt;QVector2D&gt; <a class="code hl_variable" href="class_geometry_base.html#a33e8aa2963f42a5f4891555cd5c2dad4">mTextureCoordinates</a>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="class_geometry_base.html#a69ecc288cf580c71b83253a1fb32c125">  111</a></span>    QMatrix4x4 <a class="code hl_variable" href="class_geometry_base.html#a69ecc288cf580c71b83253a1fb32c125">mModelTransformation</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class_geometry_base.html#aec656cdbacd07baa7c95237b8c501aa7">  114</a></span>    QOpenGLBuffer <a class="code hl_variable" href="class_geometry_base.html#aec656cdbacd07baa7c95237b8c501aa7">mVertexPositionBuffer</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_geometry_base.html#a57ff94a2115effe0badaa788ec1bf928">  116</a></span>    QOpenGLBuffer <a class="code hl_variable" href="class_geometry_base.html#a57ff94a2115effe0badaa788ec1bf928">mVertexColorBuffer</a>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_geometry_base.html#a1ab158e5289da0724fa7d52526500e03">  117</a></span>    QOpenGLBuffer <a class="code hl_variable" href="class_geometry_base.html#a1ab158e5289da0724fa7d52526500e03">mNormalBuffer</a>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_geometry_base.html#ab23caead63eb051f94dccf0df547f9a3">  118</a></span>    QOpenGLBuffer <a class="code hl_variable" href="class_geometry_base.html#ab23caead63eb051f94dccf0df547f9a3">mTextureCoordinatesBuffer</a>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_geometry_base.html#a709019af322bef67d03a3d8042ec823b">  121</a></span>    std::shared_ptr&lt;IGeometryImplementation&gt; <a class="code hl_variable" href="class_geometry_base.html#a709019af322bef67d03a3d8042ec823b">mImplementation</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_geometry_base.html#a844719fcb9a9df3accb49f1628d321c1">  125</a></span>    std::shared_ptr&lt;QOpenGLVertexArrayObject&gt; <a class="code hl_variable" href="class_geometry_base.html#a844719fcb9a9df3accb49f1628d321c1">mCurrentVAO</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> RenderableClass&gt;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#a376ff6a4e0ee71b15c98de2c90cd7408">addRenderableClass</a>();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="class_geometry_base.html#ae55b89fe940a6eb69d8e1a129f01084e">  133</a></span>    <span class="keyword">static</span> QSet&lt;entt::id_type&gt; <a class="code hl_variable" href="class_geometry_base.html#ae55b89fe940a6eb69d8e1a129f01084e">sRenderableGeometryClasses</a>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    QHash&lt;QString, std::shared_ptr&lt;QOpenGLVertexArrayObject&gt;&gt; mVAOs;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>};</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> GeometryBaseClass, <span class="keyword">typename</span> IGeometryImplementationClass&gt;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="class_geometry_base.html#a8a2a179495c51f4795ad1e42e3a173da">  143</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#a8a2a179495c51f4795ad1e42e3a173da">GeometryBase::emplaceToEntity</a>(entt::entity pEnt, IGeometryImplementationClass pImplementation)</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>{</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keyword">auto</span> &amp;lGeo1 = <a class="code hl_define" href="ecs_8hpp.html#a4b0f3a988b0fc380a8841e8e2c7c0007">ECS</a>.emplace_or_replace&lt;GeometryBaseClass&gt;(pEnt);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    lGeo1.setImplementation(std::make_shared&lt;IGeometryImplementationClass&gt;(pImplementation));</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>}</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> RenderableClass&gt;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="class_geometry_base.html#a376ff6a4e0ee71b15c98de2c90cd7408">  150</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#a376ff6a4e0ee71b15c98de2c90cd7408">GeometryBase::addRenderableClass</a>()</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>{</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <a class="code hl_variable" href="class_geometry_base.html#ae55b89fe940a6eb69d8e1a129f01084e">GeometryBase::sRenderableGeometryClasses</a>.insert(entt::type_hash&lt;RenderableClass&gt;::value());</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>}</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="class_geometry_base.html#a76ea763b67f9095edbe40714f30db91c">  156</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_geometry_base.html#a76ea763b67f9095edbe40714f30db91c">GeometryBase::initBuffer</a>(QOpenGLBuffer&amp; buffer, <span class="keyword">const</span> QVector&lt;T&gt;&amp; elements)</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>{</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordflow">if</span> (!buffer.isCreated())</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        buffer.create();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    buffer.setUsagePattern(QOpenGLBuffer::StaticDraw);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    buffer.bind();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    buffer.allocate(elements.constData(), elements.size() * (<span class="keywordtype">int</span>) <span class="keyword">sizeof</span>(T));</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>}</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_geometry_base_html"><div class="ttname"><a href="class_geometry_base.html">GeometryBase</a></div><div class="ttdoc">GeometryBase ist die Basisklasse für alle Objekte , die die geometrischen Daten eines zu zeichenenden...</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:22</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a06d302722e0b8dd706a326ebaa220ec0"><div class="ttname"><a href="class_geometry_base.html#a06d302722e0b8dd706a326ebaa220ec0">GeometryBase::render</a></div><div class="ttdeci">virtual void render()</div><div class="ttdoc">Geometry ggf. initialisieren und Rendern an Implementation delegieren.</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:62</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a0cd9137cd46cd7a25477452b69531bad"><div class="ttname"><a href="class_geometry_base.html#a0cd9137cd46cd7a25477452b69531bad">GeometryBase::renderableGeometryClasses</a></div><div class="ttdeci">static const QSet&lt; entt::id_type &gt; renderableGeometryClasses()</div><div class="ttdoc">Gibt die Klassen zurück, die als renderfähige Geometrie registriert wurden Meist GeometryBase und/ode...</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:82</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a147e7f0a1f424ac789402036eafd7182"><div class="ttname"><a href="class_geometry_base.html#a147e7f0a1f424ac789402036eafd7182">GeometryBase::getVertices</a></div><div class="ttdeci">const QVector&lt; QVector4D &gt; &amp; getVertices() const</div><div class="ttdoc">Getter für die Vertices der Geometry.</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:42</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a1ab158e5289da0724fa7d52526500e03"><div class="ttname"><a href="class_geometry_base.html#a1ab158e5289da0724fa7d52526500e03">GeometryBase::mNormalBuffer</a></div><div class="ttdeci">QOpenGLBuffer mNormalBuffer</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:117</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a1abac12803f60a8e1802301278bca8dd"><div class="ttname"><a href="class_geometry_base.html#a1abac12803f60a8e1802301278bca8dd">GeometryBase::getGeometry</a></div><div class="ttdeci">static GeometryBase * getGeometry(entt::entity pEnt)</div><div class="ttdoc">Findet die passende Geometrie (Component von einer der Basisklassen in sRenderableGeometryClasses abg...</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:26</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a21b49236f530cc7cb2dc1cc9fe229007"><div class="ttname"><a href="class_geometry_base.html#a21b49236f530cc7cb2dc1cc9fe229007">GeometryBase::prepareVertexArrayObject</a></div><div class="ttdeci">virtual void prepareVertexArrayObject(Shader &amp;shader, QOpenGLVertexArrayObject &amp;vao)</div><div class="ttdoc">Initialisieren ein Vertex Array Object für einen Shader. Wird pro Shader der diese Geometrie rendert ...</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:141</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a33e8aa2963f42a5f4891555cd5c2dad4"><div class="ttname"><a href="class_geometry_base.html#a33e8aa2963f42a5f4891555cd5c2dad4">GeometryBase::mTextureCoordinates</a></div><div class="ttdeci">QVector&lt; QVector2D &gt; mTextureCoordinates</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:107</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a376ff6a4e0ee71b15c98de2c90cd7408"><div class="ttname"><a href="class_geometry_base.html#a376ff6a4e0ee71b15c98de2c90cd7408">GeometryBase::addRenderableClass</a></div><div class="ttdeci">static void addRenderableClass()</div><div class="ttdoc">Muss für jede (von.</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:150</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a3a8dcfdb20c30a0b3457a4419a3381c6"><div class="ttname"><a href="class_geometry_base.html#a3a8dcfdb20c30a0b3457a4419a3381c6">GeometryBase::getTriangleList</a></div><div class="ttdeci">virtual QVector&lt; QVector4D &gt; getTriangleList()</div><div class="ttdoc">Gibt eine liste der Vertices der Geometry zurück bei der immer 3 Vertices ein Dreieck bilden....</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:79</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a3c730016f5b5b6e48cb0a9189a56de7d"><div class="ttname"><a href="class_geometry_base.html#a3c730016f5b5b6e48cb0a9189a56de7d">GeometryBase::initializeGeometryBase</a></div><div class="ttdeci">void initializeGeometryBase()</div><div class="ttdoc">Geometry-Basis Initialisieren. Wenn geometry noch nicht initialisiert wurde, werden die Geometriedate...</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:108</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a4079cd39d0dbbfd58b7dcccb89cc5f3c"><div class="ttname"><a href="class_geometry_base.html#a4079cd39d0dbbfd58b7dcccb89cc5f3c">GeometryBase::mVertexNormals</a></div><div class="ttdeci">QVector&lt; QVector3D &gt; mVertexNormals</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:106</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a56a8e65664c62f1ad4dc5275ca8603ba"><div class="ttname"><a href="class_geometry_base.html#a56a8e65664c62f1ad4dc5275ca8603ba">GeometryBase::getVertexColors</a></div><div class="ttdeci">const QVector&lt; QVector4D &gt; &amp; getVertexColors() const</div><div class="ttdoc">Getter für die Vertex-Farben der Geometry.</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:51</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a57ff94a2115effe0badaa788ec1bf928"><div class="ttname"><a href="class_geometry_base.html#a57ff94a2115effe0badaa788ec1bf928">GeometryBase::mVertexColorBuffer</a></div><div class="ttdeci">QOpenGLBuffer mVertexColorBuffer</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:116</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a5aa0c0549284728cb967fd72e5b8ff77"><div class="ttname"><a href="class_geometry_base.html#a5aa0c0549284728cb967fd72e5b8ff77">GeometryBase::setModelTransformation</a></div><div class="ttdeci">void setModelTransformation(const QMatrix4x4 &amp;pModelTransformation)</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:190</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a6193b3eb4eddfb70e5c126333808dc8a"><div class="ttname"><a href="class_geometry_base.html#a6193b3eb4eddfb70e5c126333808dc8a">GeometryBase::bindBuffer</a></div><div class="ttdeci">void bindBuffer(Shader &amp;shader)</div><div class="ttdoc">Buffer für das Rendern binden.</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:84</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a69ecc288cf580c71b83253a1fb32c125"><div class="ttname"><a href="class_geometry_base.html#a69ecc288cf580c71b83253a1fb32c125">GeometryBase::mModelTransformation</a></div><div class="ttdeci">QMatrix4x4 mModelTransformation</div><div class="ttdoc">Matrix zur Speicherung der Modeltransformation (z.B. Skalierung) Diese Matrix wird nicht an etwaige a...</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:111</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a709019af322bef67d03a3d8042ec823b"><div class="ttname"><a href="class_geometry_base.html#a709019af322bef67d03a3d8042ec823b">GeometryBase::mImplementation</a></div><div class="ttdeci">std::shared_ptr&lt; IGeometryImplementation &gt; mImplementation</div><div class="ttdoc">Enthält die konkrete Implementierung der Geometry.</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:121</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a76ea763b67f9095edbe40714f30db91c"><div class="ttname"><a href="class_geometry_base.html#a76ea763b67f9095edbe40714f30db91c">GeometryBase::initBuffer</a></div><div class="ttdeci">void initBuffer(QOpenGLBuffer &amp;buffer, const QVector&lt; T &gt; &amp;elements)</div><div class="ttdoc">Hilfsmethode zur erstellung eines Buffers sowie senden der Daten an den Buffer.</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:156</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a7eee7d64669f1e0eb9d1efcec1cec77f"><div class="ttname"><a href="class_geometry_base.html#a7eee7d64669f1e0eb9d1efcec1cec77f">GeometryBase::prepareVertexBuffers</a></div><div class="ttdeci">virtual void prepareVertexBuffers()</div><div class="ttdoc">Wird beim Initialisieren der Geometrie und erstellt die Buffer. Kann überschriben werden um zusätzlic...</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:118</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a844719fcb9a9df3accb49f1628d321c1"><div class="ttname"><a href="class_geometry_base.html#a844719fcb9a9df3accb49f1628d321c1">GeometryBase::mCurrentVAO</a></div><div class="ttdeci">std::shared_ptr&lt; QOpenGLVertexArrayObject &gt; mCurrentVAO</div><div class="ttdoc">Speichert das in bindBuffer() gebundene QOpenGLVertexArrayObject zwischen, um es in unbindBuffer() wi...</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:125</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a8a2a179495c51f4795ad1e42e3a173da"><div class="ttname"><a href="class_geometry_base.html#a8a2a179495c51f4795ad1e42e3a173da">GeometryBase::emplaceToEntity</a></div><div class="ttdeci">static void emplaceToEntity(entt::entity pEnt, IGeometryImplementationClass pImplementation)</div><div class="ttdoc">Legt für Entity pEnt die entsprechende Geometry an und verbindet diese mit der übergebenen Implementi...</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:143</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a8e7fa06e06f25dd2894fbe0b604a47fe"><div class="ttname"><a href="class_geometry_base.html#a8e7fa06e06f25dd2894fbe0b604a47fe">GeometryBase::unbindBuffer</a></div><div class="ttdeci">void unbindBuffer()</div><div class="ttdoc">Buffer nach dem Rendern freigeben.</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:101</div></div>
+<div class="ttc" id="aclass_geometry_base_html_a9e802131ba4af3c20a88c952932c2795"><div class="ttname"><a href="class_geometry_base.html#a9e802131ba4af3c20a88c952932c2795">GeometryBase::setImplementation</a></div><div class="ttdeci">virtual void setImplementation(std::shared_ptr&lt; IGeometryImplementation &gt; pImplementation)</div><div class="ttdoc">Implementation setzen: Die eigentliche Geometrie liegt im ECS, die Implementierung mit Ihren Besonder...</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:74</div></div>
+<div class="ttc" id="aclass_geometry_base_html_aa1a2cfa779187c35f2f0544b1246dc4d"><div class="ttname"><a href="class_geometry_base.html#aa1a2cfa779187c35f2f0544b1246dc4d">GeometryBase::getmodelTransformation</a></div><div class="ttdeci">QMatrix4x4 getmodelTransformation() const</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:185</div></div>
+<div class="ttc" id="aclass_geometry_base_html_ab23caead63eb051f94dccf0df547f9a3"><div class="ttname"><a href="class_geometry_base.html#ab23caead63eb051f94dccf0df547f9a3">GeometryBase::mTextureCoordinatesBuffer</a></div><div class="ttdeci">QOpenGLBuffer mTextureCoordinatesBuffer</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:118</div></div>
+<div class="ttc" id="aclass_geometry_base_html_ab9bf97d5094d7ce803f768f2491c2c10"><div class="ttname"><a href="class_geometry_base.html#ab9bf97d5094d7ce803f768f2491c2c10">GeometryBase::deInitGeometry</a></div><div class="ttdeci">void deInitGeometry()</div><div class="ttdoc">Buffer, Vertex Array Objects sowie alle Vertices, Colors, Normals und Textur Koordinaten löschen.</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:44</div></div>
+<div class="ttc" id="aclass_geometry_base_html_acd41d40c05ac5ebd009598e0f026b67e"><div class="ttname"><a href="class_geometry_base.html#acd41d40c05ac5ebd009598e0f026b67e">GeometryBase::getNormals</a></div><div class="ttdeci">const QVector&lt; QVector3D &gt; &amp; getNormals() const</div><div class="ttdoc">Getter für die Normalen der Geometry.</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:45</div></div>
+<div class="ttc" id="aclass_geometry_base_html_ad5657fbf29ed86046f0b47e950607d2c"><div class="ttname"><a href="class_geometry_base.html#ad5657fbf29ed86046f0b47e950607d2c">GeometryBase::destroyVertexBuffers</a></div><div class="ttdeci">virtual void destroyVertexBuffers()</div><div class="ttdoc">Zerstört alle Buffer der Geometrie. Kann überschrieben werden um zusätzliche Buffer wie z....</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:177</div></div>
+<div class="ttc" id="aclass_geometry_base_html_ae17a521a7025011543147cad6f270db2"><div class="ttname"><a href="class_geometry_base.html#ae17a521a7025011543147cad6f270db2">GeometryBase::mVertices</a></div><div class="ttdeci">QVector&lt; QVector4D &gt; mVertices</div><div class="ttdoc">Felder für Geometriedaten.</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:104</div></div>
+<div class="ttc" id="aclass_geometry_base_html_ae2e82c9b17656ad7dd482e9458c5f516"><div class="ttname"><a href="class_geometry_base.html#ae2e82c9b17656ad7dd482e9458c5f516">GeometryBase::getImplementation</a></div><div class="ttdeci">virtual std::shared_ptr&lt; IGeometryImplementation &gt; getImplementation()</div><div class="ttdoc">Implementation holen.</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:67</div></div>
+<div class="ttc" id="aclass_geometry_base_html_ae55b89fe940a6eb69d8e1a129f01084e"><div class="ttname"><a href="class_geometry_base.html#ae55b89fe940a6eb69d8e1a129f01084e">GeometryBase::sRenderableGeometryClasses</a></div><div class="ttdeci">static QSet&lt; entt::id_type &gt; sRenderableGeometryClasses</div><div class="ttdoc">Enthält die entt Typen aller von GeometryBase abgeleitenen Klassen, also aller Klassen,...</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:133</div></div>
+<div class="ttc" id="aclass_geometry_base_html_aec656cdbacd07baa7c95237b8c501aa7"><div class="ttname"><a href="class_geometry_base.html#aec656cdbacd07baa7c95237b8c501aa7">GeometryBase::mVertexPositionBuffer</a></div><div class="ttdeci">QOpenGLBuffer mVertexPositionBuffer</div><div class="ttdoc">Buffer für die Geometriedaten.</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:114</div></div>
+<div class="ttc" id="aclass_geometry_base_html_aed75d72e662136486dea45387ca0bbcf"><div class="ttname"><a href="class_geometry_base.html#aed75d72e662136486dea45387ca0bbcf">GeometryBase::getTextureCoordinates</a></div><div class="ttdeci">const QVector&lt; QVector2D &gt; &amp; getTextureCoordinates() const</div><div class="ttdoc">Getter für die Textur-Koordinaten der Geometry.</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:48</div></div>
+<div class="ttc" id="aclass_geometry_base_html_af028246beee64526060a728c58ec3b5c"><div class="ttname"><a href="class_geometry_base.html#af028246beee64526060a728c58ec3b5c">GeometryBase::mVertexColors</a></div><div class="ttdeci">QVector&lt; QVector4D &gt; mVertexColors</div><div class="ttdef"><b>Definition:</b> geometrybase.hpp:105</div></div>
+<div class="ttc" id="aclass_geometry_base_html_af375d4b57e53946733243091afb85701"><div class="ttname"><a href="class_geometry_base.html#af375d4b57e53946733243091afb85701">GeometryBase::GeometryBase</a></div><div class="ttdeci">GeometryBase()</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:11</div></div>
+<div class="ttc" id="aclass_geometry_base_html_af6254a208c6f20567eee32c9161fd2e9"><div class="ttname"><a href="class_geometry_base.html#af6254a208c6f20567eee32c9161fd2e9">GeometryBase::~GeometryBase</a></div><div class="ttdeci">virtual ~GeometryBase()</div><div class="ttdef"><b>Definition:</b> geometrybase.cpp:39</div></div>
+<div class="ttc" id="aclass_shader_html"><div class="ttname"><a href="class_shader.html">Shader</a></div><div class="ttdoc">Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...</div><div class="ttdef"><b>Definition:</b> shader.hpp:11</div></div>
+<div class="ttc" id="aecs_8hpp_html"><div class="ttname"><a href="ecs_8hpp.html">ecs.hpp</a></div></div>
+<div class="ttc" id="aecs_8hpp_html_a4b0f3a988b0fc380a8841e8e2c7c0007"><div class="ttname"><a href="ecs_8hpp.html#a4b0f3a988b0fc380a8841e8e2c7c0007">ECS</a></div><div class="ttdeci">#define ECS</div><div class="ttdef"><b>Definition:</b> ecs.hpp:13</div></div>
+<div class="ttc" id="aigeometryimplementation_8hpp_html"><div class="ttname"><a href="igeometryimplementation_8hpp.html">igeometryimplementation.hpp</a></div></div>
+<div class="ttc" id="aopengl_8hpp_html"><div class="ttname"><a href="opengl_8hpp.html">opengl.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_cda996fc916ed27d80e8cee84a8ca5c5.html">SORS</a></li><li class="navelem"><a class="el" href="dir_cd3bba243de42adf6eee9362c01d14f6.html">geometry</a></li><li class="navelem"><a class="el" href="geometrybase_8hpp.html">geometrybase.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

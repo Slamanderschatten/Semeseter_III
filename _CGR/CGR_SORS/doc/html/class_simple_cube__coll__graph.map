@@ -1,0 +1,4 @@
+<map id="SimpleCube" name="SimpleCube">
+<area shape="rect" id="node1" title="Geometrie eines einfachen Würfels mit Normalen und Texturkoordinaten." alt="" coords="45,80,138,107"/>
+<area shape="rect" id="node2" href="$class_i_geometry_implementation.html" title="Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien...." alt="" coords="5,5,177,32"/>
+</map>

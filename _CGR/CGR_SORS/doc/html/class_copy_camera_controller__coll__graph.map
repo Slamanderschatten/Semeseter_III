@@ -1,0 +1,6 @@
+<map id="CopyCameraController" name="CopyCameraController">
+<area shape="rect" id="node1" title="Ein CameraController, der einfach die Viewmatrix einer zugeordneten Entity übernimmt Ggf...." alt="" coords="5,229,160,256"/>
+<area shape="rect" id="node2" href="$class_camera_controller.html" title="Auch die Kamera kann mit den üblichen MoveController kontrolliert werden. Diese Klasse stellt die Ver..." alt="" coords="21,155,145,181"/>
+<area shape="rect" id="node3" href="$class_move_controller.html" title="Basisklasse aller Klassen, die die Orientierung oder Position eines Entity verändern wollen...." alt="" coords="27,80,138,107"/>
+<area shape="rect" id="node4" href="$class_wants_tick.html" title="Basisklasse für alle Objekte, die bei idle fuer Animationen gerufen werden wollen Gerufen wird die Me..." alt="" coords="41,5,125,32"/>
+</map>

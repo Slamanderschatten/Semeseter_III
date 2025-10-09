@@ -1,0 +1,6 @@
+<map id="ArmController" name="ArmController">
+<area shape="rect" id="node1" title=" " alt="" coords="64,229,167,256"/>
+<area shape="rect" id="node2" href="$class_keyboard_transformation_controller.html" title="Eine Klasse, die ein Entity mit Tastatureingaben steuern kann." alt="" coords="5,155,225,181"/>
+<area shape="rect" id="node3" href="$class_move_controller.html" title="Basisklasse aller Klassen, die die Orientierung oder Position eines Entity verändern wollen...." alt="" coords="60,80,171,107"/>
+<area shape="rect" id="node4" href="$class_wants_tick.html" title="Basisklasse für alle Objekte, die bei idle fuer Animationen gerufen werden wollen Gerufen wird die Me..." alt="" coords="73,5,157,32"/>
+</map>

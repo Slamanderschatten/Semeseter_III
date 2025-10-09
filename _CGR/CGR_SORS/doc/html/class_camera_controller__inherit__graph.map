@@ -1,0 +1,10 @@
+<map id="CameraController" name="CameraController">
+<area shape="rect" id="node1" title="Auch die Kamera kann mit den üblichen MoveController kontrolliert werden. Diese Klasse stellt die Ver..." alt="" coords="296,81,420,108"/>
+<area shape="rect" id="node4" href="$class_copy_camera_controller.html" title="Ein CameraController, der einfach die Viewmatrix einer zugeordneten Entity übernimmt Ggf...." alt="" coords="480,5,635,32"/>
+<area shape="rect" id="node5" href="$class_empty_camera_controller.html" title=" " alt="" coords="476,56,639,83"/>
+<area shape="rect" id="node6" href="$class_follow_main_cam_controller.html" title=" " alt="" coords="471,107,643,133"/>
+<area shape="rect" id="node7" href="$class_keyboard_camera_controller.html" title="Eine klassische Kamerasteuerung über a, s, d, w, den Cursortasten sowie x, y, z für eine Drehung um d..." alt="" coords="468,157,647,184"/>
+<area shape="rect" id="node2" href="$class_move_controller.html" title="Basisklasse aller Klassen, die die Orientierung oder Position eines Entity verändern wollen...." alt="" coords="137,81,248,108"/>
+<area shape="rect" id="node3" href="$class_wants_tick.html" title="Basisklasse für alle Objekte, die bei idle fuer Animationen gerufen werden wollen Gerufen wird die Me..." alt="" coords="5,81,89,108"/>
+<area shape="rect" id="node8" href="$class_mouse_keyboard_camera_controller.html" title="Realisierung einer Kamera, bei der die Blickrichtung über die Bewegung der Maus gesteuert werden kann..." alt="" coords="695,157,913,184"/>
+</map>

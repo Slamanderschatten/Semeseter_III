@@ -1,0 +1,4 @@
+<map id="Material" name="Material">
+<area shape="rect" id="node1" title="Diese Klasse realisiert ein einfaches Material, das dann über Uniforms an die Shader übergeben wird...." alt="" coords="42,80,110,107"/>
+<area shape="rect" id="node2" href="$class_i_renderable_property.html" title="Interface für alle Eigenschaften, die ein Renderable haben kann. Alle Eigenschaften werden entspreche..." alt="" coords="5,5,147,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Trackball" name="Trackball">
+<area shape="rect" id="node1" title="Diese Klasse realisiert einen einfachen Trackball und kann als Controller zu Entities hinzugefügt wer..." alt="" coords="23,155,98,181"/>
+<area shape="rect" id="node2" href="$class_move_controller.html" title="Basisklasse aller Klassen, die die Orientierung oder Position eines Entity verändern wollen...." alt="" coords="5,80,116,107"/>
+<area shape="rect" id="node3" href="$class_wants_tick.html" title="Basisklasse für alle Objekte, die bei idle fuer Animationen gerufen werden wollen Gerufen wird die Me..." alt="" coords="19,5,103,32"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="EmptyCameraController" name="EmptyCameraController">
+<area shape="rect" id="node1" title=" " alt="" coords="5,229,168,256"/>
+<area shape="rect" id="node2" href="$class_camera_controller.html" title="Auch die Kamera kann mit den üblichen MoveController kontrolliert werden. Diese Klasse stellt die Ver..." alt="" coords="25,155,149,181"/>
+<area shape="rect" id="node3" href="$class_move_controller.html" title="Basisklasse aller Klassen, die die Orientierung oder Position eines Entity verändern wollen...." alt="" coords="31,80,142,107"/>
+<area shape="rect" id="node4" href="$class_wants_tick.html" title="Basisklasse für alle Objekte, die bei idle fuer Animationen gerufen werden wollen Gerufen wird die Me..." alt="" coords="45,5,129,32"/>
+</map>

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: SORS/transformation/transformation.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('transformation_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">transformation.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="transformation_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef TRANSFORMATIONBASE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define TRANSFORMATIONBASE_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QMatrix4x4&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QQuaternion&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_transformation.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="class_transformation.html">Transformation</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_transformation.html#a40ab64d41c752804740e972ef5f2479f">   11</a></span>    <a class="code hl_function" href="class_transformation.html#a40ab64d41c752804740e972ef5f2479f">Transformation</a>(): <a class="code hl_variable" href="class_transformation.html#a51cdeac479348f78bca477e2fb1dc4dc">mMatrix</a>(), <a class="code hl_variable" href="class_transformation.html#a5828714650b7f3401b55d04970f2e9e1">mWorldMatrix</a>() {}</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_function" href="class_transformation.html#a40ab64d41c752804740e972ef5f2479f">Transformation</a>(QMatrix4x4 pMat);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_transformation.html#af3174f7df865afe6ffabccf6e7eb30d1">translate</a>(<span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty, <span class="keywordtype">float</span> tz);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_transformation.html#a021702af06ae457579a6d8cfc2dac32d">rotate</a>(<span class="keywordtype">float</span> angle, <span class="keyword">const</span> QVector3D&amp; axis);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_transformation.html#a1387e17e44cee8ce3c118680da1b6564">rotateQuat</a>(QQuaternion pQuat);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_transformation.html#a021702af06ae457579a6d8cfc2dac32d">rotate</a>(<span class="keywordtype">float</span> angle, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_transformation.html#aa7226365dee76bec8189dded44fae153">scale</a>(<span class="keyword">const</span> QVector3D&amp; <a class="code hl_function" href="class_transformation.html#aa7226365dee76bec8189dded44fae153">scale</a>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_transformation.html#aa7226365dee76bec8189dded44fae153">scale</a>(<span class="keywordtype">float</span> sx, <span class="keywordtype">float</span> sy, <span class="keywordtype">float</span> sz);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_transformation.html#a6305cba5449e8a5bee95f775b557ba05">resetTrafo</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_transformation.html#aff930573839c021f72b848c0130068bc">setMatrix</a>(<span class="keyword">const</span> QMatrix4x4&amp; modelMatrix);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_transformation.html#ad6be41f38b84809e143e98d70c6d5055">   39</a></span>    <span class="keyword">inline</span> QMatrix4x4&amp; <a class="code hl_function" href="class_transformation.html#ad6be41f38b84809e143e98d70c6d5055">getMatrix</a>() {<span class="keywordflow">return</span> <a class="code hl_variable" href="class_transformation.html#a51cdeac479348f78bca477e2fb1dc4dc">mMatrix</a>;}</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_transformation.html#ac77de220eeaa05af273e45433d24770a">   42</a></span>    <span class="keyword">inline</span> <span class="keyword">const</span> QMatrix4x4&amp; <a class="code hl_function" href="class_transformation.html#ac77de220eeaa05af273e45433d24770a">getMatrix</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="class_transformation.html#a51cdeac479348f78bca477e2fb1dc4dc">mMatrix</a>;}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    QMatrix4x4 <a class="code hl_function" href="class_transformation.html#a514c67a2e82f179ac4eeb334def8f33f">getWorldMatrix</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_transformation.html#a7dff97b0126d5457fc7a89da07faacd4">setWorldMatrix</a>(<span class="keyword">const</span> QMatrix4x4 &amp;pWorldMatrix);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_transformation.html#a51cdeac479348f78bca477e2fb1dc4dc">   49</a></span>    QMatrix4x4 <a class="code hl_variable" href="class_transformation.html#a51cdeac479348f78bca477e2fb1dc4dc">mMatrix</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_transformation.html#a5828714650b7f3401b55d04970f2e9e1">   56</a></span>    QMatrix4x4 <a class="code hl_variable" href="class_transformation.html#a5828714650b7f3401b55d04970f2e9e1">mWorldMatrix</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">// TRANSFORMATIONBASE_H</span></div>
+<div class="ttc" id="aclass_transformation_html"><div class="ttname"><a href="class_transformation.html">Transformation</a></div><div class="ttdoc">Basisklasse für Transformations-Klassen implementiert die eigentlichen Transformationen.</div><div class="ttdef"><b>Definition:</b> transformation.hpp:9</div></div>
+<div class="ttc" id="aclass_transformation_html_a021702af06ae457579a6d8cfc2dac32d"><div class="ttname"><a href="class_transformation.html#a021702af06ae457579a6d8cfc2dac32d">Transformation::rotate</a></div><div class="ttdeci">void rotate(float angle, const QVector3D &amp;axis)</div><div class="ttdoc">Rotieren um die Achse.</div><div class="ttdef"><b>Definition:</b> transformation.cpp:11</div></div>
+<div class="ttc" id="aclass_transformation_html_a1387e17e44cee8ce3c118680da1b6564"><div class="ttname"><a href="class_transformation.html#a1387e17e44cee8ce3c118680da1b6564">Transformation::rotateQuat</a></div><div class="ttdeci">void rotateQuat(QQuaternion pQuat)</div><div class="ttdoc">Rotieren um ein Quaternion.</div><div class="ttdef"><b>Definition:</b> transformation.cpp:16</div></div>
+<div class="ttc" id="aclass_transformation_html_a40ab64d41c752804740e972ef5f2479f"><div class="ttname"><a href="class_transformation.html#a40ab64d41c752804740e972ef5f2479f">Transformation::Transformation</a></div><div class="ttdeci">Transformation()</div><div class="ttdef"><b>Definition:</b> transformation.hpp:11</div></div>
+<div class="ttc" id="aclass_transformation_html_a514c67a2e82f179ac4eeb334def8f33f"><div class="ttname"><a href="class_transformation.html#a514c67a2e82f179ac4eeb334def8f33f">Transformation::getWorldMatrix</a></div><div class="ttdeci">QMatrix4x4 getWorldMatrix() const</div><div class="ttdef"><b>Definition:</b> transformation.cpp:42</div></div>
+<div class="ttc" id="aclass_transformation_html_a51cdeac479348f78bca477e2fb1dc4dc"><div class="ttname"><a href="class_transformation.html#a51cdeac479348f78bca477e2fb1dc4dc">Transformation::mMatrix</a></div><div class="ttdeci">QMatrix4x4 mMatrix</div><div class="ttdoc">Die Transformationen werden in dieser ModelMatrix gespeichert.</div><div class="ttdef"><b>Definition:</b> transformation.hpp:49</div></div>
+<div class="ttc" id="aclass_transformation_html_a5828714650b7f3401b55d04970f2e9e1"><div class="ttname"><a href="class_transformation.html#a5828714650b7f3401b55d04970f2e9e1">Transformation::mWorldMatrix</a></div><div class="ttdeci">QMatrix4x4 mWorldMatrix</div><div class="ttdoc">Enthält die ggf. in einer Hierarchie angesammelte Transformationsmatrix, die dann auf das zugehörige ...</div><div class="ttdef"><b>Definition:</b> transformation.hpp:56</div></div>
+<div class="ttc" id="aclass_transformation_html_a6305cba5449e8a5bee95f775b557ba05"><div class="ttname"><a href="class_transformation.html#a6305cba5449e8a5bee95f775b557ba05">Transformation::resetTrafo</a></div><div class="ttdeci">void resetTrafo()</div><div class="ttdoc">Transformationen zurücksetzen (LoadIdentity)</div><div class="ttdef"><b>Definition:</b> transformation.cpp:32</div></div>
+<div class="ttc" id="aclass_transformation_html_a7dff97b0126d5457fc7a89da07faacd4"><div class="ttname"><a href="class_transformation.html#a7dff97b0126d5457fc7a89da07faacd4">Transformation::setWorldMatrix</a></div><div class="ttdeci">void setWorldMatrix(const QMatrix4x4 &amp;pWorldMatrix)</div><div class="ttdef"><b>Definition:</b> transformation.cpp:47</div></div>
+<div class="ttc" id="aclass_transformation_html_aa7226365dee76bec8189dded44fae153"><div class="ttname"><a href="class_transformation.html#aa7226365dee76bec8189dded44fae153">Transformation::scale</a></div><div class="ttdeci">void scale(const QVector3D &amp;scale)</div><div class="ttdoc">Skalieren.</div><div class="ttdef"><b>Definition:</b> transformation.cpp:24</div></div>
+<div class="ttc" id="aclass_transformation_html_ac77de220eeaa05af273e45433d24770a"><div class="ttname"><a href="class_transformation.html#ac77de220eeaa05af273e45433d24770a">Transformation::getMatrix</a></div><div class="ttdeci">const QMatrix4x4 &amp; getMatrix() const</div><div class="ttdoc">Const getter für die ModelMatrix.</div><div class="ttdef"><b>Definition:</b> transformation.hpp:42</div></div>
+<div class="ttc" id="aclass_transformation_html_ad6be41f38b84809e143e98d70c6d5055"><div class="ttname"><a href="class_transformation.html#ad6be41f38b84809e143e98d70c6d5055">Transformation::getMatrix</a></div><div class="ttdeci">QMatrix4x4 &amp; getMatrix()</div><div class="ttdoc">Mutable getter für die ModelMatrix.</div><div class="ttdef"><b>Definition:</b> transformation.hpp:39</div></div>
+<div class="ttc" id="aclass_transformation_html_af3174f7df865afe6ffabccf6e7eb30d1"><div class="ttname"><a href="class_transformation.html#af3174f7df865afe6ffabccf6e7eb30d1">Transformation::translate</a></div><div class="ttdeci">void translate(float tx, float ty, float tz)</div><div class="ttdoc">Verschieben um Vektor, der durch die 3 Parameter gebildet wird.</div><div class="ttdef"><b>Definition:</b> transformation.cpp:7</div></div>
+<div class="ttc" id="aclass_transformation_html_aff930573839c021f72b848c0130068bc"><div class="ttname"><a href="class_transformation.html#aff930573839c021f72b848c0130068bc">Transformation::setMatrix</a></div><div class="ttdeci">void setMatrix(const QMatrix4x4 &amp;modelMatrix)</div><div class="ttdoc">Setter für die ModelMatrix.</div><div class="ttdef"><b>Definition:</b> transformation.cpp:37</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_cda996fc916ed27d80e8cee84a8ca5c5.html">SORS</a></li><li class="navelem"><a class="el" href="dir_196a93b07937a74a595d5939044d08d2.html">transformation</a></li><li class="navelem"><a class="el" href="transformation_8hpp.html">transformation.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

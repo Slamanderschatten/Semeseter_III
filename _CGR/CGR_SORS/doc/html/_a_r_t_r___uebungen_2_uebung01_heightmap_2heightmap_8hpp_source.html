@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: ARTR_Uebungen/Uebung01Heightmap/heightmap.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_a_r_t_r___uebungen_2_uebung01_heightmap_2heightmap_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">heightmap.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_a_r_t_r___uebungen_2_uebung01_heightmap_2heightmap_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef HEIGHTMAP_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define HEIGHTMAP_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QRgb&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QImage&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="geometrybase_8hpp.html">geometry/geometrybase.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="inputregistry_8hpp.html">input/inputregistry.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="ecs_8hpp.html">ecs.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="igeometryimplementation_8hpp.html">geometry/igeometryimplementation.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_heightmap.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="class_heightmap.html">Heightmap</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_i_geometry_implementation.html">IGeometryImplementation</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_heightmap.html#a49fd4cf8e9258903bafb76f9fbc534c9">   16</a></span>    <a class="code hl_function" href="class_heightmap.html#a49fd4cf8e9258903bafb76f9fbc534c9">Heightmap</a>(): myScale(5.0), mPoints(false)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        image_pfade[0] = <span class="stringliteral">&quot;sam.bmp&quot;</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        image_pfade[1] = <span class="stringliteral">&quot;logo.bmp&quot;</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        image_pfade[2] = <span class="stringliteral">&quot;sw.bmp&quot;</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        image_pfade[3] = <span class="stringliteral">&quot;terrain.bmp&quot;</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        image_pfade[4] = <span class="stringliteral">&quot;swklein.bmp&quot;</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_function" href="class_heightmap.html#a65421cfaf9e695bc8b43caf4b063b3ae">loadImage</a>(image_pfade[0]);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_heightmap.html#a65421cfaf9e695bc8b43caf4b063b3ae">   27</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_heightmap.html#a65421cfaf9e695bc8b43caf4b063b3ae">loadImage</a>(QString pPath)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">auto</span> lPath = QString(DEFAULT_IMAGES_DIR) + pPath;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        Q_ASSERT(image.load(lPath));</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">//    virtual void keyboard(int key, int modifier) override;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_heightmap.html#a9967aff83a5cc03f6df11a43a6882345">   34</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_heightmap.html#a9967aff83a5cc03f6df11a43a6882345">setPoints</a>(<span class="keywordtype">bool</span> p) {mPoints = p;}</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_heightmap.html#ad0a6add57b61e0c4efc3b2d5bdbf6a21">   37</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_heightmap.html#ad0a6add57b61e0c4efc3b2d5bdbf6a21">render</a>()<span class="keyword"> override</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_function" href="class_heightmap.html#a11266c396234a6c99c7cb86479bd0e4a">keyboard</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">if</span> (mPoints)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glPointSize(5.0);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glDrawArrays(GL_POINTS,0, 4*(image.height()-1)*(image.width()-1));</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_variable" href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a>-&gt;glDrawArrays(GL_TRIANGLES,0, 6*(image.height()-1)*(image.width()-1));</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_heightmap.html#adda45cfb0f860cf0ec07fe1c37eeb962">   51</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_heightmap.html#adda45cfb0f860cf0ec07fe1c37eeb962">fillVertices</a>(QVector&lt;QVector4D&gt;&amp; vertices)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        vertices.clear();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">for</span> (i=0; i&lt;image.height()-1; i++)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">for</span> (j=0; j&lt;image.width()-1; j++)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <span class="comment">//Dreieck links oben</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                QRgb farbe_ji = image.pixel(j, i);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                QRgb farbe_jiplus1 = image.pixel(j, i+1);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                QRgb farbe_jplus1i = image.pixel(j+1, i);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                QRgb farbe_jplus1iplus1 = image.pixel(j+1, i+1);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                vertices.append(QVector4D(scaleTo(i)-scaleTo(image.height())/2, scaleTo(qGray(farbe_ji))/10.0, scaleTo(j),1.0));</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordflow">if</span> (!mPoints)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    vertices.append(QVector4D(scaleTo(i)-scaleTo(image.height())/2, scaleTo(qGray(farbe_jplus1i))/10.0, scaleTo(j+1),1.0));</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                vertices.append(QVector4D(scaleTo(i+1)-scaleTo(image.height())/2, scaleTo(qGray(farbe_jiplus1))/10.0, scaleTo(j),1.0));</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="comment">//Dreieck rechts unten</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keywordflow">if</span> (!mPoints)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    vertices.append(QVector4D(scaleTo(i)-scaleTo(image.height())/2, scaleTo(qGray(farbe_jplus1i))/10.0, scaleTo(j+1),1.0));</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                vertices.append(QVector4D(scaleTo(i+1)-scaleTo(image.height())/2, scaleTo(qGray(farbe_jplus1iplus1))/10.0, scaleTo(j+1),1.0));</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                vertices.append(QVector4D(scaleTo(i+1)-scaleTo(image.height())/2, scaleTo(qGray(farbe_jiplus1))/10.0, scaleTo(j),1.0));</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_heightmap.html#a60858771ffed3d55298455ce9959166b">   77</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_heightmap.html#a60858771ffed3d55298455ce9959166b">fillColors</a>(QVector&lt;QVector4D&gt;&amp; colors)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        colors.clear();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">for</span> (i=0; i&lt;image.height()-1; i++)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">for</span> (j=0; j&lt;image.width()-1; j++)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <span class="comment">//Dreieck links oben</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                QRgb farbe_ji = image.pixel(j, i);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                QRgb farbe_jiplus1 = image.pixel(j, i+1);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                QRgb farbe_jplus1i = image.pixel(j+1, i);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                QRgb farbe_jplus1iplus1 = image.pixel(j+1, i+1);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                colors.append(QVector4D(clampColor(qRed(farbe_ji)),clampColor(qGreen(farbe_ji)), clampColor(qBlue(farbe_ji)), 1.0));</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                <span class="keywordflow">if</span> (!mPoints)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                    colors.append(QVector4D(clampColor(qRed(farbe_jplus1i)),clampColor(qGreen(farbe_jplus1i)), clampColor(qBlue(farbe_jplus1i)), 1.0));</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                colors.append(QVector4D(clampColor(qRed(farbe_jiplus1)),clampColor(qGreen(farbe_jiplus1)), clampColor(qBlue(farbe_jiplus1)), 1.0));</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="comment">//Dreieck rechts unten</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                <span class="keywordflow">if</span> (!mPoints)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                    colors.append(QVector4D(clampColor(qRed(farbe_jplus1i)),clampColor(qGreen(farbe_jplus1i)), clampColor(qBlue(farbe_jplus1i)), 1.0));</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                colors.append(QVector4D(clampColor(qRed(farbe_jplus1iplus1)),clampColor(qGreen(farbe_jplus1iplus1)), clampColor(qBlue(farbe_jplus1iplus1)), 1.0));</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                colors.append(QVector4D(clampColor(qRed(farbe_jiplus1)),clampColor(qGreen(farbe_jiplus1)), clampColor(qBlue(farbe_jiplus1)), 1.0));</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_heightmap.html#afe3c65b7a637c283dc70afd5af07e6e3">  102</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_heightmap.html#afe3c65b7a637c283dc70afd5af07e6e3">fillNormals</a>(QVector&lt;QVector3D&gt;&amp; normals, QVector&lt;QVector4D&gt;&amp; vertices)<span class="keyword">  override</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        normals.clear();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">if</span> (!mPoints) <span class="comment">//Falls Punkte gezeichnet werden -&gt; keine Normalen berechnen</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="comment">//Setzen derselben Normale für alle Verts eines Dreiecks -&gt; die geometrische Struktur (Dreiecke) wird sichtbar</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="comment">//Für &quot;weicheres&quot; Aussehen Mittelwerte berechnen  aus mehr Vertices (s.u.)</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;vertices.size()-3; i+=3)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                QList&lt;QVector3D&gt; param;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                param.clear();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j&lt;3; j++)</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                    param.append(QVector3D(vertices[i+j]));</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                QVector3D result = newell(param);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                normals.append(result);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                normals.append(result);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                normals.append(result);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordflow">if</span>(mSmoothEnabled)</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;image.height()-1; i++)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j&lt;image.width()-1; j++)</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                        QList&lt;int&gt; normalIndices;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                        <span class="keywordtype">int</span> currentIndex = i * (image.width() - 1) * 6 + j * 6;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                        <span class="keywordtype">bool</span> isFirstRow = currentIndex &lt; ((image.width() - 1) * 6);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                        <span class="keywordtype">bool</span> isFirstColumn = currentIndex % ((image.width() - 1) * 6) == 0;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                        <span class="keywordflow">if</span>(isFirstRow || isFirstColumn)</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                        normalIndices.append(currentIndex);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                        normalIndices.append(currentIndex - 3);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                        normalIndices.append(currentIndex - 5);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                        normalIndices.append(currentIndex - (image.width() - 1) * 6 + 2);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                        normalIndices.append(currentIndex - (image.width() - 1) * 6 + 5);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                        normalIndices.append(currentIndex - (image.width()) * 6 + 4);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                        QVector3D smoothedNormal;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> normalIndex : normalIndices)</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                            smoothedNormal += normals[normalIndex];</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                        smoothedNormal.normalize();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> normalIndex : normalIndices)</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                            normals[normalIndex] = smoothedNormal;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                    }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="class_heightmap.html#a11266c396234a6c99c7cb86479bd0e4a">  158</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_heightmap.html#a11266c396234a6c99c7cb86479bd0e4a">keyboard</a>()</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keyword">auto</span> keyIn = <a class="code hl_function" href="class_input_registry.html#a2947541085e41a21aa2e67f38cb13f1e">InputRegistry::getInstance</a>().<a class="code hl_function" href="class_input_registry.html#ac26e612e7dc7159189c1cfb57c74e09b">getKeyboardInput</a>();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <a class="code hl_variable" href="class_i_geometry_implementation.html#abd49a4900d45b6e9dc8cbbc7a634d29a">mNeedsInit</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">if</span> (keyIn-&gt;isKeyPressed(<span class="charliteral">&#39;g&#39;</span>))</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            myScale /= 1.1F;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyIn-&gt;isKeyPressed(<span class="charliteral">&#39;G&#39;</span>))</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            myScale *= 1.1F;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyIn-&gt;isKeyPressed(<span class="charliteral">&#39;p&#39;</span>))</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            mPoints = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyIn-&gt;isKeyPressed(<span class="charliteral">&#39;l&#39;</span>))</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            mPoints = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyIn-&gt;isKeyPressed(<span class="charliteral">&#39;1&#39;</span>))</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <a class="code hl_function" href="class_heightmap.html#a65421cfaf9e695bc8b43caf4b063b3ae">loadImage</a>(image_pfade[0]);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyIn-&gt;isKeyPressed(<span class="charliteral">&#39;2&#39;</span>))</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            <a class="code hl_function" href="class_heightmap.html#a65421cfaf9e695bc8b43caf4b063b3ae">loadImage</a>(image_pfade[1]);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyIn-&gt;isKeyPressed(<span class="charliteral">&#39;3&#39;</span>))</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <a class="code hl_function" href="class_heightmap.html#a65421cfaf9e695bc8b43caf4b063b3ae">loadImage</a>(image_pfade[2]);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyIn-&gt;isKeyPressed(<span class="charliteral">&#39;4&#39;</span>))</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <a class="code hl_function" href="class_heightmap.html#a65421cfaf9e695bc8b43caf4b063b3ae">loadImage</a>(image_pfade[3]);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyIn-&gt;isKeyPressed(<span class="charliteral">&#39;h&#39;</span>))</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            mSmoothEnabled = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyIn-&gt;isKeyPressed(<span class="charliteral">&#39;H&#39;</span>))</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            mSmoothEnabled = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            <a class="code hl_variable" href="class_i_geometry_implementation.html#abd49a4900d45b6e9dc8cbbc7a634d29a">mNeedsInit</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    QImage image;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    QString image_pfade[5];</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordtype">float</span> myScale;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordtype">bool</span> mPoints;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordtype">bool</span> mSmoothEnabled{<span class="keyword">true</span>};</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordtype">float</span> clampColor(uchar d)   {<span class="keywordflow">return</span> (d/255.0);}</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordtype">double</span> scaleTo(<span class="keywordtype">int</span> toscale)</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keyword">static</span> <span class="keywordtype">int</span> imageausdehnung=std::max(image.height(),image.width());</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordflow">return</span> double(toscale)/imageausdehnung*myScale;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    }</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    QVector3D newell(QList&lt;QVector3D&gt; pInputVertices)</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    {</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        QVector3D lOut;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> lHowMany = pInputVertices.length();</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;pInputVertices.length(); i++)</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            lOut[0] += ((pInputVertices[i][1]-pInputVertices[(i+1)%lHowMany][1]) * (pInputVertices[i][2]+pInputVertices[(i+1)%lHowMany][2]))/2;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            lOut[1] += ((pInputVertices[i][2]-pInputVertices[(i+1)%lHowMany][2]) * (pInputVertices[i][0]+pInputVertices[(i+1)%lHowMany][0]))/2;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            lOut[2] += ((pInputVertices[i][0]-pInputVertices[(i+1)%lHowMany][0]) * (pInputVertices[i][1]+pInputVertices[(i+1)%lHowMany][1]))/2;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="keywordflow">return</span> (lOut.normalized());</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>};</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="preprocessor">#endif </span><span class="comment">// HEIGHTMAP_HPP</span></div>
+<div class="ttc" id="aclass_heightmap_html"><div class="ttname"><a href="class_heightmap.html">Heightmap</a></div><div class="ttdef"><b>Definition:</b> heightmap.hpp:14</div></div>
+<div class="ttc" id="aclass_heightmap_html_a11266c396234a6c99c7cb86479bd0e4a"><div class="ttname"><a href="class_heightmap.html#a11266c396234a6c99c7cb86479bd0e4a">Heightmap::keyboard</a></div><div class="ttdeci">void keyboard()</div><div class="ttdef"><b>Definition:</b> heightmap.hpp:158</div></div>
+<div class="ttc" id="aclass_heightmap_html_a49fd4cf8e9258903bafb76f9fbc534c9"><div class="ttname"><a href="class_heightmap.html#a49fd4cf8e9258903bafb76f9fbc534c9">Heightmap::Heightmap</a></div><div class="ttdeci">Heightmap()</div><div class="ttdef"><b>Definition:</b> heightmap.hpp:16</div></div>
+<div class="ttc" id="aclass_heightmap_html_a60858771ffed3d55298455ce9959166b"><div class="ttname"><a href="class_heightmap.html#a60858771ffed3d55298455ce9959166b">Heightmap::fillColors</a></div><div class="ttdeci">void fillColors(QVector&lt; QVector4D &gt; &amp;colors) override</div><div class="ttdoc">Überschreiben um die Vertex-Farben beim Initialisieren der Geometrie zu erstellen.</div><div class="ttdef"><b>Definition:</b> heightmap.hpp:77</div></div>
+<div class="ttc" id="aclass_heightmap_html_a65421cfaf9e695bc8b43caf4b063b3ae"><div class="ttname"><a href="class_heightmap.html#a65421cfaf9e695bc8b43caf4b063b3ae">Heightmap::loadImage</a></div><div class="ttdeci">void loadImage(QString pPath)</div><div class="ttdef"><b>Definition:</b> heightmap.hpp:27</div></div>
+<div class="ttc" id="aclass_heightmap_html_a9967aff83a5cc03f6df11a43a6882345"><div class="ttname"><a href="class_heightmap.html#a9967aff83a5cc03f6df11a43a6882345">Heightmap::setPoints</a></div><div class="ttdeci">void setPoints(bool p)</div><div class="ttdef"><b>Definition:</b> heightmap.hpp:34</div></div>
+<div class="ttc" id="aclass_heightmap_html_ad0a6add57b61e0c4efc3b2d5bdbf6a21"><div class="ttname"><a href="class_heightmap.html#ad0a6add57b61e0c4efc3b2d5bdbf6a21">Heightmap::render</a></div><div class="ttdeci">virtual void render() override</div><div class="ttdoc">Methoden aus.</div><div class="ttdef"><b>Definition:</b> heightmap.hpp:37</div></div>
+<div class="ttc" id="aclass_heightmap_html_adda45cfb0f860cf0ec07fe1c37eeb962"><div class="ttname"><a href="class_heightmap.html#adda45cfb0f860cf0ec07fe1c37eeb962">Heightmap::fillVertices</a></div><div class="ttdeci">virtual void fillVertices(QVector&lt; QVector4D &gt; &amp;vertices) override</div><div class="ttdoc">Überschreiben um die Vertices beim Initialisieren der Geometrie zu erstellen.</div><div class="ttdef"><b>Definition:</b> heightmap.hpp:51</div></div>
+<div class="ttc" id="aclass_heightmap_html_afe3c65b7a637c283dc70afd5af07e6e3"><div class="ttname"><a href="class_heightmap.html#afe3c65b7a637c283dc70afd5af07e6e3">Heightmap::fillNormals</a></div><div class="ttdeci">virtual void fillNormals(QVector&lt; QVector3D &gt; &amp;normals, QVector&lt; QVector4D &gt; &amp;vertices) override</div><div class="ttdoc">Überschreiben um die Normalen beim Initialisieren der Geometrie zu erstellen.</div><div class="ttdef"><b>Definition:</b> heightmap.hpp:102</div></div>
+<div class="ttc" id="aclass_i_geometry_implementation_html"><div class="ttname"><a href="class_i_geometry_implementation.html">IGeometryImplementation</a></div><div class="ttdoc">Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien....</div><div class="ttdef"><b>Definition:</b> igeometryimplementation.hpp:12</div></div>
+<div class="ttc" id="aclass_i_geometry_implementation_html_abd49a4900d45b6e9dc8cbbc7a634d29a"><div class="ttname"><a href="class_i_geometry_implementation.html#abd49a4900d45b6e9dc8cbbc7a634d29a">IGeometryImplementation::mNeedsInit</a></div><div class="ttdeci">bool mNeedsInit</div><div class="ttdoc">Sagt aus, ob die Geometrie neu initialisiert und die GeometryBase neu befüllt werden muss Nicht ganz ...</div><div class="ttdef"><b>Definition:</b> igeometryimplementation.hpp:41</div></div>
+<div class="ttc" id="aclass_input_registry_html_a2947541085e41a21aa2e67f38cb13f1e"><div class="ttname"><a href="class_input_registry.html#a2947541085e41a21aa2e67f38cb13f1e">InputRegistry::getInstance</a></div><div class="ttdeci">static InputRegistry &amp; getInstance()</div><div class="ttdoc">getInstance Singleton-Abruf, Thread sicher</div><div class="ttdef"><b>Definition:</b> inputregistry.cpp:10</div></div>
+<div class="ttc" id="aclass_input_registry_html_ac26e612e7dc7159189c1cfb57c74e09b"><div class="ttname"><a href="class_input_registry.html#ac26e612e7dc7159189c1cfb57c74e09b">InputRegistry::getKeyboardInput</a></div><div class="ttdeci">std::shared_ptr&lt; KeyboardInput &gt; getKeyboardInput()</div><div class="ttdoc">getKeyboardInput Erstellt eine KeyboardInput-Instanz, falls nicht vorhanden, und gibt diese zurück</div><div class="ttdef"><b>Definition:</b> inputregistry.cpp:16</div></div>
+<div class="ttc" id="aecs_8hpp_html"><div class="ttname"><a href="ecs_8hpp.html">ecs.hpp</a></div></div>
+<div class="ttc" id="ageometrybase_8hpp_html"><div class="ttname"><a href="geometrybase_8hpp.html">geometrybase.hpp</a></div></div>
+<div class="ttc" id="aigeometryimplementation_8hpp_html"><div class="ttname"><a href="igeometryimplementation_8hpp.html">igeometryimplementation.hpp</a></div></div>
+<div class="ttc" id="ainputregistry_8hpp_html"><div class="ttname"><a href="inputregistry_8hpp.html">inputregistry.hpp</a></div></div>
+<div class="ttc" id="aopengl_8hpp_html_aa4b69e25f84fb24882f8889fb7238b03"><div class="ttname"><a href="opengl_8hpp.html#aa4b69e25f84fb24882f8889fb7238b03">glFunctions</a></div><div class="ttdeci">QOpenGLFunctions_4_0_Core * glFunctions</div><div class="ttdoc">Aktuell wird OpenGL 4.0 verwendet und somit eine instanz von QOpenGLFunctions_4_0_Core erstellt.</div><div class="ttdef"><b>Definition:</b> openglwidget.cpp:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_0994ba94015428f872a1a501c74bbd96.html">ARTR_Uebungen</a></li><li class="navelem"><a class="el" href="dir_9afe1c4dac0e9a2d58f7a9f7f6f186a1.html">Uebung01Heightmap</a></li><li class="navelem"><a class="el" href="_a_r_t_r___uebungen_2_uebung01_heightmap_2heightmap_8hpp.html">heightmap.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

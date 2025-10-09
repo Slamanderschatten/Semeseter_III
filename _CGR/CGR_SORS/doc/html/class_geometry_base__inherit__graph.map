@@ -1,0 +1,4 @@
+<map id="GeometryBase" name="GeometryBase">
+<area shape="rect" id="node1" title="GeometryBase ist die Basisklasse für alle Objekte , die die geometrischen Daten eines zu zeichenenden..." alt="" coords="28,5,137,32"/>
+<area shape="rect" id="node2" href="$class_geometry_indexed_base.html" title="Basisklasse für alle Geometrien, die indexed gespeichert sind. Indexed bedeutet, dass nicht bei jedem..." alt="" coords="5,80,160,107"/>
+</map>

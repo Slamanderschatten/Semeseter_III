@@ -1,0 +1,4 @@
+<map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
+<area shape="rect" id="node1" href="$class_relationship_visitor.html" title="Basisklasse der Visitors, in etwa dem entsprechenden Visitor&#45;Pattern folgend." alt="" coords="5,5,136,32"/>
+<area shape="rect" id="node2" href="$class_transformation_hierarchy_visitor.html" title="Visitor&#45;Klasse, die die Hierarchien von Relationship durchläuft, um zusammengesetzte Transformationen..." alt="" coords="184,5,387,32"/>
+</map>

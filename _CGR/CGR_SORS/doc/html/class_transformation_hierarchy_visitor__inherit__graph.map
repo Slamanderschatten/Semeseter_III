@@ -1,0 +1,4 @@
+<map id="TransformationHierarchyVisitor" name="TransformationHierarchyVisitor">
+<area shape="rect" id="node1" title="Visitor&#45;Klasse, die die Hierarchien von Relationship durchläuft, um zusammengesetzte Transformationen..." alt="" coords="5,80,208,107"/>
+<area shape="rect" id="node2" href="$class_relationship_visitor.html" title="Basisklasse der Visitors, in etwa dem entsprechenden Visitor&#45;Pattern folgend." alt="" coords="41,5,172,32"/>
+</map>

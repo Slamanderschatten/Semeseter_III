@@ -1,0 +1,4 @@
+<map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
+<area shape="rect" id="node1" href="$class_geometry_base.html" title="GeometryBase ist die Basisklasse für alle Objekte , die die geometrischen Daten eines zu zeichenenden..." alt="" coords="5,5,115,32"/>
+<area shape="rect" id="node2" href="$class_geometry_indexed_base.html" title="Basisklasse für alle Geometrien, die indexed gespeichert sind. Indexed bedeutet, dass nicht bei jedem..." alt="" coords="163,5,317,32"/>
+</map>

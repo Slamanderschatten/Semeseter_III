@@ -1,0 +1,5 @@
+<map id="ColoredPlane" name="ColoredPlane">
+<area shape="rect" id="node1" title=" " alt="" coords="41,155,141,181"/>
+<area shape="rect" id="node2" href="$class_simple_plane.html" title="Einfache Fläche in parametrisierbarer Ausdehnung und Auflösung (mDivs)." alt="" coords="44,80,139,107"/>
+<area shape="rect" id="node3" href="$class_i_geometry_implementation.html" title="Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien...." alt="" coords="5,5,177,32"/>
+</map>

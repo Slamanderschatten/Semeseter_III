@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: ShaderManager Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_shader_manager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Öffentliche, statische Methoden</a> &#124;
+<a href="class_shader_manager-members.html">Aufstellung aller Elemente</a>  </div>
+  <div class="headertitle"><div class="title">ShaderManager Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Die <a class="el" href="class_shader_manager.html" title="Die ShaderManager Klasse erzeugt und verwaltet Shader. Sie sorgt dafür, dass nur eine Instanz eines S...">ShaderManager</a> Klasse erzeugt und verwaltet <a class="el" href="class_shader.html" title="Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...">Shader</a>.<br  />
+Sie sorgt dafür, dass nur eine Instanz eines Shaders existiert.<br  />
+Beispiel:  
+ <a href="class_shader_manager.html#details">Mehr ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="shadermanager_8hpp_source.html">shadermanager.hpp</a>&gt;</code></p>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><div class="fragment"><div class="line"><a class="code hl_class" href="class_shader.html">Shader</a>* shader = <a class="code hl_function" href="class_shader_manager.html#a50ca1d874a71536cb07e1734f2f581a8">ShaderManager::getShader</a>(<span class="stringliteral">&quot;basic.vert&quot;</span>, <span class="stringliteral">&quot;basic.frag&quot;</span>); <span class="comment">// Erzeugt und gibt einen Shader vom</span></div>
+<div class="line">                                                                       <span class="comment">// Typ &quot;Shader&quot; zurück</span></div>
+<div class="line">shader = <a class="code hl_function" href="class_shader_manager.html#a50ca1d874a71536cb07e1734f2f581a8">ShaderManager::getShader</a>(<span class="stringliteral">&quot;basic.vert&quot;</span>, <span class="stringliteral">&quot;basic.frag&quot;</span>); <span class="comment">// Gibt Shader vom Typ &quot;Shader&quot; zurück. Da dieser</span></div>
+<div class="line">                         <span class="comment">// bereits existiert wird dieselbe Adresse wie bei obigem Funktionsaufruf zurückgegeben</span></div>
+<div class="line"><a class="code hl_class" href="class_shader.html">Shader</a>* shader2 = <a class="code hl_function" href="class_shader_manager.html#a50ca1d874a71536cb07e1734f2f581a8">ShaderManager::getShader</a>(<span class="stringliteral">&quot;phong.vert&quot;</span>, <span class="stringliteral">&quot;phong.frag&quot;</span>); <span class="comment">// Erzeugt und gibt einen Shader vom</span></div>
+<div class="line">                                                                        <span class="comment">// Typ &quot;Shader&quot; zurück</span></div>
+<div class="line">MyShader* shader = ShaderManager::getShader&lt;MyShader&gt;(<span class="stringliteral">&quot;basic.vert&quot;</span>, <span class="stringliteral">&quot;basic.frag&quot;</span>) <span class="comment">// Erzeugt und gibt einen Shader</span></div>
+<div class="line">                                                                                  <span class="comment">// vom Typ &quot;MyShader&quot; zurück</span></div>
+<div class="ttc" id="aclass_shader_html"><div class="ttname"><a href="class_shader.html">Shader</a></div><div class="ttdoc">Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...</div><div class="ttdef"><b>Definition:</b> shader.hpp:11</div></div>
+<div class="ttc" id="aclass_shader_manager_html_a50ca1d874a71536cb07e1734f2f581a8"><div class="ttname"><a href="class_shader_manager.html#a50ca1d874a71536cb07e1734f2f581a8">ShaderManager::getShader</a></div><div class="ttdeci">static std::shared_ptr&lt; Shader &gt; getShader(QList&lt; QString &gt; pShaderPaths)</div><div class="ttdoc">Gibt Shader von gegebenem Templatetyp zurück. Falls noch kein Shader für den gebenenen Templatetyp so...</div><div class="ttdef"><b>Definition:</b> shadermanager.hpp:49</div></div>
+</div><!-- fragment --> </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Öffentliche, statische Methoden</h2></td></tr>
+<tr class="memitem:a50ca1d874a71536cb07e1734f2f581a8"><td class="memTemplParams" colspan="2">template&lt;typename T  = Shader&gt; </td></tr>
+<tr class="memitem:a50ca1d874a71536cb07e1734f2f581a8"><td class="memTemplItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="class_shader.html">Shader</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a50ca1d874a71536cb07e1734f2f581a8">getShader</a> (QList&lt; QString &gt; pShaderPaths)</td></tr>
+<tr class="memdesc:a50ca1d874a71536cb07e1734f2f581a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt <a class="el" href="class_shader.html" title="Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...">Shader</a> von gegebenem Templatetyp zurück. Falls noch kein <a class="el" href="class_shader.html" title="Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...">Shader</a> für den gebenenen Templatetyp sowie für die gegebenen Parameter existiert, wird ein <a class="el" href="class_shader.html" title="Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...">Shader</a> erzeugt. Die Reihenfolge der Shaderdateien ist Vertex, Fragment, Geometry, TCS und TES. Letztere können fehlen.  <a href="class_shader_manager.html#a50ca1d874a71536cb07e1734f2f581a8">Mehr ...</a><br /></td></tr>
+<tr class="separator:a50ca1d874a71536cb07e1734f2f581a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a879a6f85cdf57d91939144714e62b3d9"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="class_shader.html">Shader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a879a6f85cdf57d91939144714e62b3d9">getDefaultShader</a> ()</td></tr>
+<tr class="separator:a879a6f85cdf57d91939144714e62b3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a879a6f85cdf57d91939144714e62b3d9" name="a879a6f85cdf57d91939144714e62b3d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879a6f85cdf57d91939144714e62b3d9">&#9670;&nbsp;</a></span>getDefaultShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_shader.html">Shader</a> &gt; ShaderManager::getDefaultShader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50ca1d874a71536cb07e1734f2f581a8" name="a50ca1d874a71536cb07e1734f2f581a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50ca1d874a71536cb07e1734f2f581a8">&#9670;&nbsp;</a></span>getShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_shader.html">Shader</a> &gt; ShaderManager::getShader </td>
+          <td>(</td>
+          <td class="paramtype">QList&lt; QString &gt;&#160;</td>
+          <td class="paramname"><em>pShaderPaths</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Gibt <a class="el" href="class_shader.html" title="Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...">Shader</a> mit den jeweiligen Dateinamen zurück Achtung: <a class="el" href="class_shader.html" title="Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...">Shader</a>, deren einzelne Module (z.B. vert und frag) alle gleiche Namen haben, werden als gleiche <a class="el" href="class_shader.html" title="Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...">Shader</a> interpretiert! Dadurch werden gleich <a class="el" href="class_shader.html" title="Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...">Shader</a> nicht "doppelt" angelegt. </p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien:<ul>
+<li>SORS/<a class="el" href="shadermanager_8hpp_source.html">shadermanager.hpp</a></li>
+<li>SORS/<a class="el" href="shadermanager_8cpp.html">shadermanager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_shader_manager.html">ShaderManager</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

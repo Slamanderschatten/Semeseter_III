@@ -1,0 +1,831 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: Heightmap Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_heightmap.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="#pro-methods">Geschützte Methoden</a> &#124;
+<a href="class_heightmap-members.html">Aufstellung aller Elemente</a>  </div>
+  <div class="headertitle"><div class="title">Heightmap Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_a_r_t_r___uebungen_2_uebung01_heightmap_2heightmap_8hpp_source.html">heightmap.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Klassendiagramm für Heightmap:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_heightmap__inherit__graph.png" border="0" usemap="#a_heightmap_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_heightmap_inherit__map" id="a_heightmap_inherit__map">
+<area shape="rect" title=" " alt="" coords="49,80,134,107"/>
+<area shape="rect" href="class_i_geometry_implementation.html" title="Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien...." alt="" coords="5,5,177,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">Legende</a>]</span></center></div>
+<div class="dynheader">
+Zusammengehörigkeiten von Heightmap:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_heightmap__coll__graph.png" border="0" usemap="#a_heightmap_coll__map" alt="Collaboration graph"/></div>
+<map name="a_heightmap_coll__map" id="a_heightmap_coll__map">
+<area shape="rect" title=" " alt="" coords="49,80,134,107"/>
+<area shape="rect" href="class_i_geometry_implementation.html" title="Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien...." alt="" coords="5,5,177,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:a49fd4cf8e9258903bafb76f9fbc534c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a49fd4cf8e9258903bafb76f9fbc534c9">Heightmap</a> ()</td></tr>
+<tr class="separator:a49fd4cf8e9258903bafb76f9fbc534c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65421cfaf9e695bc8b43caf4b063b3ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a65421cfaf9e695bc8b43caf4b063b3ae">loadImage</a> (QString pPath)</td></tr>
+<tr class="separator:a65421cfaf9e695bc8b43caf4b063b3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9967aff83a5cc03f6df11a43a6882345"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a9967aff83a5cc03f6df11a43a6882345">setPoints</a> (bool p)</td></tr>
+<tr class="separator:a9967aff83a5cc03f6df11a43a6882345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a6add57b61e0c4efc3b2d5bdbf6a21"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#ad0a6add57b61e0c4efc3b2d5bdbf6a21">render</a> () override</td></tr>
+<tr class="memdesc:ad0a6add57b61e0c4efc3b2d5bdbf6a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Methoden aus.  <a href="class_heightmap.html#ad0a6add57b61e0c4efc3b2d5bdbf6a21">Mehr ...</a><br /></td></tr>
+<tr class="separator:ad0a6add57b61e0c4efc3b2d5bdbf6a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49fd4cf8e9258903bafb76f9fbc534c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a49fd4cf8e9258903bafb76f9fbc534c9">Heightmap</a> ()</td></tr>
+<tr class="separator:a49fd4cf8e9258903bafb76f9fbc534c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65421cfaf9e695bc8b43caf4b063b3ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a65421cfaf9e695bc8b43caf4b063b3ae">loadImage</a> (QString pPath)</td></tr>
+<tr class="separator:a65421cfaf9e695bc8b43caf4b063b3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9967aff83a5cc03f6df11a43a6882345"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a9967aff83a5cc03f6df11a43a6882345">setPoints</a> (bool p)</td></tr>
+<tr class="separator:a9967aff83a5cc03f6df11a43a6882345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e74ffbae83f297284cdd1d2c4c010c8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a3e74ffbae83f297284cdd1d2c4c010c8">render</a> () override</td></tr>
+<tr class="memdesc:a3e74ffbae83f297284cdd1d2c4c010c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Methoden aus.  <a href="class_heightmap.html#a3e74ffbae83f297284cdd1d2c4c010c8">Mehr ...</a><br /></td></tr>
+<tr class="separator:a3e74ffbae83f297284cdd1d2c4c010c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49fd4cf8e9258903bafb76f9fbc534c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a49fd4cf8e9258903bafb76f9fbc534c9">Heightmap</a> ()</td></tr>
+<tr class="separator:a49fd4cf8e9258903bafb76f9fbc534c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65421cfaf9e695bc8b43caf4b063b3ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a65421cfaf9e695bc8b43caf4b063b3ae">loadImage</a> (QString pPath)</td></tr>
+<tr class="separator:a65421cfaf9e695bc8b43caf4b063b3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9967aff83a5cc03f6df11a43a6882345"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a9967aff83a5cc03f6df11a43a6882345">setPoints</a> (bool p)</td></tr>
+<tr class="separator:a9967aff83a5cc03f6df11a43a6882345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e74ffbae83f297284cdd1d2c4c010c8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a3e74ffbae83f297284cdd1d2c4c010c8">render</a> () override</td></tr>
+<tr class="memdesc:a3e74ffbae83f297284cdd1d2c4c010c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Methoden aus.  <a href="class_heightmap.html#a3e74ffbae83f297284cdd1d2c4c010c8">Mehr ...</a><br /></td></tr>
+<tr class="separator:a3e74ffbae83f297284cdd1d2c4c010c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_geometry_implementation"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_geometry_implementation')"><img src="closed.png" alt="-"/>&#160;Öffentliche Methoden geerbt von <a class="el" href="class_i_geometry_implementation.html">IGeometryImplementation</a></td></tr>
+<tr class="memitem:a04469f87265616b2a0d45c7f16cf3ed4 inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a04469f87265616b2a0d45c7f16cf3ed4">IGeometryImplementation</a> ()</td></tr>
+<tr class="separator:a04469f87265616b2a0d45c7f16cf3ed4 inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affc33769a6c24c4af082d9bf2970e5f5 inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#affc33769a6c24c4af082d9bf2970e5f5">fillVertices</a> (QVector&lt; QVector4D &gt; &amp;vertices)</td></tr>
+<tr class="memdesc:affc33769a6c24c4af082d9bf2970e5f5 inherit pub_methods_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Vertices beim Initialisieren der Geometrie zu erstellen.  <a href="class_i_geometry_implementation.html#affc33769a6c24c4af082d9bf2970e5f5">Mehr ...</a><br /></td></tr>
+<tr class="separator:affc33769a6c24c4af082d9bf2970e5f5 inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd6014712219f405be4c4e3abe971c8a inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#afd6014712219f405be4c4e3abe971c8a">fillNormals</a> (QVector&lt; QVector3D &gt; &amp;normals, QVector&lt; QVector4D &gt; &amp;vertices)</td></tr>
+<tr class="memdesc:afd6014712219f405be4c4e3abe971c8a inherit pub_methods_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Normalen beim Initialisieren der Geometrie zu erstellen.  <a href="class_i_geometry_implementation.html#afd6014712219f405be4c4e3abe971c8a">Mehr ...</a><br /></td></tr>
+<tr class="separator:afd6014712219f405be4c4e3abe971c8a inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a52d95e22a4e82fd991951dfe1d3451 inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a3a52d95e22a4e82fd991951dfe1d3451">fillTexCoords</a> (QVector&lt; QVector2D &gt; &amp;texCoords)</td></tr>
+<tr class="memdesc:a3a52d95e22a4e82fd991951dfe1d3451 inherit pub_methods_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Textur-Koordinaten beim Initialisieren der Geometrie zu erstellen.  <a href="class_i_geometry_implementation.html#a3a52d95e22a4e82fd991951dfe1d3451">Mehr ...</a><br /></td></tr>
+<tr class="separator:a3a52d95e22a4e82fd991951dfe1d3451 inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1780855bd1702fa7a4fb1e3f47918d4f inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a1780855bd1702fa7a4fb1e3f47918d4f">fillColors</a> (QVector&lt; QVector4D &gt; &amp;colors)</td></tr>
+<tr class="memdesc:a1780855bd1702fa7a4fb1e3f47918d4f inherit pub_methods_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Vertex-Farben beim Initialisieren der Geometrie zu erstellen.  <a href="class_i_geometry_implementation.html#a1780855bd1702fa7a4fb1e3f47918d4f">Mehr ...</a><br /></td></tr>
+<tr class="separator:a1780855bd1702fa7a4fb1e3f47918d4f inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a625a44c86a1e7e81f3d9b2f5382d0089 inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a625a44c86a1e7e81f3d9b2f5382d0089">needsInit</a> ()</td></tr>
+<tr class="memdesc:a625a44c86a1e7e81f3d9b2f5382d0089 inherit pub_methods_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muss von Implementierungen überschrieben werden, wenn init während des Renderloops gerufen werden muss.  <a href="class_i_geometry_implementation.html#a625a44c86a1e7e81f3d9b2f5382d0089">Mehr ...</a><br /></td></tr>
+<tr class="separator:a625a44c86a1e7e81f3d9b2f5382d0089 inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95974d825d2351df69d471e7ebd9c10e inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a95974d825d2351df69d471e7ebd9c10e">init</a> ()</td></tr>
+<tr class="memdesc:a95974d825d2351df69d471e7ebd9c10e inherit pub_methods_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wird vor dem Rendern gerufen, wenn needsInit true zurückgibt Alle Inits der Geometrien im preRender gesammelt durchgeführt.  <a href="class_i_geometry_implementation.html#a95974d825d2351df69d471e7ebd9c10e">Mehr ...</a><br /></td></tr>
+<tr class="separator:a95974d825d2351df69d471e7ebd9c10e inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a805ffeaafbc621c82b68ce2f839ef246 inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a805ffeaafbc621c82b68ce2f839ef246">render</a> ()=0</td></tr>
+<tr class="memdesc:a805ffeaafbc621c82b68ce2f839ef246 inherit pub_methods_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objekt zeichnen.  <a href="class_i_geometry_implementation.html#a805ffeaafbc621c82b68ce2f839ef246">Mehr ...</a><br /></td></tr>
+<tr class="separator:a805ffeaafbc621c82b68ce2f839ef246 inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa4c8447434a0729273c0d3ce0edffe inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a9fa4c8447434a0729273c0d3ce0edffe">setNeedsInit</a> (bool pNeedsInit)</td></tr>
+<tr class="separator:a9fa4c8447434a0729273c0d3ce0edffe inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Geschützte Methoden</h2></td></tr>
+<tr class="memitem:adda45cfb0f860cf0ec07fe1c37eeb962"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#adda45cfb0f860cf0ec07fe1c37eeb962">fillVertices</a> (QVector&lt; QVector4D &gt; &amp;vertices) override</td></tr>
+<tr class="memdesc:adda45cfb0f860cf0ec07fe1c37eeb962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Vertices beim Initialisieren der Geometrie zu erstellen.  <a href="class_heightmap.html#adda45cfb0f860cf0ec07fe1c37eeb962">Mehr ...</a><br /></td></tr>
+<tr class="separator:adda45cfb0f860cf0ec07fe1c37eeb962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60858771ffed3d55298455ce9959166b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a60858771ffed3d55298455ce9959166b">fillColors</a> (QVector&lt; QVector4D &gt; &amp;colors) override</td></tr>
+<tr class="memdesc:a60858771ffed3d55298455ce9959166b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Vertex-Farben beim Initialisieren der Geometrie zu erstellen.  <a href="class_heightmap.html#a60858771ffed3d55298455ce9959166b">Mehr ...</a><br /></td></tr>
+<tr class="separator:a60858771ffed3d55298455ce9959166b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3c65b7a637c283dc70afd5af07e6e3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#afe3c65b7a637c283dc70afd5af07e6e3">fillNormals</a> (QVector&lt; QVector3D &gt; &amp;normals, QVector&lt; QVector4D &gt; &amp;vertices) override</td></tr>
+<tr class="memdesc:afe3c65b7a637c283dc70afd5af07e6e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Normalen beim Initialisieren der Geometrie zu erstellen.  <a href="class_heightmap.html#afe3c65b7a637c283dc70afd5af07e6e3">Mehr ...</a><br /></td></tr>
+<tr class="separator:afe3c65b7a637c283dc70afd5af07e6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11266c396234a6c99c7cb86479bd0e4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a11266c396234a6c99c7cb86479bd0e4a">keyboard</a> ()</td></tr>
+<tr class="separator:a11266c396234a6c99c7cb86479bd0e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc1baef898ed275b731fdbfd67c6f273"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#acc1baef898ed275b731fdbfd67c6f273">fillVertices</a> (QVector&lt; QVector4D &gt; &amp;vertices) override</td></tr>
+<tr class="memdesc:acc1baef898ed275b731fdbfd67c6f273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Vertices beim Initialisieren der Geometrie zu erstellen.  <a href="class_heightmap.html#acc1baef898ed275b731fdbfd67c6f273">Mehr ...</a><br /></td></tr>
+<tr class="separator:acc1baef898ed275b731fdbfd67c6f273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a046a608f25c072b29ae765a22164be67"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a046a608f25c072b29ae765a22164be67">fillColors</a> (QVector&lt; QVector4D &gt; &amp;colors) override</td></tr>
+<tr class="memdesc:a046a608f25c072b29ae765a22164be67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Vertex-Farben beim Initialisieren der Geometrie zu erstellen.  <a href="class_heightmap.html#a046a608f25c072b29ae765a22164be67">Mehr ...</a><br /></td></tr>
+<tr class="separator:a046a608f25c072b29ae765a22164be67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11266c396234a6c99c7cb86479bd0e4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a11266c396234a6c99c7cb86479bd0e4a">keyboard</a> ()</td></tr>
+<tr class="separator:a11266c396234a6c99c7cb86479bd0e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc1baef898ed275b731fdbfd67c6f273"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#acc1baef898ed275b731fdbfd67c6f273">fillVertices</a> (QVector&lt; QVector4D &gt; &amp;vertices) override</td></tr>
+<tr class="memdesc:acc1baef898ed275b731fdbfd67c6f273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Vertices beim Initialisieren der Geometrie zu erstellen.  <a href="class_heightmap.html#acc1baef898ed275b731fdbfd67c6f273">Mehr ...</a><br /></td></tr>
+<tr class="separator:acc1baef898ed275b731fdbfd67c6f273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a046a608f25c072b29ae765a22164be67"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a046a608f25c072b29ae765a22164be67">fillColors</a> (QVector&lt; QVector4D &gt; &amp;colors) override</td></tr>
+<tr class="memdesc:a046a608f25c072b29ae765a22164be67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Vertex-Farben beim Initialisieren der Geometrie zu erstellen.  <a href="class_heightmap.html#a046a608f25c072b29ae765a22164be67">Mehr ...</a><br /></td></tr>
+<tr class="separator:a046a608f25c072b29ae765a22164be67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef95ca887a1a6db18c41d2fb15658376"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#aef95ca887a1a6db18c41d2fb15658376">fillNormals</a> (QVector&lt; QVector3D &gt; &amp;normals, QVector&lt; QVector4D &gt; &amp;vertices) override</td></tr>
+<tr class="memdesc:aef95ca887a1a6db18c41d2fb15658376"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Normalen beim Initialisieren der Geometrie zu erstellen.  <a href="class_heightmap.html#aef95ca887a1a6db18c41d2fb15658376">Mehr ...</a><br /></td></tr>
+<tr class="separator:aef95ca887a1a6db18c41d2fb15658376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11266c396234a6c99c7cb86479bd0e4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heightmap.html#a11266c396234a6c99c7cb86479bd0e4a">keyboard</a> ()</td></tr>
+<tr class="separator:a11266c396234a6c99c7cb86479bd0e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Weitere Geerbte Elemente</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_i_geometry_implementation"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_i_geometry_implementation')"><img src="closed.png" alt="-"/>&#160;Geschützte Attribute geerbt von <a class="el" href="class_i_geometry_implementation.html">IGeometryImplementation</a></td></tr>
+<tr class="memitem:abd49a4900d45b6e9dc8cbbc7a634d29a inherit pro_attribs_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#abd49a4900d45b6e9dc8cbbc7a634d29a">mNeedsInit</a> {true}</td></tr>
+<tr class="memdesc:abd49a4900d45b6e9dc8cbbc7a634d29a inherit pro_attribs_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sagt aus, ob die Geometrie neu initialisiert und die <a class="el" href="class_geometry_base.html" title="GeometryBase ist die Basisklasse für alle Objekte , die die geometrischen Daten eines zu zeichenenden...">GeometryBase</a> neu befüllt werden muss Nicht ganz "sauber" für ein Interface, aber sinnvoll.  <a href="class_i_geometry_implementation.html#abd49a4900d45b6e9dc8cbbc7a634d29a">Mehr ...</a><br /></td></tr>
+<tr class="separator:abd49a4900d45b6e9dc8cbbc7a634d29a inherit pro_attribs_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="a49fd4cf8e9258903bafb76f9fbc534c9" name="a49fd4cf8e9258903bafb76f9fbc534c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49fd4cf8e9258903bafb76f9fbc534c9">&#9670;&nbsp;</a></span>Heightmap() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Heightmap::Heightmap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49fd4cf8e9258903bafb76f9fbc534c9" name="a49fd4cf8e9258903bafb76f9fbc534c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49fd4cf8e9258903bafb76f9fbc534c9">&#9670;&nbsp;</a></span>Heightmap() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Heightmap::Heightmap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49fd4cf8e9258903bafb76f9fbc534c9" name="a49fd4cf8e9258903bafb76f9fbc534c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49fd4cf8e9258903bafb76f9fbc534c9">&#9670;&nbsp;</a></span>Heightmap() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Heightmap::Heightmap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a60858771ffed3d55298455ce9959166b" name="a60858771ffed3d55298455ce9959166b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60858771ffed3d55298455ce9959166b">&#9670;&nbsp;</a></span>fillColors() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heightmap::fillColors </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector4D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>colors</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation von <a class="el" href="class_i_geometry_implementation.html#a1780855bd1702fa7a4fb1e3f47918d4f">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="a046a608f25c072b29ae765a22164be67" name="a046a608f25c072b29ae765a22164be67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a046a608f25c072b29ae765a22164be67">&#9670;&nbsp;</a></span>fillColors() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Heightmap::fillColors </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector4D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>colors</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation von <a class="el" href="class_i_geometry_implementation.html#a1780855bd1702fa7a4fb1e3f47918d4f">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="a046a608f25c072b29ae765a22164be67" name="a046a608f25c072b29ae765a22164be67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a046a608f25c072b29ae765a22164be67">&#9670;&nbsp;</a></span>fillColors() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Heightmap::fillColors </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector4D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>colors</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation von <a class="el" href="class_i_geometry_implementation.html#a1780855bd1702fa7a4fb1e3f47918d4f">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="afe3c65b7a637c283dc70afd5af07e6e3" name="afe3c65b7a637c283dc70afd5af07e6e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe3c65b7a637c283dc70afd5af07e6e3">&#9670;&nbsp;</a></span>fillNormals() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heightmap::fillNormals </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector3D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>normals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QVector&lt; QVector4D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation von <a class="el" href="class_i_geometry_implementation.html#afd6014712219f405be4c4e3abe971c8a">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="aef95ca887a1a6db18c41d2fb15658376" name="aef95ca887a1a6db18c41d2fb15658376"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef95ca887a1a6db18c41d2fb15658376">&#9670;&nbsp;</a></span>fillNormals() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Heightmap::fillNormals </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector3D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>normals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QVector&lt; QVector4D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation von <a class="el" href="class_i_geometry_implementation.html#afd6014712219f405be4c4e3abe971c8a">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="adda45cfb0f860cf0ec07fe1c37eeb962" name="adda45cfb0f860cf0ec07fe1c37eeb962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda45cfb0f860cf0ec07fe1c37eeb962">&#9670;&nbsp;</a></span>fillVertices() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heightmap::fillVertices </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector4D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation von <a class="el" href="class_i_geometry_implementation.html#affc33769a6c24c4af082d9bf2970e5f5">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="acc1baef898ed275b731fdbfd67c6f273" name="acc1baef898ed275b731fdbfd67c6f273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc1baef898ed275b731fdbfd67c6f273">&#9670;&nbsp;</a></span>fillVertices() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Heightmap::fillVertices </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector4D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation von <a class="el" href="class_i_geometry_implementation.html#affc33769a6c24c4af082d9bf2970e5f5">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="acc1baef898ed275b731fdbfd67c6f273" name="acc1baef898ed275b731fdbfd67c6f273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc1baef898ed275b731fdbfd67c6f273">&#9670;&nbsp;</a></span>fillVertices() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Heightmap::fillVertices </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector4D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation von <a class="el" href="class_i_geometry_implementation.html#affc33769a6c24c4af082d9bf2970e5f5">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="a11266c396234a6c99c7cb86479bd0e4a" name="a11266c396234a6c99c7cb86479bd0e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11266c396234a6c99c7cb86479bd0e4a">&#9670;&nbsp;</a></span>keyboard() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heightmap::keyboard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11266c396234a6c99c7cb86479bd0e4a" name="a11266c396234a6c99c7cb86479bd0e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11266c396234a6c99c7cb86479bd0e4a">&#9670;&nbsp;</a></span>keyboard() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heightmap::keyboard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11266c396234a6c99c7cb86479bd0e4a" name="a11266c396234a6c99c7cb86479bd0e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11266c396234a6c99c7cb86479bd0e4a">&#9670;&nbsp;</a></span>keyboard() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heightmap::keyboard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65421cfaf9e695bc8b43caf4b063b3ae" name="a65421cfaf9e695bc8b43caf4b063b3ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65421cfaf9e695bc8b43caf4b063b3ae">&#9670;&nbsp;</a></span>loadImage() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heightmap::loadImage </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>pPath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65421cfaf9e695bc8b43caf4b063b3ae" name="a65421cfaf9e695bc8b43caf4b063b3ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65421cfaf9e695bc8b43caf4b063b3ae">&#9670;&nbsp;</a></span>loadImage() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heightmap::loadImage </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>pPath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65421cfaf9e695bc8b43caf4b063b3ae" name="a65421cfaf9e695bc8b43caf4b063b3ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65421cfaf9e695bc8b43caf4b063b3ae">&#9670;&nbsp;</a></span>loadImage() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heightmap::loadImage </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>pPath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0a6add57b61e0c4efc3b2d5bdbf6a21" name="ad0a6add57b61e0c4efc3b2d5bdbf6a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a6add57b61e0c4efc3b2d5bdbf6a21">&#9670;&nbsp;</a></span>render() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heightmap::render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="class_i_geometry_implementation.html" title="Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien....">IGeometryImplementation</a> überschreiben </dd></dl>
+
+<p>Implementiert <a class="el" href="class_i_geometry_implementation.html#a805ffeaafbc621c82b68ce2f839ef246">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="a3e74ffbae83f297284cdd1d2c4c010c8" name="a3e74ffbae83f297284cdd1d2c4c010c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e74ffbae83f297284cdd1d2c4c010c8">&#9670;&nbsp;</a></span>render() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Heightmap::render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="class_i_geometry_implementation.html" title="Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien....">IGeometryImplementation</a> überschreiben </dd></dl>
+
+<p>Implementiert <a class="el" href="class_i_geometry_implementation.html#a805ffeaafbc621c82b68ce2f839ef246">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="a3e74ffbae83f297284cdd1d2c4c010c8" name="a3e74ffbae83f297284cdd1d2c4c010c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e74ffbae83f297284cdd1d2c4c010c8">&#9670;&nbsp;</a></span>render() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Heightmap::render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="class_i_geometry_implementation.html" title="Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien....">IGeometryImplementation</a> überschreiben </dd></dl>
+
+<p>Implementiert <a class="el" href="class_i_geometry_implementation.html#a805ffeaafbc621c82b68ce2f839ef246">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="a9967aff83a5cc03f6df11a43a6882345" name="a9967aff83a5cc03f6df11a43a6882345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9967aff83a5cc03f6df11a43a6882345">&#9670;&nbsp;</a></span>setPoints() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heightmap::setPoints </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9967aff83a5cc03f6df11a43a6882345" name="a9967aff83a5cc03f6df11a43a6882345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9967aff83a5cc03f6df11a43a6882345">&#9670;&nbsp;</a></span>setPoints() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heightmap::setPoints </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9967aff83a5cc03f6df11a43a6882345" name="a9967aff83a5cc03f6df11a43a6882345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9967aff83a5cc03f6df11a43a6882345">&#9670;&nbsp;</a></span>setPoints() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heightmap::setPoints </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien:<ul>
+<li>ARTR_Uebungen/Uebung01Heightmap/<a class="el" href="_a_r_t_r___uebungen_2_uebung01_heightmap_2heightmap_8hpp_source.html">heightmap.hpp</a></li>
+<li>CGR_Uebungen/Heightmap/<a class="el" href="_c_g_r___uebungen_2_heightmap_2heightmap_8hpp_source.html">heightmap.hpp</a></li>
+<li>CGR_Uebungen/Uebung10Heightmap/<a class="el" href="_c_g_r___uebungen_2_uebung10_heightmap_2heightmap_8hpp_source.html">heightmap.hpp</a></li>
+<li>CGR_Uebungen/Heightmap/<a class="el" href="_heightmap_2heightmap_8cpp.html">heightmap.cpp</a></li>
+<li>CGR_Uebungen/Uebung10Heightmap/<a class="el" href="_uebung10_heightmap_2heightmap_8cpp.html">heightmap.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_heightmap.html">Heightmap</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

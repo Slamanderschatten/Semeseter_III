@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: MeshOBJ Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_mesh_o_b_j.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="#pro-methods">Geschützte Methoden</a> &#124;
+<a href="class_mesh_o_b_j-members.html">Aufstellung aller Elemente</a>  </div>
+  <div class="headertitle"><div class="title">MeshOBJ Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Sehr einfache Implementierung einer Mesh-Klasse, die aus .obj-Dateien (z.B. aus Blender) geladen wird. Zum Laden wird tinyobjloader (siehe thirdparty) verwendet. Vorsicht: Es werden derzeit nur Meshes geladen, die aus einem Teil bestehen. Weitere Einschränkunen sind, dass nur die diffuse Textur und keine Materialien geladen werden.  
+</p>
+
+<p><code>#include &lt;<a class="el" href="meshobj_8hpp_source.html">meshobj.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Klassendiagramm für MeshOBJ:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mesh_o_b_j__inherit__graph.png" border="0" usemap="#a_mesh_o_b_j_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_mesh_o_b_j_inherit__map" id="a_mesh_o_b_j_inherit__map">
+<area shape="rect" title="Sehr einfache Implementierung einer Mesh&#45;Klasse, die aus .obj&#45;Dateien (z.B. aus Blender) geladen wird..." alt="" coords="75,155,155,181"/>
+<area shape="rect" href="class_i_geometry_indexed_implementation.html" title="Spezialisierung der Klasse IGeometryImplementation, um indexed geometries zu unterstützen." alt="" coords="5,80,224,107"/>
+<area shape="rect" href="class_i_geometry_implementation.html" title="Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien...." alt="" coords="29,5,201,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">Legende</a>]</span></center></div>
+<div class="dynheader">
+Zusammengehörigkeiten von MeshOBJ:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mesh_o_b_j__coll__graph.png" border="0" usemap="#a_mesh_o_b_j_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mesh_o_b_j_coll__map" id="a_mesh_o_b_j_coll__map">
+<area shape="rect" title="Sehr einfache Implementierung einer Mesh&#45;Klasse, die aus .obj&#45;Dateien (z.B. aus Blender) geladen wird..." alt="" coords="75,155,155,181"/>
+<area shape="rect" href="class_i_geometry_indexed_implementation.html" title="Spezialisierung der Klasse IGeometryImplementation, um indexed geometries zu unterstützen." alt="" coords="5,80,224,107"/>
+<area shape="rect" href="class_i_geometry_implementation.html" title="Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien...." alt="" coords="29,5,201,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:aacab67b703344e92992bf8f56c13b482"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh_o_b_j.html#aacab67b703344e92992bf8f56c13b482">MeshOBJ</a> ()</td></tr>
+<tr class="separator:aacab67b703344e92992bf8f56c13b482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dbb655018cd1acb7c69523d38b6ae04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh_o_b_j.html#a0dbb655018cd1acb7c69523d38b6ae04">MeshOBJ</a> (QString pFilePath)</td></tr>
+<tr class="separator:a0dbb655018cd1acb7c69523d38b6ae04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a081a4c49c62b607f7e6d2bbe6af6d0f6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh_o_b_j.html#a081a4c49c62b607f7e6d2bbe6af6d0f6">~MeshOBJ</a> ()</td></tr>
+<tr class="separator:a081a4c49c62b607f7e6d2bbe6af6d0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d717215b3f29f4d877e03f6352dfee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh_o_b_j.html#ae3d717215b3f29f4d877e03f6352dfee">init</a> () override</td></tr>
+<tr class="memdesc:ae3d717215b3f29f4d877e03f6352dfee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wird vor dem Rendern gerufen, wenn needsInit true zurückgibt Alle Inits der Geometrien im preRender gesammelt durchgeführt.  <a href="class_mesh_o_b_j.html#ae3d717215b3f29f4d877e03f6352dfee">Mehr ...</a><br /></td></tr>
+<tr class="separator:ae3d717215b3f29f4d877e03f6352dfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692545c30d17bb7e6035e8d0b2e599ad"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh_o_b_j.html#a692545c30d17bb7e6035e8d0b2e599ad">getTextureDiffusePath</a> (unsigned int pMaterialID)</td></tr>
+<tr class="separator:a692545c30d17bb7e6035e8d0b2e599ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47512cb8f3585ea2278ec05d4be01434"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh_o_b_j.html#a47512cb8f3585ea2278ec05d4be01434">getGenerateFaceNormals</a> () const</td></tr>
+<tr class="separator:a47512cb8f3585ea2278ec05d4be01434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c9114cffc0150c7f60aed39f210dc11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh_o_b_j.html#a1c9114cffc0150c7f60aed39f210dc11">setGenerateFaceNormals</a> (bool pGenerateFaceNormals)</td></tr>
+<tr class="separator:a1c9114cffc0150c7f60aed39f210dc11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_geometry_indexed_implementation"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_geometry_indexed_implementation')"><img src="closed.png" alt="-"/>&#160;Öffentliche Methoden geerbt von <a class="el" href="class_i_geometry_indexed_implementation.html">IGeometryIndexedImplementation</a></td></tr>
+<tr class="memitem:a73269cd009d0acdaf93dae2568dd4f5b inherit pub_methods_class_i_geometry_indexed_implementation"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_indexed_implementation.html#a73269cd009d0acdaf93dae2568dd4f5b">IGeometryIndexedImplementation</a> ()</td></tr>
+<tr class="separator:a73269cd009d0acdaf93dae2568dd4f5b inherit pub_methods_class_i_geometry_indexed_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f262f63292cd879f74e8ffe2a8bf493 inherit pub_methods_class_i_geometry_indexed_implementation"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_indexed_implementation.html#a2f262f63292cd879f74e8ffe2a8bf493">fillIndices</a> (QVector&lt; GLuint &gt; &amp;indices)</td></tr>
+<tr class="memdesc:a2f262f63292cd879f74e8ffe2a8bf493 inherit pub_methods_class_i_geometry_indexed_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschrieben um die Indices beim Initialisieren der Geometrie zu erstellen.  <a href="class_i_geometry_indexed_implementation.html#a2f262f63292cd879f74e8ffe2a8bf493">Mehr ...</a><br /></td></tr>
+<tr class="separator:a2f262f63292cd879f74e8ffe2a8bf493 inherit pub_methods_class_i_geometry_indexed_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24686fc3d7f5b6bcb531efb53290b45c inherit pub_methods_class_i_geometry_indexed_implementation"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_indexed_implementation.html#a24686fc3d7f5b6bcb531efb53290b45c">render</a> () override</td></tr>
+<tr class="memdesc:a24686fc3d7f5b6bcb531efb53290b45c inherit pub_methods_class_i_geometry_indexed_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objekt zeichnen.  <a href="class_i_geometry_indexed_implementation.html#a24686fc3d7f5b6bcb531efb53290b45c">Mehr ...</a><br /></td></tr>
+<tr class="separator:a24686fc3d7f5b6bcb531efb53290b45c inherit pub_methods_class_i_geometry_indexed_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_geometry_implementation"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_geometry_implementation')"><img src="closed.png" alt="-"/>&#160;Öffentliche Methoden geerbt von <a class="el" href="class_i_geometry_implementation.html">IGeometryImplementation</a></td></tr>
+<tr class="memitem:a04469f87265616b2a0d45c7f16cf3ed4 inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a04469f87265616b2a0d45c7f16cf3ed4">IGeometryImplementation</a> ()</td></tr>
+<tr class="separator:a04469f87265616b2a0d45c7f16cf3ed4 inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affc33769a6c24c4af082d9bf2970e5f5 inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#affc33769a6c24c4af082d9bf2970e5f5">fillVertices</a> (QVector&lt; QVector4D &gt; &amp;vertices)</td></tr>
+<tr class="memdesc:affc33769a6c24c4af082d9bf2970e5f5 inherit pub_methods_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Vertices beim Initialisieren der Geometrie zu erstellen.  <a href="class_i_geometry_implementation.html#affc33769a6c24c4af082d9bf2970e5f5">Mehr ...</a><br /></td></tr>
+<tr class="separator:affc33769a6c24c4af082d9bf2970e5f5 inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd6014712219f405be4c4e3abe971c8a inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#afd6014712219f405be4c4e3abe971c8a">fillNormals</a> (QVector&lt; QVector3D &gt; &amp;normals, QVector&lt; QVector4D &gt; &amp;vertices)</td></tr>
+<tr class="memdesc:afd6014712219f405be4c4e3abe971c8a inherit pub_methods_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Normalen beim Initialisieren der Geometrie zu erstellen.  <a href="class_i_geometry_implementation.html#afd6014712219f405be4c4e3abe971c8a">Mehr ...</a><br /></td></tr>
+<tr class="separator:afd6014712219f405be4c4e3abe971c8a inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a52d95e22a4e82fd991951dfe1d3451 inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a3a52d95e22a4e82fd991951dfe1d3451">fillTexCoords</a> (QVector&lt; QVector2D &gt; &amp;texCoords)</td></tr>
+<tr class="memdesc:a3a52d95e22a4e82fd991951dfe1d3451 inherit pub_methods_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Textur-Koordinaten beim Initialisieren der Geometrie zu erstellen.  <a href="class_i_geometry_implementation.html#a3a52d95e22a4e82fd991951dfe1d3451">Mehr ...</a><br /></td></tr>
+<tr class="separator:a3a52d95e22a4e82fd991951dfe1d3451 inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1780855bd1702fa7a4fb1e3f47918d4f inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a1780855bd1702fa7a4fb1e3f47918d4f">fillColors</a> (QVector&lt; QVector4D &gt; &amp;colors)</td></tr>
+<tr class="memdesc:a1780855bd1702fa7a4fb1e3f47918d4f inherit pub_methods_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Vertex-Farben beim Initialisieren der Geometrie zu erstellen.  <a href="class_i_geometry_implementation.html#a1780855bd1702fa7a4fb1e3f47918d4f">Mehr ...</a><br /></td></tr>
+<tr class="separator:a1780855bd1702fa7a4fb1e3f47918d4f inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a625a44c86a1e7e81f3d9b2f5382d0089 inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a625a44c86a1e7e81f3d9b2f5382d0089">needsInit</a> ()</td></tr>
+<tr class="memdesc:a625a44c86a1e7e81f3d9b2f5382d0089 inherit pub_methods_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muss von Implementierungen überschrieben werden, wenn init während des Renderloops gerufen werden muss.  <a href="class_i_geometry_implementation.html#a625a44c86a1e7e81f3d9b2f5382d0089">Mehr ...</a><br /></td></tr>
+<tr class="separator:a625a44c86a1e7e81f3d9b2f5382d0089 inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95974d825d2351df69d471e7ebd9c10e inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a95974d825d2351df69d471e7ebd9c10e">init</a> ()</td></tr>
+<tr class="memdesc:a95974d825d2351df69d471e7ebd9c10e inherit pub_methods_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wird vor dem Rendern gerufen, wenn needsInit true zurückgibt Alle Inits der Geometrien im preRender gesammelt durchgeführt.  <a href="class_i_geometry_implementation.html#a95974d825d2351df69d471e7ebd9c10e">Mehr ...</a><br /></td></tr>
+<tr class="separator:a95974d825d2351df69d471e7ebd9c10e inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a805ffeaafbc621c82b68ce2f839ef246 inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a805ffeaafbc621c82b68ce2f839ef246">render</a> ()=0</td></tr>
+<tr class="memdesc:a805ffeaafbc621c82b68ce2f839ef246 inherit pub_methods_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objekt zeichnen.  <a href="class_i_geometry_implementation.html#a805ffeaafbc621c82b68ce2f839ef246">Mehr ...</a><br /></td></tr>
+<tr class="separator:a805ffeaafbc621c82b68ce2f839ef246 inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa4c8447434a0729273c0d3ce0edffe inherit pub_methods_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a9fa4c8447434a0729273c0d3ce0edffe">setNeedsInit</a> (bool pNeedsInit)</td></tr>
+<tr class="separator:a9fa4c8447434a0729273c0d3ce0edffe inherit pub_methods_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Geschützte Methoden</h2></td></tr>
+<tr class="memitem:a487f316bcd57898744fef13169d6e672"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh_o_b_j.html#a487f316bcd57898744fef13169d6e672">fillVertices</a> (QVector&lt; QVector4D &gt; &amp;vertices) override</td></tr>
+<tr class="memdesc:a487f316bcd57898744fef13169d6e672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Vertices beim Initialisieren der Geometrie zu erstellen.  <a href="class_mesh_o_b_j.html#a487f316bcd57898744fef13169d6e672">Mehr ...</a><br /></td></tr>
+<tr class="separator:a487f316bcd57898744fef13169d6e672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd7fec6a3d88f10ea5cb031b1b3afed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh_o_b_j.html#abbd7fec6a3d88f10ea5cb031b1b3afed">fillNormals</a> (QVector&lt; QVector3D &gt; &amp;normals, QVector&lt; QVector4D &gt; &amp;vertices) override</td></tr>
+<tr class="memdesc:abbd7fec6a3d88f10ea5cb031b1b3afed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Normalen beim Initialisieren der Geometrie zu erstellen.  <a href="class_mesh_o_b_j.html#abbd7fec6a3d88f10ea5cb031b1b3afed">Mehr ...</a><br /></td></tr>
+<tr class="separator:abbd7fec6a3d88f10ea5cb031b1b3afed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6899d11cba7cc61457a1459e1aad032a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh_o_b_j.html#a6899d11cba7cc61457a1459e1aad032a">fillTexCoords</a> (QVector&lt; QVector2D &gt; &amp;texCoords) override</td></tr>
+<tr class="memdesc:a6899d11cba7cc61457a1459e1aad032a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Textur-Koordinaten beim Initialisieren der Geometrie zu erstellen.  <a href="class_mesh_o_b_j.html#a6899d11cba7cc61457a1459e1aad032a">Mehr ...</a><br /></td></tr>
+<tr class="separator:a6899d11cba7cc61457a1459e1aad032a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b3cc5f75192c8ea87b080a7a3d2f66"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh_o_b_j.html#a48b3cc5f75192c8ea87b080a7a3d2f66">fillIndices</a> (QVector&lt; GLuint &gt; &amp;indices) override</td></tr>
+<tr class="memdesc:a48b3cc5f75192c8ea87b080a7a3d2f66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschrieben um die Indices beim Initialisieren der Geometrie zu erstellen.  <a href="class_mesh_o_b_j.html#a48b3cc5f75192c8ea87b080a7a3d2f66">Mehr ...</a><br /></td></tr>
+<tr class="separator:a48b3cc5f75192c8ea87b080a7a3d2f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Weitere Geerbte Elemente</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_i_geometry_indexed_implementation"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_i_geometry_indexed_implementation')"><img src="closed.png" alt="-"/>&#160;Geschützte Attribute geerbt von <a class="el" href="class_i_geometry_indexed_implementation.html">IGeometryIndexedImplementation</a></td></tr>
+<tr class="memitem:a8fe8712a17bbe6f5bd9ef1182d2bb02b inherit pro_attribs_class_i_geometry_indexed_implementation"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_indexed_implementation.html#a8fe8712a17bbe6f5bd9ef1182d2bb02b">mNrOfIndices</a></td></tr>
+<tr class="separator:a8fe8712a17bbe6f5bd9ef1182d2bb02b inherit pro_attribs_class_i_geometry_indexed_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_i_geometry_implementation"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_i_geometry_implementation')"><img src="closed.png" alt="-"/>&#160;Geschützte Attribute geerbt von <a class="el" href="class_i_geometry_implementation.html">IGeometryImplementation</a></td></tr>
+<tr class="memitem:abd49a4900d45b6e9dc8cbbc7a634d29a inherit pro_attribs_class_i_geometry_implementation"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#abd49a4900d45b6e9dc8cbbc7a634d29a">mNeedsInit</a> {true}</td></tr>
+<tr class="memdesc:abd49a4900d45b6e9dc8cbbc7a634d29a inherit pro_attribs_class_i_geometry_implementation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sagt aus, ob die Geometrie neu initialisiert und die <a class="el" href="class_geometry_base.html" title="GeometryBase ist die Basisklasse für alle Objekte , die die geometrischen Daten eines zu zeichenenden...">GeometryBase</a> neu befüllt werden muss Nicht ganz "sauber" für ein Interface, aber sinnvoll.  <a href="class_i_geometry_implementation.html#abd49a4900d45b6e9dc8cbbc7a634d29a">Mehr ...</a><br /></td></tr>
+<tr class="separator:abd49a4900d45b6e9dc8cbbc7a634d29a inherit pro_attribs_class_i_geometry_implementation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="aacab67b703344e92992bf8f56c13b482" name="aacab67b703344e92992bf8f56c13b482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacab67b703344e92992bf8f56c13b482">&#9670;&nbsp;</a></span>MeshOBJ() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MeshOBJ::MeshOBJ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0dbb655018cd1acb7c69523d38b6ae04" name="a0dbb655018cd1acb7c69523d38b6ae04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dbb655018cd1acb7c69523d38b6ae04">&#9670;&nbsp;</a></span>MeshOBJ() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MeshOBJ::MeshOBJ </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>pFilePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a081a4c49c62b607f7e6d2bbe6af6d0f6" name="a081a4c49c62b607f7e6d2bbe6af6d0f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a081a4c49c62b607f7e6d2bbe6af6d0f6">&#9670;&nbsp;</a></span>~MeshOBJ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MeshOBJ::~MeshOBJ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a48b3cc5f75192c8ea87b080a7a3d2f66" name="a48b3cc5f75192c8ea87b080a7a3d2f66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b3cc5f75192c8ea87b080a7a3d2f66">&#9670;&nbsp;</a></span>fillIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MeshOBJ::fillIndices </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; GLuint &gt; &amp;&#160;</td>
+          <td class="paramname"><em>indices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Hier wird bislang nur eine Shape geladen, auch nicht mit wechselndem <a class="el" href="class_material.html" title="Diese Klasse realisiert ein einfaches Material, das dann über Uniforms an die Shader übergeben wird....">Material</a> Ein komplettes Laden von .obj-Files würde mehrere Renderables erzeugen, jedes mit seinem eigenen <a class="el" href="class_material.html" title="Diese Klasse realisiert ein einfaches Material, das dann über Uniforms an die Shader übergeben wird....">Material</a></p>
+
+<p>Erneute Implementation von <a class="el" href="class_i_geometry_indexed_implementation.html#a2f262f63292cd879f74e8ffe2a8bf493">IGeometryIndexedImplementation</a>.</p>
+
+</div>
+</div>
+<a id="abbd7fec6a3d88f10ea5cb031b1b3afed" name="abbd7fec6a3d88f10ea5cb031b1b3afed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbd7fec6a3d88f10ea5cb031b1b3afed">&#9670;&nbsp;</a></span>fillNormals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MeshOBJ::fillNormals </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector3D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>normals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QVector&lt; QVector4D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation von <a class="el" href="class_i_geometry_implementation.html#afd6014712219f405be4c4e3abe971c8a">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="a6899d11cba7cc61457a1459e1aad032a" name="a6899d11cba7cc61457a1459e1aad032a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6899d11cba7cc61457a1459e1aad032a">&#9670;&nbsp;</a></span>fillTexCoords()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MeshOBJ::fillTexCoords </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector2D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>texCoords</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation von <a class="el" href="class_i_geometry_implementation.html#a3a52d95e22a4e82fd991951dfe1d3451">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="a487f316bcd57898744fef13169d6e672" name="a487f316bcd57898744fef13169d6e672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a487f316bcd57898744fef13169d6e672">&#9670;&nbsp;</a></span>fillVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MeshOBJ::fillVertices </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector4D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation von <a class="el" href="class_i_geometry_implementation.html#affc33769a6c24c4af082d9bf2970e5f5">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="a47512cb8f3585ea2278ec05d4be01434" name="a47512cb8f3585ea2278ec05d4be01434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47512cb8f3585ea2278ec05d4be01434">&#9670;&nbsp;</a></span>getGenerateFaceNormals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MeshOBJ::getGenerateFaceNormals </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a692545c30d17bb7e6035e8d0b2e599ad" name="a692545c30d17bb7e6035e8d0b2e599ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692545c30d17bb7e6035e8d0b2e599ad">&#9670;&nbsp;</a></span>getTextureDiffusePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString MeshOBJ::getTextureDiffusePath </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>pMaterialID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3d717215b3f29f4d877e03f6352dfee" name="ae3d717215b3f29f4d877e03f6352dfee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d717215b3f29f4d877e03f6352dfee">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MeshOBJ::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation von <a class="el" href="class_i_geometry_implementation.html#a95974d825d2351df69d471e7ebd9c10e">IGeometryImplementation</a>.</p>
+
+</div>
+</div>
+<a id="a1c9114cffc0150c7f60aed39f210dc11" name="a1c9114cffc0150c7f60aed39f210dc11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c9114cffc0150c7f60aed39f210dc11">&#9670;&nbsp;</a></span>setGenerateFaceNormals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MeshOBJ::setGenerateFaceNormals </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pGenerateFaceNormals</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien:<ul>
+<li>SORS/geometry/<a class="el" href="meshobj_8hpp_source.html">meshobj.hpp</a></li>
+<li>SORS/geometry/<a class="el" href="meshobj_8cpp.html">meshobj.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_mesh_o_b_j.html">MeshOBJ</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

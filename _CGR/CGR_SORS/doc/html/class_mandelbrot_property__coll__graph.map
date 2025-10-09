@@ -1,0 +1,6 @@
+<map id="MandelbrotProperty" name="MandelbrotProperty">
+<area shape="rect" id="node1" title=" " alt="" coords="86,171,221,197"/>
+<area shape="rect" id="node2" href="$class_texture.html" title="Klasse zum Rendering von Texturen." alt="" coords="121,95,186,121"/>
+<area shape="rect" id="node3" href="$class_i_renderable_property.html" title="Interface für alle Eigenschaften, die ein Renderable haben kann. Alle Eigenschaften werden entspreche..." alt="" coords="5,5,147,32"/>
+<area shape="rect" id="node4" href="$struct_tex_image_format.html" title=" " alt="" coords="171,5,291,32"/>
+</map>

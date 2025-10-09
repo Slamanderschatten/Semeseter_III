@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: SORS/rendering/renderable.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('renderable_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">renderable.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="renderable_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef RENDERABLE_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define RENDERABLE_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QVector&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;<a class="code" href="ecs_8hpp.html">ecs.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="irenderableproperty_8hpp.html">irenderableproperty.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_renderable.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_renderable.html">Renderable</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_function" href="class_renderable.html#a97a0f6efd2a058dfb003e64e63bdb255">Renderable</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_renderable.html#acbfd66e4c41c08eeb7238219910f96a7">addProperty</a>(std::shared_ptr&lt;IRenderableProperty&gt; pProperty);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_renderable.html#ab8b48f24791d592773b09d9df8967436">preRender</a>(<a class="code hl_class" href="class_shader.html">Shader</a> &amp;pShader);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_renderable.html#ae0f5c6e29f960be869a806001cb95e80">render</a>(<a class="code hl_class" href="class_shader.html">Shader</a> &amp;pShader);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_renderable.html#ae45aa00d6e0f51ad02701767045b65b1">postRender</a>(<a class="code hl_class" href="class_shader.html">Shader</a> &amp;pShader);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_renderable.html#a8c1e3833a5a40d10f61f49db97e0ac55">getIsEnabled</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_renderable.html#a1a83f3c523aca36fa2c7a1efc3b71972">setIsEnabled</a>(<span class="keywordtype">bool</span> pIsEnabled);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_renderable.html#a79527520fac477e27f7e0a4256d20248">getIsTransparent</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_renderable.html#a08961bfe5f541b9319ec333173f6910f">setIsTransparent</a>(<span class="keywordtype">bool</span> pIsTransparent);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    entt::entity <a class="code hl_function" href="class_renderable.html#a184349de078aae8e081d4f9873babf8d">getsingleRenderContext</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_renderable.html#af467814631c85911203cfe82f8d1c4bc">setSingleRenderContext</a>(entt::entity pSingleRenderContext);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_renderable.html#a3a33a68041a23376661ffb9d473fa109">   38</a></span>    QVector&lt;std::shared_ptr&lt;IRenderableProperty&gt;&gt; <a class="code hl_variable" href="class_renderable.html#a3a33a68041a23376661ffb9d473fa109">mProperties</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_renderable.html#a2cd759e3b1c929d21608258b87c150f4">   39</a></span>    entt::entity <a class="code hl_variable" href="class_renderable.html#a2cd759e3b1c929d21608258b87c150f4">mSingleRenderContext</a>{entt::null};</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_renderable.html#afd72c6585daa13f8f31f4a4ed3310219">   40</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_renderable.html#afd72c6585daa13f8f31f4a4ed3310219">mIsEnabled</a>{<span class="keyword">true</span>};</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_renderable.html#a5a2980e679046caec282ec952f7b191a">   41</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_renderable.html#a5a2980e679046caec282ec952f7b191a">mIsTransparent</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif </span><span class="comment">// RENDERABLE_HPP</span></div>
+<div class="ttc" id="aclass_renderable_html"><div class="ttname"><a href="class_renderable.html">Renderable</a></div><div class="ttdoc">Jede Entity, die gerendert werden kann, hat diese Component. Wichtig ist hier das Verständnis,...</div><div class="ttdef"><b>Definition:</b> renderable.hpp:13</div></div>
+<div class="ttc" id="aclass_renderable_html_a08961bfe5f541b9319ec333173f6910f"><div class="ttname"><a href="class_renderable.html#a08961bfe5f541b9319ec333173f6910f">Renderable::setIsTransparent</a></div><div class="ttdeci">void setIsTransparent(bool pIsTransparent)</div><div class="ttdef"><b>Definition:</b> renderable.cpp:48</div></div>
+<div class="ttc" id="aclass_renderable_html_a184349de078aae8e081d4f9873babf8d"><div class="ttname"><a href="class_renderable.html#a184349de078aae8e081d4f9873babf8d">Renderable::getsingleRenderContext</a></div><div class="ttdeci">entt::entity getsingleRenderContext() const</div><div class="ttdef"><b>Definition:</b> renderable.cpp:53</div></div>
+<div class="ttc" id="aclass_renderable_html_a1a83f3c523aca36fa2c7a1efc3b71972"><div class="ttname"><a href="class_renderable.html#a1a83f3c523aca36fa2c7a1efc3b71972">Renderable::setIsEnabled</a></div><div class="ttdeci">void setIsEnabled(bool pIsEnabled)</div><div class="ttdef"><b>Definition:</b> renderable.cpp:38</div></div>
+<div class="ttc" id="aclass_renderable_html_a2cd759e3b1c929d21608258b87c150f4"><div class="ttname"><a href="class_renderable.html#a2cd759e3b1c929d21608258b87c150f4">Renderable::mSingleRenderContext</a></div><div class="ttdeci">entt::entity mSingleRenderContext</div><div class="ttdef"><b>Definition:</b> renderable.hpp:39</div></div>
+<div class="ttc" id="aclass_renderable_html_a3a33a68041a23376661ffb9d473fa109"><div class="ttname"><a href="class_renderable.html#a3a33a68041a23376661ffb9d473fa109">Renderable::mProperties</a></div><div class="ttdeci">QVector&lt; std::shared_ptr&lt; IRenderableProperty &gt; &gt; mProperties</div><div class="ttdef"><b>Definition:</b> renderable.hpp:38</div></div>
+<div class="ttc" id="aclass_renderable_html_a5a2980e679046caec282ec952f7b191a"><div class="ttname"><a href="class_renderable.html#a5a2980e679046caec282ec952f7b191a">Renderable::mIsTransparent</a></div><div class="ttdeci">bool mIsTransparent</div><div class="ttdef"><b>Definition:</b> renderable.hpp:41</div></div>
+<div class="ttc" id="aclass_renderable_html_a79527520fac477e27f7e0a4256d20248"><div class="ttname"><a href="class_renderable.html#a79527520fac477e27f7e0a4256d20248">Renderable::getIsTransparent</a></div><div class="ttdeci">bool getIsTransparent() const</div><div class="ttdef"><b>Definition:</b> renderable.cpp:43</div></div>
+<div class="ttc" id="aclass_renderable_html_a8c1e3833a5a40d10f61f49db97e0ac55"><div class="ttname"><a href="class_renderable.html#a8c1e3833a5a40d10f61f49db97e0ac55">Renderable::getIsEnabled</a></div><div class="ttdeci">bool getIsEnabled() const</div><div class="ttdef"><b>Definition:</b> renderable.cpp:33</div></div>
+<div class="ttc" id="aclass_renderable_html_a97a0f6efd2a058dfb003e64e63bdb255"><div class="ttname"><a href="class_renderable.html#a97a0f6efd2a058dfb003e64e63bdb255">Renderable::Renderable</a></div><div class="ttdeci">Renderable()</div><div class="ttdef"><b>Definition:</b> renderable.cpp:5</div></div>
+<div class="ttc" id="aclass_renderable_html_ab8b48f24791d592773b09d9df8967436"><div class="ttname"><a href="class_renderable.html#ab8b48f24791d592773b09d9df8967436">Renderable::preRender</a></div><div class="ttdeci">void preRender(Shader &amp;pShader)</div><div class="ttdoc">preRender wird beim Renderdurchlauf direkt nach dem Binden des passenden Shaders gerufen</div><div class="ttdef"><b>Definition:</b> renderable.cpp:15</div></div>
+<div class="ttc" id="aclass_renderable_html_acbfd66e4c41c08eeb7238219910f96a7"><div class="ttname"><a href="class_renderable.html#acbfd66e4c41c08eeb7238219910f96a7">Renderable::addProperty</a></div><div class="ttdeci">void addProperty(std::shared_ptr&lt; IRenderableProperty &gt; pProperty)</div><div class="ttdoc">Hinfügen einer RenderableProperty zu einer Entity Für alle Properties wird preRender,...</div><div class="ttdef"><b>Definition:</b> renderable.cpp:10</div></div>
+<div class="ttc" id="aclass_renderable_html_ae0f5c6e29f960be869a806001cb95e80"><div class="ttname"><a href="class_renderable.html#ae0f5c6e29f960be869a806001cb95e80">Renderable::render</a></div><div class="ttdeci">void render(Shader &amp;pShader)</div><div class="ttdoc">render wird beim Renderdurchlauf direkt vor dem rendern der Geometrie gerufen Zwischen preRender und ...</div><div class="ttdef"><b>Definition:</b> renderable.cpp:21</div></div>
+<div class="ttc" id="aclass_renderable_html_ae45aa00d6e0f51ad02701767045b65b1"><div class="ttname"><a href="class_renderable.html#ae45aa00d6e0f51ad02701767045b65b1">Renderable::postRender</a></div><div class="ttdeci">void postRender(Shader &amp;pShader)</div><div class="ttdoc">postRender wird nach dem Rendern der Geometrie gerufen, als letzte Operation des Renderdurchlaufs für...</div><div class="ttdef"><b>Definition:</b> renderable.cpp:27</div></div>
+<div class="ttc" id="aclass_renderable_html_af467814631c85911203cfe82f8d1c4bc"><div class="ttname"><a href="class_renderable.html#af467814631c85911203cfe82f8d1c4bc">Renderable::setSingleRenderContext</a></div><div class="ttdeci">void setSingleRenderContext(entt::entity pSingleRenderContext)</div><div class="ttdef"><b>Definition:</b> renderable.cpp:58</div></div>
+<div class="ttc" id="aclass_renderable_html_afd72c6585daa13f8f31f4a4ed3310219"><div class="ttname"><a href="class_renderable.html#afd72c6585daa13f8f31f4a4ed3310219">Renderable::mIsEnabled</a></div><div class="ttdeci">bool mIsEnabled</div><div class="ttdef"><b>Definition:</b> renderable.hpp:40</div></div>
+<div class="ttc" id="aclass_shader_html"><div class="ttname"><a href="class_shader.html">Shader</a></div><div class="ttdoc">Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...</div><div class="ttdef"><b>Definition:</b> shader.hpp:11</div></div>
+<div class="ttc" id="aecs_8hpp_html"><div class="ttname"><a href="ecs_8hpp.html">ecs.hpp</a></div></div>
+<div class="ttc" id="airenderableproperty_8hpp_html"><div class="ttname"><a href="irenderableproperty_8hpp.html">irenderableproperty.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_cda996fc916ed27d80e8cee84a8ca5c5.html">SORS</a></li><li class="navelem"><a class="el" href="dir_6f8a73d58f15ae90033e36c24ed6e8ca.html">rendering</a></li><li class="navelem"><a class="el" href="renderable_8hpp.html">renderable.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: Manager Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_manager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="#pub-static-methods">Öffentliche, statische Methoden</a> &#124;
+<a href="class_manager-members.html">Aufstellung aller Elemente</a>  </div>
+  <div class="headertitle"><div class="title">Manager Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Enthält alle Methoden, in denen übergeordnete/unabhängige Entities/Objekte angelegt werden. Hierbei ist zu bedenken, dass bei der konsequenten Verwendung von smart pointern Objekte, die dynamisch via smart pointern angelegt werden, während der Konstruktion "this" nicht an andere Objekte weitergeben können. Grund hierfür ist, dass das Objekt ggf. in einem nicht vollständig initialisierten Zustand von anderen verwendet wird, was zu undefiniertem Verhalten führen kann. So könnte also ein <a class="el" href="class_renderable.html" title="Jede Entity, die gerendert werden kann, hat diese Component. Wichtig ist hier das Verständnis,...">Renderable</a> in seinem eigenen Konstruktor sich nicht selbst in das ECS eintragen, sondern die Instanz, die das <a class="el" href="class_renderable.html" title="Jede Entity, die gerendert werden kann, hat diese Component. Wichtig ist hier das Verständnis,...">Renderable</a> angelegt hat, müsste das separat tun. Da das unelegant wäre, gibt es die Manager-Klasse, die diese Aufgaben gesammelt übernimmt.  
+</p>
+
+<p><code>#include &lt;<a class="el" href="manager_8hpp_source.html">manager.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:aa9e1d309899af35842d21ebfd66dcf16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_manager.html#aa9e1d309899af35842d21ebfd66dcf16">Manager</a> ()=delete</td></tr>
+<tr class="separator:aa9e1d309899af35842d21ebfd66dcf16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Öffentliche, statische Methoden</h2></td></tr>
+<tr class="memitem:a3cb686919af232127c1b32c90b9b87f9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_manager.html#a3cb686919af232127c1b32c90b9b87f9">initialize</a> ()</td></tr>
+<tr class="separator:a3cb686919af232127c1b32c90b9b87f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac001f5cde0770d43e4de4a974a814dc"><td class="memTemplParams" colspan="2">template&lt;typename GeometryBaseClass , typename GeometryImplementationClass &gt; </td></tr>
+<tr class="memitem:aac001f5cde0770d43e4de4a974a814dc"><td class="memTemplItemLeft" align="right" valign="top">static entt::entity&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_manager.html#aac001f5cde0770d43e4de4a974a814dc">addRenderable</a> (const GeometryImplementationClass &amp;lGeoImplementation, std::shared_ptr&lt; <a class="el" href="class_shader.html">Shader</a> &gt; pShader=nullptr)</td></tr>
+<tr class="memdesc:aac001f5cde0770d43e4de4a974a814dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fügt ein <a class="el" href="class_renderable.html" title="Jede Entity, die gerendert werden kann, hat diese Component. Wichtig ist hier das Verständnis,...">Renderable</a> hinzu. Dabei wird <a class="el" href="class_shader.html" title="Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...">Shader</a> (ggf. Default-Shader), die Geometriebasis (siehe Template-Parameter) hinzugefügt und entsprechend mit der übergebenen Implementierung verbunden.  <a href="class_manager.html#aac001f5cde0770d43e4de4a974a814dc">Mehr ...</a><br /></td></tr>
+<tr class="separator:aac001f5cde0770d43e4de4a974a814dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad87dc677b26a3615f34b648e150084c6"><td class="memItemLeft" align="right" valign="top">static entt::entity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_manager.html#ad87dc677b26a3615f34b648e150084c6">addRenderableSharedGeometry</a> (entt::entity pEntWithSharedGeometry, std::shared_ptr&lt; <a class="el" href="class_shader.html">Shader</a> &gt; pShader=nullptr)</td></tr>
+<tr class="memdesc:ad87dc677b26a3615f34b648e150084c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fügt ein <a class="el" href="class_renderable.html" title="Jede Entity, die gerendert werden kann, hat diese Component. Wichtig ist hier das Verständnis,...">Renderable</a> hinzu, dass die Geometrie mit einem anderen Entity teilt Wichtig: Das Entity mit der "Original"-Geometrie muss erhalten bleiben, es ist "Owner" der Geometrie.  <a href="class_manager.html#ad87dc677b26a3615f34b648e150084c6">Mehr ...</a><br /></td></tr>
+<tr class="separator:ad87dc677b26a3615f34b648e150084c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2528da4c45026694223bd10284b1ad55"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_transformation.html">Transformation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_manager.html#a2528da4c45026694223bd10284b1ad55">addTransformationEntity</a> ()</td></tr>
+<tr class="memdesc:a2528da4c45026694223bd10284b1ad55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legt eine <a class="el" href="class_transformation.html" title="Basisklasse für Transformations-Klassen implementiert die eigentlichen Transformationen.">Transformation</a> als eigenes Entity an. Das wird verwendet, um Hierarchien (siehe Relationhip) aufzubauen. Ansonsten müssen die Transformationen der jeweiligen Entities verwendet werden.  <a href="class_manager.html#a2528da4c45026694223bd10284b1ad55">Mehr ...</a><br /></td></tr>
+<tr class="separator:a2528da4c45026694223bd10284b1ad55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30e93c51a5578e7bd37ec89b9723f4f2"><td class="memTemplParams" colspan="2">template&lt;class TController &gt; </td></tr>
+<tr class="memitem:a30e93c51a5578e7bd37ec89b9723f4f2"><td class="memTemplItemLeft" align="right" valign="top">static std::shared_ptr&lt; TController &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_manager.html#a30e93c51a5578e7bd37ec89b9723f4f2">addController</a> (entt::entity pEnt=entt::null)</td></tr>
+<tr class="memdesc:a30e93c51a5578e7bd37ec89b9723f4f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fügt einem Entity einen Controller hinzu, der die Lage steuern kann. Das können alle von <a class="el" href="class_move_controller.html" title="Basisklasse aller Klassen, die die Orientierung oder Position eines Entity verändern wollen....">MoveController</a> abgeleiteten Klassen sein. Der Controller greift dann auf die <a class="el" href="class_transformation.html" title="Basisklasse für Transformations-Klassen implementiert die eigentlichen Transformationen.">Transformation</a> des Entity zu.  <a href="class_manager.html#a30e93c51a5578e7bd37ec89b9723f4f2">Mehr ...</a><br /></td></tr>
+<tr class="separator:a30e93c51a5578e7bd37ec89b9723f4f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="aa9e1d309899af35842d21ebfd66dcf16" name="aa9e1d309899af35842d21ebfd66dcf16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9e1d309899af35842d21ebfd66dcf16">&#9670;&nbsp;</a></span>Manager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Manager::Manager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a30e93c51a5578e7bd37ec89b9723f4f2" name="a30e93c51a5578e7bd37ec89b9723f4f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30e93c51a5578e7bd37ec89b9723f4f2">&#9670;&nbsp;</a></span>addController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TController &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::shared_ptr&lt; TController &gt; Manager::addController </td>
+          <td>(</td>
+          <td class="paramtype">entt::entity&#160;</td>
+          <td class="paramname"><em>pEnt</em> = <code>entt::null</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac001f5cde0770d43e4de4a974a814dc" name="aac001f5cde0770d43e4de4a974a814dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac001f5cde0770d43e4de4a974a814dc">&#9670;&nbsp;</a></span>addRenderable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GeometryBaseClass , typename GeometryImplementationClass &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">entt::entity Manager::addRenderable </td>
+          <td>(</td>
+          <td class="paramtype">const GeometryImplementationClass &amp;&#160;</td>
+          <td class="paramname"><em>lGeoImplementation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_shader.html">Shader</a> &gt;&#160;</td>
+          <td class="paramname"><em>pShader</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Legt ein Renderable-Entity an. Alles, was später gezeichnet werden soll, muss diese Methode oder addRenderableSharedGeometry verwenden. Dabei wird ein Entity angelegt und die zuhörige Geometrie hinzugefügt. </p>
+
+</div>
+</div>
+<a id="ad87dc677b26a3615f34b648e150084c6" name="ad87dc677b26a3615f34b648e150084c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad87dc677b26a3615f34b648e150084c6">&#9670;&nbsp;</a></span>addRenderableSharedGeometry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">entt::entity Manager::addRenderableSharedGeometry </td>
+          <td>(</td>
+          <td class="paramtype">entt::entity&#160;</td>
+          <td class="paramname"><em>pEntWithSharedGeometry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_shader.html">Shader</a> &gt;&#160;</td>
+          <td class="paramname"><em>pShader</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2528da4c45026694223bd10284b1ad55" name="a2528da4c45026694223bd10284b1ad55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2528da4c45026694223bd10284b1ad55">&#9670;&nbsp;</a></span>addTransformationEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_transformation.html">Transformation</a> &amp; Manager::addTransformationEntity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3cb686919af232127c1b32c90b9b87f9" name="a3cb686919af232127c1b32c90b9b87f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cb686919af232127c1b32c90b9b87f9">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Manager::initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien:<ul>
+<li>SORS/<a class="el" href="manager_8hpp_source.html">manager.hpp</a></li>
+<li>ARTR_Uebungen/Uebung01Heightmap/<a class="el" href="_a_r_t_r___uebungen_2_uebung01_heightmap_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>ARTR_Uebungen/Uebung02OcclusionCR/<a class="el" href="_a_r_t_r___uebungen_2_uebung02_occlusion_c_r_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>ARTR_Uebungen/Uebung03StencilShader/<a class="el" href="_a_r_t_r___uebungen_2_uebung03_stencil_shader_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>CGR_Uebungen/Heightmap/<a class="el" href="_c_g_r___uebungen_2_heightmap_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>CGR_Uebungen/Robot/<a class="el" href="_c_g_r___uebungen_2_robot_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>CGR_Uebungen/RobotVorlage/<a class="el" href="_c_g_r___uebungen_2_robot_vorlage_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>CGR_Uebungen/Sonnensystem/<a class="el" href="_c_g_r___uebungen_2_sonnensystem_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>CGR_Uebungen/SonnensystemVorlage/<a class="el" href="_c_g_r___uebungen_2_sonnensystem_vorlage_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>CGR_Uebungen/Uebung06FragmentShader/<a class="el" href="_c_g_r___uebungen_2_uebung06_fragment_shader_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>CGR_Uebungen/Uebung07Filter/<a class="el" href="_c_g_r___uebungen_2_uebung07_filter_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>CGR_Uebungen/Uebung07Mandelbrot/<a class="el" href="_c_g_r___uebungen_2_uebung07_mandelbrot_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>CGR_Uebungen/Uebung08Morphing/<a class="el" href="_c_g_r___uebungen_2_uebung08_morphing_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>CGR_Uebungen/Uebung09Shader/<a class="el" href="_c_g_r___uebungen_2_uebung09_shader_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>CGR_Uebungen/Uebung10Heightmap/<a class="el" href="_c_g_r___uebungen_2_uebung10_heightmap_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>CGR_Uebungen/Uebung11BumpMap/<a class="el" href="_c_g_r___uebungen_2_uebung11_bump_map_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>CGR_Uebungen/Uebung11MovingTexture/<a class="el" href="_c_g_r___uebungen_2_uebung11_moving_texture_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>examplesadvanced/AmbientOcclusion/<a class="el" href="examplesadvanced_2_ambient_occlusion_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>examplesadvanced/FBO/<a class="el" href="examplesadvanced_2_f_b_o_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>examplesadvanced/MotionBlur/<a class="el" href="examplesadvanced_2_motion_blur_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>examplesadvanced/Shadowmap/<a class="el" href="examplesadvanced_2_shadowmap_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>examplesbasic/Bumpmap/<a class="el" href="examplesbasic_2_bumpmap_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>examplesbasic/coloredplane/<a class="el" href="examplesbasic_2coloredplane_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>examplesbasic/quatdemo/<a class="el" href="examplesbasic_2quatdemo_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>examplesbasic/SimpleCircle/<a class="el" href="examplesbasic_2_simple_circle_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>examplesbasic/SimpleLighting/<a class="el" href="examplesbasic_2_simple_lighting_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>examplesbasic/SimpleShader/<a class="el" href="examplesbasic_2_simple_shader_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>examplesbasic/SORS_Cube/<a class="el" href="examplesbasic_2_s_o_r_s___cube_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>examplesbasic/SORS_Mesh/<a class="el" href="examplesbasic_2_s_o_r_s___mesh_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>examplesbasic/transparenz/<a class="el" href="examplesbasic_2transparenz_2myscene_8cpp.html">myscene.cpp</a></li>
+<li>SORS/<a class="el" href="manager_8cpp.html">manager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_manager.html">Manager</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

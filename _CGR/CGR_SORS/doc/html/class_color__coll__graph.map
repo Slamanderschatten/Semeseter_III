@@ -1,0 +1,4 @@
+<map id="Color" name="Color">
+<area shape="rect" id="node1" title="Einfache Property, um eine Farbe an den Shader zu übergeben. Beispielcode:" alt="" coords="49,80,103,107"/>
+<area shape="rect" id="node2" href="$class_i_renderable_property.html" title="Interface für alle Eigenschaften, die ein Renderable haben kann. Alle Eigenschaften werden entspreche..." alt="" coords="5,5,147,32"/>
+</map>

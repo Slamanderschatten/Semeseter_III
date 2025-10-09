@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: SORS/system.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('system_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">system.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="system_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SYSTEMS_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SYSTEMS_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="ecs_8hpp.html">ecs.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_system.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="class_system.html">System</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_system.html#aaf192f45a6bc87c0105b47845ad84342">   11</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_system.html#aaf192f45a6bc87c0105b47845ad84342">preRender</a>() {}</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_system.html#a3b72d5aa335c4aae0f45b27abb23d8d1">   12</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_system.html#a3b72d5aa335c4aae0f45b27abb23d8d1">render</a>() {}</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_system.html#add65fe6a79621223d5a10bcb7226c23a">   13</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_system.html#add65fe6a79621223d5a10bcb7226c23a">postRender</a>() {}</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>};</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_game_system.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="class_game_system.html">GameSystem</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_system.html">System</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_game_system.html#a61a48f37cd943ab86edecb3f170b135c">   20</a></span>    <a class="code hl_function" href="class_game_system.html#a61a48f37cd943ab86edecb3f170b135c">GameSystem</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_system.html#ab51a4d725d9e9af60acfcc740e6bb357">mainLoop</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_system.html#aceeb7d3c66c9a281a98cc83b5cec4ba9">preRender</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_system.html#ae4d86d28a645ad569f85bcc6b8e3d69f">render</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_system.html#ade1f9fe5e4bb8fea9a3f6f61171c8f36">postRender</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">static</span> entt::entity <a class="code hl_function" href="class_game_system.html#a7d9bc57ec22be2f395de80a6abdd1416">getMainRenderContext</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_system.html#af3f68ce58c22c1d5e39b4478ed7d8b3f">doRender</a>(<span class="keywordtype">bool</span> pTransparent);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>};</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif </span><span class="comment">// SYSTEMS_HPP</span></div>
+<div class="ttc" id="aclass_game_system_html"><div class="ttname"><a href="class_game_system.html">GameSystem</a></div><div class="ttdoc">Implementiert den Loop der Anwendung und wird zyklisch von OpenGLWidget::paintGL gerufen.</div><div class="ttdef"><b>Definition:</b> system.hpp:18</div></div>
+<div class="ttc" id="aclass_game_system_html_a61a48f37cd943ab86edecb3f170b135c"><div class="ttname"><a href="class_game_system.html#a61a48f37cd943ab86edecb3f170b135c">GameSystem::GameSystem</a></div><div class="ttdeci">GameSystem()=default</div></div>
+<div class="ttc" id="aclass_game_system_html_a7d9bc57ec22be2f395de80a6abdd1416"><div class="ttname"><a href="class_game_system.html#a7d9bc57ec22be2f395de80a6abdd1416">GameSystem::getMainRenderContext</a></div><div class="ttdeci">static entt::entity getMainRenderContext()</div><div class="ttdef"><b>Definition:</b> system.cpp:106</div></div>
+<div class="ttc" id="aclass_game_system_html_ab51a4d725d9e9af60acfcc740e6bb357"><div class="ttname"><a href="class_game_system.html#ab51a4d725d9e9af60acfcc740e6bb357">GameSystem::mainLoop</a></div><div class="ttdeci">static void mainLoop()</div><div class="ttdoc">Wird von openglwidget nach Initialisierung gerufen und steuert die Renderdurchläufe.</div><div class="ttdef"><b>Definition:</b> system.cpp:11</div></div>
+<div class="ttc" id="aclass_game_system_html_aceeb7d3c66c9a281a98cc83b5cec4ba9"><div class="ttname"><a href="class_game_system.html#aceeb7d3c66c9a281a98cc83b5cec4ba9">GameSystem::preRender</a></div><div class="ttdeci">static void preRender()</div><div class="ttdef"><b>Definition:</b> system.cpp:28</div></div>
+<div class="ttc" id="aclass_game_system_html_ade1f9fe5e4bb8fea9a3f6f61171c8f36"><div class="ttname"><a href="class_game_system.html#ade1f9fe5e4bb8fea9a3f6f61171c8f36">GameSystem::postRender</a></div><div class="ttdeci">static void postRender()</div><div class="ttdef"><b>Definition:</b> system.cpp:98</div></div>
+<div class="ttc" id="aclass_game_system_html_ae4d86d28a645ad569f85bcc6b8e3d69f"><div class="ttname"><a href="class_game_system.html#ae4d86d28a645ad569f85bcc6b8e3d69f">GameSystem::render</a></div><div class="ttdeci">static void render()</div><div class="ttdef"><b>Definition:</b> system.cpp:38</div></div>
+<div class="ttc" id="aclass_game_system_html_af3f68ce58c22c1d5e39b4478ed7d8b3f"><div class="ttname"><a href="class_game_system.html#af3f68ce58c22c1d5e39b4478ed7d8b3f">GameSystem::doRender</a></div><div class="ttdeci">static void doRender(bool pTransparent)</div><div class="ttdef"><b>Definition:</b> system.cpp:49</div></div>
+<div class="ttc" id="aclass_system_html"><div class="ttname"><a href="class_system.html">System</a></div><div class="ttdoc">Von dieser Klasse leiten alle systems ab, die Klasse GameSystem sorgt dafür, dass die Methoden der &quot;s...</div><div class="ttdef"><b>Definition:</b> system.hpp:9</div></div>
+<div class="ttc" id="aclass_system_html_a3b72d5aa335c4aae0f45b27abb23d8d1"><div class="ttname"><a href="class_system.html#a3b72d5aa335c4aae0f45b27abb23d8d1">System::render</a></div><div class="ttdeci">static void render()</div><div class="ttdef"><b>Definition:</b> system.hpp:12</div></div>
+<div class="ttc" id="aclass_system_html_aaf192f45a6bc87c0105b47845ad84342"><div class="ttname"><a href="class_system.html#aaf192f45a6bc87c0105b47845ad84342">System::preRender</a></div><div class="ttdeci">static void preRender()</div><div class="ttdef"><b>Definition:</b> system.hpp:11</div></div>
+<div class="ttc" id="aclass_system_html_add65fe6a79621223d5a10bcb7226c23a"><div class="ttname"><a href="class_system.html#add65fe6a79621223d5a10bcb7226c23a">System::postRender</a></div><div class="ttdeci">static void postRender()</div><div class="ttdef"><b>Definition:</b> system.hpp:13</div></div>
+<div class="ttc" id="aecs_8hpp_html"><div class="ttname"><a href="ecs_8hpp.html">ecs.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_cda996fc916ed27d80e8cee84a8ca5c5.html">SORS</a></li><li class="navelem"><a class="el" href="system_8hpp.html">system.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

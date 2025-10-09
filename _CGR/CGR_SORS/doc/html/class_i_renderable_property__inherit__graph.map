@@ -1,0 +1,15 @@
+<map id="IRenderableProperty" name="IRenderableProperty">
+<area shape="rect" id="node1" title="Interface für alle Eigenschaften, die ein Renderable haben kann. Alle Eigenschaften werden entspreche..." alt="" coords="5,233,147,260"/>
+<area shape="rect" id="node2" href="$class_color.html" title="Einfache Property, um eine Farbe an den Shader zu übergeben. Beispielcode:" alt="" coords="245,5,298,32"/>
+<area shape="rect" id="node3" href="$class_material.html" title="Diese Klasse realisiert ein einfaches Material, das dann über Uniforms an die Shader übergeben wird...." alt="" coords="237,56,305,83"/>
+<area shape="rect" id="node4" href="$class_open_g_l_states.html" title="Setzen von allgemeinen Zustandsattributen von OpenGL für Renderables. Einfaches Beispiel filled oder ..." alt="" coords="217,107,325,133"/>
+<area shape="rect" id="node5" href="$class_point_light.html" title="Implementierung einer Punktlichtquelle, die dann im Shader zur Verfügung steht. Die Klasse hält die w..." alt="" coords="231,157,311,184"/>
+<area shape="rect" id="node6" href="$class_render_to_texture.html" title=" " alt="" coords="211,208,332,235"/>
+<area shape="rect" id="node8" href="$class_rot_axis_property.html" title=" " alt="" coords="212,259,331,285"/>
+<area shape="rect" id="node9" href="$class_s_s_a_o_noise_and_kernel.html" title=" " alt="" coords="195,309,348,336"/>
+<area shape="rect" id="node10" href="$class_texture.html" title="Klasse zum Rendering von Texturen." alt="" coords="239,360,304,387"/>
+<area shape="rect" id="node12" href="$class_timer_uniform.html" title="Diese Klasse realisiert einen einfachen Timer, der als RenderableProperty an Renderables angehängt we..." alt="" coords="221,411,322,437"/>
+<area shape="rect" id="node13" href="$class_v_buffer_uniforms.html" title=" " alt="" coords="212,461,331,488"/>
+<area shape="rect" id="node7" href="$class_shadow_map_texture.html" title=" " alt="" coords="396,208,533,235"/>
+<area shape="rect" id="node11" href="$class_mandelbrot_property.html" title=" " alt="" coords="397,360,532,387"/>
+</map>

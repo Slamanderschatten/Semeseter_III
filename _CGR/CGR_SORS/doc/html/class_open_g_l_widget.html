@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: OpenGLWidget Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_open_g_l_widget.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="#pub-static-methods">Öffentliche, statische Methoden</a> &#124;
+<a href="#pro-slots">Geschützte Slots</a> &#124;
+<a href="class_open_g_l_widget-members.html">Aufstellung aller Elemente</a>  </div>
+  <div class="headertitle"><div class="title">OpenGLWidget Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ein Qt-Widget, das OpenGL zeichnen kann. Diese Klasse ist die Verbindung zwischen OpenGL und dem Windowing-System, in unserem Fall Qt. Qt kümmert sich um Aufruf der Input-Methoden (z.B. keyPressEvent) und um die Methoden zur Initialisierung (initializeGL()) und Rendering (<a class="el" href="class_open_g_l_widget.html#a86df33a6b58b77588ffb1c110fcf2932" title="Slot, der von Qt angestoßen wird um neu zu zeichnen. Prüft, ob ein passender Kontext erzeugt wurde....">paintGL()</a>).  
+</p>
+
+<p><code>#include &lt;<a class="el" href="openglwidget_8hpp_source.html">openglwidget.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Klassendiagramm für OpenGLWidget:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_open_g_l_widget__inherit__graph.png" border="0" usemap="#a_open_g_l_widget_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_open_g_l_widget_inherit__map" id="a_open_g_l_widget_inherit__map">
+<area shape="rect" title="Ein Qt&#45;Widget, das OpenGL zeichnen kann. Diese Klasse ist die Verbindung zwischen OpenGL und dem Wind..." alt="" coords="86,80,197,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,125,32"/>
+<area shape="rect" title=" " alt="" coords="150,5,287,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">Legende</a>]</span></center></div>
+<div class="dynheader">
+Zusammengehörigkeiten von OpenGLWidget:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_open_g_l_widget__coll__graph.png" border="0" usemap="#a_open_g_l_widget_coll__map" alt="Collaboration graph"/></div>
+<map name="a_open_g_l_widget_coll__map" id="a_open_g_l_widget_coll__map">
+<area shape="rect" title="Ein Qt&#45;Widget, das OpenGL zeichnen kann. Diese Klasse ist die Verbindung zwischen OpenGL und dem Wind..." alt="" coords="86,80,197,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,125,32"/>
+<area shape="rect" title=" " alt="" coords="150,5,287,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:a9a19ed12a509218dc7d3095342daec1a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#a9a19ed12a509218dc7d3095342daec1a">OpenGLWidget</a> (QWidget *parent=0, bool pSetMousePointerinWindow=false)</td></tr>
+<tr class="separator:a9a19ed12a509218dc7d3095342daec1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a293847f6a7e6c40344a1acfca3e9eb51"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#a293847f6a7e6c40344a1acfca3e9eb51">~OpenGLWidget</a> ()</td></tr>
+<tr class="separator:a293847f6a7e6c40344a1acfca3e9eb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9483d7eacf22b14612d06220013b8f27"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#a9483d7eacf22b14612d06220013b8f27">keyPressEvent</a> (QKeyEvent *e) override</td></tr>
+<tr class="memdesc:a9483d7eacf22b14612d06220013b8f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event Callbacks für Maus und Tastatur Diese werden von Qt aufgerufen. In den Methoden erfolgt die Weitergabe an <a class="el" href="class_input_registry.html" title="Ermöglicht Abfragen von Eingaben aus Keyboard und Tastatur. Typischerweise wird das über Callback-Eve...">InputRegistry</a>.  <a href="class_open_g_l_widget.html#a9483d7eacf22b14612d06220013b8f27">Mehr ...</a><br /></td></tr>
+<tr class="separator:a9483d7eacf22b14612d06220013b8f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c94347d80f7dcb566617a84b8ecd494"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#a6c94347d80f7dcb566617a84b8ecd494">keyReleaseEvent</a> (QKeyEvent *event) override</td></tr>
+<tr class="separator:a6c94347d80f7dcb566617a84b8ecd494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87d11020a473c4cf8dadc3ccca470f94"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#a87d11020a473c4cf8dadc3ccca470f94">mouseMoveEvent</a> (QMouseEvent *event) override</td></tr>
+<tr class="separator:a87d11020a473c4cf8dadc3ccca470f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee5bdfb8da8e4902d9bcd04fab14193a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#aee5bdfb8da8e4902d9bcd04fab14193a">mousePressEvent</a> (QMouseEvent *event) override</td></tr>
+<tr class="separator:aee5bdfb8da8e4902d9bcd04fab14193a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3103dfa0ffce969b3508f47f65367d37"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#a3103dfa0ffce969b3508f47f65367d37">mouseReleaseEvent</a> (QMouseEvent *event) override</td></tr>
+<tr class="separator:a3103dfa0ffce969b3508f47f65367d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b76b89ac5ffaa609722af490be1332"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#a31b76b89ac5ffaa609722af490be1332">wheelEvent</a> (QWheelEvent *e) override</td></tr>
+<tr class="separator:a31b76b89ac5ffaa609722af490be1332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6b36785118f98d7d38a24af619f72f4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#ac6b36785118f98d7d38a24af619f72f4">getContext</a> ()</td></tr>
+<tr class="memdesc:ac6b36785118f98d7d38a24af619f72f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenGL Kontext zurückgeben. Der Kontext hält übergreifende Einstellungen für OpenGL Z.B. Bittiefe des Tiefenpuffers, OpenGL Version.  <a href="class_open_g_l_widget.html#ac6b36785118f98d7d38a24af619f72f4">Mehr ...</a><br /></td></tr>
+<tr class="separator:ac6b36785118f98d7d38a24af619f72f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd75325425be2457a90453d02dd5c72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#a5dd75325425be2457a90453d02dd5c72">addTickObject</a> (std::shared_ptr&lt; <a class="el" href="class_wants_tick.html">WantsTick</a> &gt; pTickObject)</td></tr>
+<tr class="memdesc:a5dd75325425be2457a90453d02dd5c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objekte registrieren, die timergesteuert aufgerufen werden wollen.  <a href="class_open_g_l_widget.html#a5dd75325425be2457a90453d02dd5c72">Mehr ...</a><br /></td></tr>
+<tr class="separator:a5dd75325425be2457a90453d02dd5c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e47bd72ed741198a8b72fe6a471dc62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#a0e47bd72ed741198a8b72fe6a471dc62">removeTickObject</a> (std::shared_ptr&lt; <a class="el" href="class_wants_tick.html">WantsTick</a> &gt; pTickObject)</td></tr>
+<tr class="separator:a0e47bd72ed741198a8b72fe6a471dc62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f52184d2b9dbd857442d31b288ff68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#a29f52184d2b9dbd857442d31b288ff68">getIsInCleanup</a> () const</td></tr>
+<tr class="memdesc:a29f52184d2b9dbd857442d31b288ff68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt zurück, ob das Widget gerade freigegeben/beendet wird. Siehe setCleanup.  <a href="class_open_g_l_widget.html#a29f52184d2b9dbd857442d31b288ff68">Mehr ...</a><br /></td></tr>
+<tr class="separator:a29f52184d2b9dbd857442d31b288ff68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Öffentliche, statische Methoden</h2></td></tr>
+<tr class="memitem:a270e20bcca5b6723c4bdc54d7e35c378"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_open_g_l_widget.html">OpenGLWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#a270e20bcca5b6723c4bdc54d7e35c378">getInstance</a> ()</td></tr>
+<tr class="memdesc:a270e20bcca5b6723c4bdc54d7e35c378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instanz des OpenGLWidgets holen, dort kann OpenGL gerendert werden.  <a href="class_open_g_l_widget.html#a270e20bcca5b6723c4bdc54d7e35c378">Mehr ...</a><br /></td></tr>
+<tr class="separator:a270e20bcca5b6723c4bdc54d7e35c378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4a79df4a8f1f3554730bec9749958c3"><td class="memItemLeft" align="right" valign="top">static QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#ae4a79df4a8f1f3554730bec9749958c3">getMainWindow</a> ()</td></tr>
+<tr class="memdesc:ae4a79df4a8f1f3554730bec9749958c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zugriff auf Mainwindow, um globale Einstellungen zu bekommen, z.B. Fokusverhalten, etc.  <a href="class_open_g_l_widget.html#ae4a79df4a8f1f3554730bec9749958c3">Mehr ...</a><br /></td></tr>
+<tr class="separator:ae4a79df4a8f1f3554730bec9749958c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-slots" name="pro-slots"></a>
+Geschützte Slots</h2></td></tr>
+<tr class="memitem:a5f4d21ea58d18a47e90850ac0fbb50ad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#a5f4d21ea58d18a47e90850ac0fbb50ad">resizeGL</a> (int w, int h) override</td></tr>
+<tr class="memdesc:a5f4d21ea58d18a47e90850ac0fbb50ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wird von Qt gerufen, wenn sich die Fenstergröße geändert hat.  <a href="class_open_g_l_widget.html#a5f4d21ea58d18a47e90850ac0fbb50ad">Mehr ...</a><br /></td></tr>
+<tr class="separator:a5f4d21ea58d18a47e90850ac0fbb50ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86df33a6b58b77588ffb1c110fcf2932"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#a86df33a6b58b77588ffb1c110fcf2932">paintGL</a> () override</td></tr>
+<tr class="memdesc:a86df33a6b58b77588ffb1c110fcf2932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot, der von Qt angestoßen wird um neu zu zeichnen. Prüft, ob ein passender Kontext erzeugt wurde. Falls ja, wird das Rendering angestoßen. Falls nein, werden wechselnde Farben angezeigt, um das Problem zu visualisieren ;-). Achtung: Mainwindow und Widget sind dafür vorgesehen auf dem Stack angelegt zu werden -&gt; keine Smart Pointer.  <a href="class_open_g_l_widget.html#a86df33a6b58b77588ffb1c110fcf2932">Mehr ...</a><br /></td></tr>
+<tr class="separator:a86df33a6b58b77588ffb1c110fcf2932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6a02d67ba438031254a9def7eedb2d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#ae6a02d67ba438031254a9def7eedb2d0">idle</a> ()</td></tr>
+<tr class="separator:ae6a02d67ba438031254a9def7eedb2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19612bd78ecafd9319b071c2d9291b7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_widget.html#a19612bd78ecafd9319b071c2d9291b7a">setCleanup</a> ()</td></tr>
+<tr class="memdesc:a19612bd78ecafd9319b071c2d9291b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ermöglicht herauszufinden, ob das Widget gerade freigegeben wird. In diesem Fall werden OpenGL-Ressourcen nicht freigegeben, da die richtige Reihenfolge nicht sinnvoll eingehalten werden kann.  <a href="class_open_g_l_widget.html#a19612bd78ecafd9319b071c2d9291b7a">Mehr ...</a><br /></td></tr>
+<tr class="separator:a19612bd78ecafd9319b071c2d9291b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="a9a19ed12a509218dc7d3095342daec1a" name="a9a19ed12a509218dc7d3095342daec1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a19ed12a509218dc7d3095342daec1a">&#9670;&nbsp;</a></span>OpenGLWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OpenGLWidget::OpenGLWidget </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pSetMousePointerinWindow</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a293847f6a7e6c40344a1acfca3e9eb51" name="a293847f6a7e6c40344a1acfca3e9eb51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a293847f6a7e6c40344a1acfca3e9eb51">&#9670;&nbsp;</a></span>~OpenGLWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OpenGLWidget::~OpenGLWidget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a5dd75325425be2457a90453d02dd5c72" name="a5dd75325425be2457a90453d02dd5c72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dd75325425be2457a90453d02dd5c72">&#9670;&nbsp;</a></span>addTickObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenGLWidget::addTickObject </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_wants_tick.html">WantsTick</a> &gt;&#160;</td>
+          <td class="paramname"><em>pTickObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6b36785118f98d7d38a24af619f72f4" name="ac6b36785118f98d7d38a24af619f72f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6b36785118f98d7d38a24af619f72f4">&#9670;&nbsp;</a></span>getContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto OpenGLWidget::getContext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a270e20bcca5b6723c4bdc54d7e35c378" name="a270e20bcca5b6723c4bdc54d7e35c378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a270e20bcca5b6723c4bdc54d7e35c378">&#9670;&nbsp;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_open_g_l_widget.html">OpenGLWidget</a> * OpenGLWidget::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29f52184d2b9dbd857442d31b288ff68" name="a29f52184d2b9dbd857442d31b288ff68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29f52184d2b9dbd857442d31b288ff68">&#9670;&nbsp;</a></span>getIsInCleanup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OpenGLWidget::getIsInCleanup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4a79df4a8f1f3554730bec9749958c3" name="ae4a79df4a8f1f3554730bec9749958c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4a79df4a8f1f3554730bec9749958c3">&#9670;&nbsp;</a></span>getMainWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QWidget * OpenGLWidget::getMainWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6a02d67ba438031254a9def7eedb2d0" name="ae6a02d67ba438031254a9def7eedb2d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6a02d67ba438031254a9def7eedb2d0">&#9670;&nbsp;</a></span>idle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenGLWidget::idle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9483d7eacf22b14612d06220013b8f27" name="a9483d7eacf22b14612d06220013b8f27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9483d7eacf22b14612d06220013b8f27">&#9670;&nbsp;</a></span>keyPressEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenGLWidget::keyPressEvent </td>
+          <td>(</td>
+          <td class="paramtype">QKeyEvent *&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c94347d80f7dcb566617a84b8ecd494" name="a6c94347d80f7dcb566617a84b8ecd494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c94347d80f7dcb566617a84b8ecd494">&#9670;&nbsp;</a></span>keyReleaseEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenGLWidget::keyReleaseEvent </td>
+          <td>(</td>
+          <td class="paramtype">QKeyEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87d11020a473c4cf8dadc3ccca470f94" name="a87d11020a473c4cf8dadc3ccca470f94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87d11020a473c4cf8dadc3ccca470f94">&#9670;&nbsp;</a></span>mouseMoveEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenGLWidget::mouseMoveEvent </td>
+          <td>(</td>
+          <td class="paramtype">QMouseEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee5bdfb8da8e4902d9bcd04fab14193a" name="aee5bdfb8da8e4902d9bcd04fab14193a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee5bdfb8da8e4902d9bcd04fab14193a">&#9670;&nbsp;</a></span>mousePressEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenGLWidget::mousePressEvent </td>
+          <td>(</td>
+          <td class="paramtype">QMouseEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3103dfa0ffce969b3508f47f65367d37" name="a3103dfa0ffce969b3508f47f65367d37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3103dfa0ffce969b3508f47f65367d37">&#9670;&nbsp;</a></span>mouseReleaseEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenGLWidget::mouseReleaseEvent </td>
+          <td>(</td>
+          <td class="paramtype">QMouseEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86df33a6b58b77588ffb1c110fcf2932" name="a86df33a6b58b77588ffb1c110fcf2932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86df33a6b58b77588ffb1c110fcf2932">&#9670;&nbsp;</a></span>paintGL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenGLWidget::paintGL </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e47bd72ed741198a8b72fe6a471dc62" name="a0e47bd72ed741198a8b72fe6a471dc62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e47bd72ed741198a8b72fe6a471dc62">&#9670;&nbsp;</a></span>removeTickObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenGLWidget::removeTickObject </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_wants_tick.html">WantsTick</a> &gt;&#160;</td>
+          <td class="paramname"><em>pTickObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f4d21ea58d18a47e90850ac0fbb50ad" name="a5f4d21ea58d18a47e90850ac0fbb50ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f4d21ea58d18a47e90850ac0fbb50ad">&#9670;&nbsp;</a></span>resizeGL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenGLWidget::resizeGL </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19612bd78ecafd9319b071c2d9291b7a" name="a19612bd78ecafd9319b071c2d9291b7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19612bd78ecafd9319b071c2d9291b7a">&#9670;&nbsp;</a></span>setCleanup</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenGLWidget::setCleanup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31b76b89ac5ffaa609722af490be1332" name="a31b76b89ac5ffaa609722af490be1332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b76b89ac5ffaa609722af490be1332">&#9670;&nbsp;</a></span>wheelEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenGLWidget::wheelEvent </td>
+          <td>(</td>
+          <td class="paramtype">QWheelEvent *&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien:<ul>
+<li>SORS/win_oglbase/<a class="el" href="openglwidget_8hpp_source.html">openglwidget.hpp</a></li>
+<li>SORS/win_oglbase/<a class="el" href="openglwidget_8cpp.html">openglwidget.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_open_g_l_widget.html">OpenGLWidget</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: GeometryBase Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_geometry_base.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="#pub-static-methods">Öffentliche, statische Methoden</a> &#124;
+<a href="#pro-methods">Geschützte Methoden</a> &#124;
+<a href="#pro-static-methods">Geschützte, statische Methoden</a> &#124;
+<a href="#pro-attribs">Geschützte Attribute</a> &#124;
+<a href="#pro-static-attribs">Statische, geschützte Attribute</a> &#124;
+<a href="class_geometry_base-members.html">Aufstellung aller Elemente</a>  </div>
+  <div class="headertitle"><div class="title">GeometryBase Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="class_geometry_base.html" title="GeometryBase ist die Basisklasse für alle Objekte , die die geometrischen Daten eines zu zeichenenden...">GeometryBase</a> ist die Basisklasse für alle Objekte , die die geometrischen Daten eines zu zeichenenden Objektes enthalten. Dazu gehören alle Vertex-Attribute, also auch Normalen, Texturkoordinaten, etc. Eine Farbe pro Vertex kann ebenfalls festgelegt werden. Jedes <a class="el" href="class_renderable.html" title="Jede Entity, die gerendert werden kann, hat diese Component. Wichtig ist hier das Verständnis,...">Renderable</a> muss ein Geometry-Objekt haben, um gezeichnet werden zu können. Mehrere Renderables können sich aber eine Geometry teilen! Spezielle Geometrien wie SimpleCubes oder Meshes leiten nicht von Geometry ab, sondern implementieren das Interface <a class="el" href="class_i_geometry_implementation.html" title="Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien....">IGeometryImplementation</a>.  
+</p>
+
+<p><code>#include &lt;<a class="el" href="geometrybase_8hpp_source.html">geometrybase.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Klassendiagramm für GeometryBase:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_geometry_base__inherit__graph.png" border="0" usemap="#a_geometry_base_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_geometry_base_inherit__map" id="a_geometry_base_inherit__map">
+<area shape="rect" title="GeometryBase ist die Basisklasse für alle Objekte , die die geometrischen Daten eines zu zeichenenden..." alt="" coords="28,5,137,32"/>
+<area shape="rect" href="class_geometry_indexed_base.html" title="Basisklasse für alle Geometrien, die indexed gespeichert sind. Indexed bedeutet, dass nicht bei jedem..." alt="" coords="5,80,160,107"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:af375d4b57e53946733243091afb85701"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#af375d4b57e53946733243091afb85701">GeometryBase</a> ()</td></tr>
+<tr class="separator:af375d4b57e53946733243091afb85701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a404c8443bc84d8467e7efc4fa33700"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a2a404c8443bc84d8467e7efc4fa33700">GeometryBase</a> (std::shared_ptr&lt; <a class="el" href="class_i_geometry_implementation.html">IGeometryImplementation</a> &gt; pImplementation)</td></tr>
+<tr class="separator:a2a404c8443bc84d8467e7efc4fa33700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6254a208c6f20567eee32c9161fd2e9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#af6254a208c6f20567eee32c9161fd2e9">~GeometryBase</a> ()</td></tr>
+<tr class="separator:af6254a208c6f20567eee32c9161fd2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6193b3eb4eddfb70e5c126333808dc8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a6193b3eb4eddfb70e5c126333808dc8a">bindBuffer</a> (<a class="el" href="class_shader.html">Shader</a> &amp;shader)</td></tr>
+<tr class="memdesc:a6193b3eb4eddfb70e5c126333808dc8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer für das Rendern binden.  <a href="class_geometry_base.html#a6193b3eb4eddfb70e5c126333808dc8a">Mehr ...</a><br /></td></tr>
+<tr class="separator:a6193b3eb4eddfb70e5c126333808dc8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7fa06e06f25dd2894fbe0b604a47fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a8e7fa06e06f25dd2894fbe0b604a47fe">unbindBuffer</a> ()</td></tr>
+<tr class="memdesc:a8e7fa06e06f25dd2894fbe0b604a47fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer nach dem Rendern freigeben.  <a href="class_geometry_base.html#a8e7fa06e06f25dd2894fbe0b604a47fe">Mehr ...</a><br /></td></tr>
+<tr class="separator:a8e7fa06e06f25dd2894fbe0b604a47fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c730016f5b5b6e48cb0a9189a56de7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a3c730016f5b5b6e48cb0a9189a56de7d">initializeGeometryBase</a> ()</td></tr>
+<tr class="memdesc:a3c730016f5b5b6e48cb0a9189a56de7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometry-Basis Initialisieren. Wenn geometry noch nicht initialisiert wurde, werden die Geometriedaten befüllt sowie die Buffer erstellt und befüllt.  <a href="class_geometry_base.html#a3c730016f5b5b6e48cb0a9189a56de7d">Mehr ...</a><br /></td></tr>
+<tr class="separator:a3c730016f5b5b6e48cb0a9189a56de7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9bf97d5094d7ce803f768f2491c2c10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#ab9bf97d5094d7ce803f768f2491c2c10">deInitGeometry</a> ()</td></tr>
+<tr class="memdesc:ab9bf97d5094d7ce803f768f2491c2c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer, Vertex Array Objects sowie alle Vertices, Colors, Normals und Textur Koordinaten löschen.  <a href="class_geometry_base.html#ab9bf97d5094d7ce803f768f2491c2c10">Mehr ...</a><br /></td></tr>
+<tr class="separator:ab9bf97d5094d7ce803f768f2491c2c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147e7f0a1f424ac789402036eafd7182"><td class="memItemLeft" align="right" valign="top">const QVector&lt; QVector4D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a147e7f0a1f424ac789402036eafd7182">getVertices</a> () const</td></tr>
+<tr class="memdesc:a147e7f0a1f424ac789402036eafd7182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter für die Vertices der Geometry.  <a href="class_geometry_base.html#a147e7f0a1f424ac789402036eafd7182">Mehr ...</a><br /></td></tr>
+<tr class="separator:a147e7f0a1f424ac789402036eafd7182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd41d40c05ac5ebd009598e0f026b67e"><td class="memItemLeft" align="right" valign="top">const QVector&lt; QVector3D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#acd41d40c05ac5ebd009598e0f026b67e">getNormals</a> () const</td></tr>
+<tr class="memdesc:acd41d40c05ac5ebd009598e0f026b67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter für die Normalen der Geometry.  <a href="class_geometry_base.html#acd41d40c05ac5ebd009598e0f026b67e">Mehr ...</a><br /></td></tr>
+<tr class="separator:acd41d40c05ac5ebd009598e0f026b67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed75d72e662136486dea45387ca0bbcf"><td class="memItemLeft" align="right" valign="top">const QVector&lt; QVector2D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#aed75d72e662136486dea45387ca0bbcf">getTextureCoordinates</a> () const</td></tr>
+<tr class="memdesc:aed75d72e662136486dea45387ca0bbcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter für die Textur-Koordinaten der Geometry.  <a href="class_geometry_base.html#aed75d72e662136486dea45387ca0bbcf">Mehr ...</a><br /></td></tr>
+<tr class="separator:aed75d72e662136486dea45387ca0bbcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56a8e65664c62f1ad4dc5275ca8603ba"><td class="memItemLeft" align="right" valign="top">const QVector&lt; QVector4D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a56a8e65664c62f1ad4dc5275ca8603ba">getVertexColors</a> () const</td></tr>
+<tr class="memdesc:a56a8e65664c62f1ad4dc5275ca8603ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter für die Vertex-Farben der Geometry.  <a href="class_geometry_base.html#a56a8e65664c62f1ad4dc5275ca8603ba">Mehr ...</a><br /></td></tr>
+<tr class="separator:a56a8e65664c62f1ad4dc5275ca8603ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d302722e0b8dd706a326ebaa220ec0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a06d302722e0b8dd706a326ebaa220ec0">render</a> ()</td></tr>
+<tr class="memdesc:a06d302722e0b8dd706a326ebaa220ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometry ggf. initialisieren und Rendern an Implementation delegieren.  <a href="class_geometry_base.html#a06d302722e0b8dd706a326ebaa220ec0">Mehr ...</a><br /></td></tr>
+<tr class="separator:a06d302722e0b8dd706a326ebaa220ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a8dcfdb20c30a0b3457a4419a3381c6"><td class="memItemLeft" align="right" valign="top">virtual QVector&lt; QVector4D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a3a8dcfdb20c30a0b3457a4419a3381c6">getTriangleList</a> ()</td></tr>
+<tr class="memdesc:a3a8dcfdb20c30a0b3457a4419a3381c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt eine liste der Vertices der Geometry zurück bei der immer 3 Vertices ein Dreieck bilden. Bei normalen Geometrien, die als Dreiecksliste abgelegt sind, ist diese Methode equivalent zu <a class="el" href="class_geometry_base.html#a147e7f0a1f424ac789402036eafd7182" title="Getter für die Vertices der Geometry.">getVertices()</a>. Wenn die Daten jedoch indexed (IndexedGeometry) sind, gibt <a class="el" href="class_geometry_base.html#a3a8dcfdb20c30a0b3457a4419a3381c6" title="Gibt eine liste der Vertices der Geometry zurück bei der immer 3 Vertices ein Dreieck bilden....">getTriangleList()</a> die Vertices als Dreiecksliste zurück.  <a href="class_geometry_base.html#a3a8dcfdb20c30a0b3457a4419a3381c6">Mehr ...</a><br /></td></tr>
+<tr class="separator:a3a8dcfdb20c30a0b3457a4419a3381c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e802131ba4af3c20a88c952932c2795"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a9e802131ba4af3c20a88c952932c2795">setImplementation</a> (std::shared_ptr&lt; <a class="el" href="class_i_geometry_implementation.html">IGeometryImplementation</a> &gt; pImplementation)</td></tr>
+<tr class="memdesc:a9e802131ba4af3c20a88c952932c2795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation setzen: Die eigentliche Geometrie liegt im ECS, die Implementierung mit Ihren Besonderheiten und ggf. Polymorphismus bleibt außerhalb.  <a href="class_geometry_base.html#a9e802131ba4af3c20a88c952932c2795">Mehr ...</a><br /></td></tr>
+<tr class="separator:a9e802131ba4af3c20a88c952932c2795"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2e82c9b17656ad7dd482e9458c5f516"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="class_i_geometry_implementation.html">IGeometryImplementation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#ae2e82c9b17656ad7dd482e9458c5f516">getImplementation</a> ()</td></tr>
+<tr class="memdesc:ae2e82c9b17656ad7dd482e9458c5f516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation holen.  <a href="class_geometry_base.html#ae2e82c9b17656ad7dd482e9458c5f516">Mehr ...</a><br /></td></tr>
+<tr class="separator:ae2e82c9b17656ad7dd482e9458c5f516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1a2cfa779187c35f2f0544b1246dc4d"><td class="memItemLeft" align="right" valign="top">QMatrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#aa1a2cfa779187c35f2f0544b1246dc4d">getmodelTransformation</a> () const</td></tr>
+<tr class="separator:aa1a2cfa779187c35f2f0544b1246dc4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aa0c0549284728cb967fd72e5b8ff77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a5aa0c0549284728cb967fd72e5b8ff77">setModelTransformation</a> (const QMatrix4x4 &amp;pModelTransformation)</td></tr>
+<tr class="separator:a5aa0c0549284728cb967fd72e5b8ff77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Öffentliche, statische Methoden</h2></td></tr>
+<tr class="memitem:a1abac12803f60a8e1802301278bca8dd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_geometry_base.html">GeometryBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a1abac12803f60a8e1802301278bca8dd">getGeometry</a> (entt::entity pEnt)</td></tr>
+<tr class="memdesc:a1abac12803f60a8e1802301278bca8dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Findet die passende Geometrie (Component von einer der Basisklassen in sRenderableGeometryClasses abgeleitet), die an pEnt hängt.  <a href="class_geometry_base.html#a1abac12803f60a8e1802301278bca8dd">Mehr ...</a><br /></td></tr>
+<tr class="separator:a1abac12803f60a8e1802301278bca8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a2a179495c51f4795ad1e42e3a173da"><td class="memTemplParams" colspan="2">template&lt;typename GeometryBaseClass  = GeometryBase, typename IGeometryImplementationClass &gt; </td></tr>
+<tr class="memitem:a8a2a179495c51f4795ad1e42e3a173da"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a8a2a179495c51f4795ad1e42e3a173da">emplaceToEntity</a> (entt::entity pEnt, IGeometryImplementationClass pImplementation)</td></tr>
+<tr class="memdesc:a8a2a179495c51f4795ad1e42e3a173da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legt für Entity pEnt die entsprechende Geometry an und verbindet diese mit der übergebenen Implementierung.  <a href="class_geometry_base.html#a8a2a179495c51f4795ad1e42e3a173da">Mehr ...</a><br /></td></tr>
+<tr class="separator:a8a2a179495c51f4795ad1e42e3a173da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd9137cd46cd7a25477452b69531bad"><td class="memItemLeft" align="right" valign="top">static const QSet&lt; entt::id_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a0cd9137cd46cd7a25477452b69531bad">renderableGeometryClasses</a> ()</td></tr>
+<tr class="memdesc:a0cd9137cd46cd7a25477452b69531bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt die Klassen zurück, die als renderfähige Geometrie registriert wurden Meist <a class="el" href="class_geometry_base.html" title="GeometryBase ist die Basisklasse für alle Objekte , die die geometrischen Daten eines zu zeichenenden...">GeometryBase</a> und/oder <a class="el" href="class_geometry_indexed_base.html" title="Basisklasse für alle Geometrien, die indexed gespeichert sind. Indexed bedeutet, dass nicht bei jedem...">GeometryIndexedBase</a>.  <a href="class_geometry_base.html#a0cd9137cd46cd7a25477452b69531bad">Mehr ...</a><br /></td></tr>
+<tr class="separator:a0cd9137cd46cd7a25477452b69531bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Geschützte Methoden</h2></td></tr>
+<tr class="memitem:a7eee7d64669f1e0eb9d1efcec1cec77f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a7eee7d64669f1e0eb9d1efcec1cec77f">prepareVertexBuffers</a> ()</td></tr>
+<tr class="memdesc:a7eee7d64669f1e0eb9d1efcec1cec77f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wird beim Initialisieren der Geometrie und erstellt die Buffer. Kann überschriben werden um zusätzliche Buffer wie z.B. einen IndexBuffer zu erstellen.  <a href="class_geometry_base.html#a7eee7d64669f1e0eb9d1efcec1cec77f">Mehr ...</a><br /></td></tr>
+<tr class="separator:a7eee7d64669f1e0eb9d1efcec1cec77f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b49236f530cc7cb2dc1cc9fe229007"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a21b49236f530cc7cb2dc1cc9fe229007">prepareVertexArrayObject</a> (<a class="el" href="class_shader.html">Shader</a> &amp;shader, QOpenGLVertexArrayObject &amp;vao)</td></tr>
+<tr class="memdesc:a21b49236f530cc7cb2dc1cc9fe229007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisieren ein Vertex Array Object für einen <a class="el" href="class_shader.html" title="Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...">Shader</a>. Wird pro <a class="el" href="class_shader.html" title="Hier werden die Shaderprogramme erzeugt. Die Klasse besteht einerseits aus &quot;Convenience&quot;-Methoden zum...">Shader</a> der diese Geometrie rendert einmal aufgerufen. Kann überschrieben werden um zusätzliche Buffer wie z.B. einen IndexBuffer an das Vertex Array Object anzuhängen.  <a href="class_geometry_base.html#a21b49236f530cc7cb2dc1cc9fe229007">Mehr ...</a><br /></td></tr>
+<tr class="separator:a21b49236f530cc7cb2dc1cc9fe229007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5657fbf29ed86046f0b47e950607d2c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#ad5657fbf29ed86046f0b47e950607d2c">destroyVertexBuffers</a> ()</td></tr>
+<tr class="memdesc:ad5657fbf29ed86046f0b47e950607d2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zerstört alle Buffer der Geometrie. Kann überschrieben werden um zusätzliche Buffer wie z.B. einen IndexBuffer zu zerstören.  <a href="class_geometry_base.html#ad5657fbf29ed86046f0b47e950607d2c">Mehr ...</a><br /></td></tr>
+<tr class="separator:ad5657fbf29ed86046f0b47e950607d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ea763b67f9095edbe40714f30db91c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a76ea763b67f9095edbe40714f30db91c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a76ea763b67f9095edbe40714f30db91c">initBuffer</a> (QOpenGLBuffer &amp;buffer, const QVector&lt; T &gt; &amp;elements)</td></tr>
+<tr class="memdesc:a76ea763b67f9095edbe40714f30db91c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hilfsmethode zur erstellung eines Buffers sowie senden der Daten an den Buffer.  <a href="class_geometry_base.html#a76ea763b67f9095edbe40714f30db91c">Mehr ...</a><br /></td></tr>
+<tr class="separator:a76ea763b67f9095edbe40714f30db91c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+Geschützte, statische Methoden</h2></td></tr>
+<tr class="memitem:a376ff6a4e0ee71b15c98de2c90cd7408"><td class="memTemplParams" colspan="2">template&lt;typename RenderableClass &gt; </td></tr>
+<tr class="memitem:a376ff6a4e0ee71b15c98de2c90cd7408"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a376ff6a4e0ee71b15c98de2c90cd7408">addRenderableClass</a> ()</td></tr>
+<tr class="memdesc:a376ff6a4e0ee71b15c98de2c90cd7408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muss für jede (von.  <a href="class_geometry_base.html#a376ff6a4e0ee71b15c98de2c90cd7408">Mehr ...</a><br /></td></tr>
+<tr class="separator:a376ff6a4e0ee71b15c98de2c90cd7408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Geschützte Attribute</h2></td></tr>
+<tr class="memitem:ae17a521a7025011543147cad6f270db2"><td class="memItemLeft" align="right" valign="top">QVector&lt; QVector4D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#ae17a521a7025011543147cad6f270db2">mVertices</a></td></tr>
+<tr class="memdesc:ae17a521a7025011543147cad6f270db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Felder für Geometriedaten.  <a href="class_geometry_base.html#ae17a521a7025011543147cad6f270db2">Mehr ...</a><br /></td></tr>
+<tr class="separator:ae17a521a7025011543147cad6f270db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af028246beee64526060a728c58ec3b5c"><td class="memItemLeft" align="right" valign="top">QVector&lt; QVector4D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#af028246beee64526060a728c58ec3b5c">mVertexColors</a></td></tr>
+<tr class="separator:af028246beee64526060a728c58ec3b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4079cd39d0dbbfd58b7dcccb89cc5f3c"><td class="memItemLeft" align="right" valign="top">QVector&lt; QVector3D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a4079cd39d0dbbfd58b7dcccb89cc5f3c">mVertexNormals</a></td></tr>
+<tr class="separator:a4079cd39d0dbbfd58b7dcccb89cc5f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33e8aa2963f42a5f4891555cd5c2dad4"><td class="memItemLeft" align="right" valign="top">QVector&lt; QVector2D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a33e8aa2963f42a5f4891555cd5c2dad4">mTextureCoordinates</a></td></tr>
+<tr class="separator:a33e8aa2963f42a5f4891555cd5c2dad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69ecc288cf580c71b83253a1fb32c125"><td class="memItemLeft" align="right" valign="top">QMatrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a69ecc288cf580c71b83253a1fb32c125">mModelTransformation</a></td></tr>
+<tr class="memdesc:a69ecc288cf580c71b83253a1fb32c125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix zur Speicherung der Modeltransformation (z.B. Skalierung) Diese Matrix wird nicht an etwaige angehängte Objekte o.ä. weitergegeben.  <a href="class_geometry_base.html#a69ecc288cf580c71b83253a1fb32c125">Mehr ...</a><br /></td></tr>
+<tr class="separator:a69ecc288cf580c71b83253a1fb32c125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec656cdbacd07baa7c95237b8c501aa7"><td class="memItemLeft" align="right" valign="top">QOpenGLBuffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#aec656cdbacd07baa7c95237b8c501aa7">mVertexPositionBuffer</a></td></tr>
+<tr class="memdesc:aec656cdbacd07baa7c95237b8c501aa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer für die Geometriedaten.  <a href="class_geometry_base.html#aec656cdbacd07baa7c95237b8c501aa7">Mehr ...</a><br /></td></tr>
+<tr class="separator:aec656cdbacd07baa7c95237b8c501aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57ff94a2115effe0badaa788ec1bf928"><td class="memItemLeft" align="right" valign="top">QOpenGLBuffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a57ff94a2115effe0badaa788ec1bf928">mVertexColorBuffer</a></td></tr>
+<tr class="separator:a57ff94a2115effe0badaa788ec1bf928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab158e5289da0724fa7d52526500e03"><td class="memItemLeft" align="right" valign="top">QOpenGLBuffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a1ab158e5289da0724fa7d52526500e03">mNormalBuffer</a></td></tr>
+<tr class="separator:a1ab158e5289da0724fa7d52526500e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab23caead63eb051f94dccf0df547f9a3"><td class="memItemLeft" align="right" valign="top">QOpenGLBuffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#ab23caead63eb051f94dccf0df547f9a3">mTextureCoordinatesBuffer</a></td></tr>
+<tr class="separator:ab23caead63eb051f94dccf0df547f9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a709019af322bef67d03a3d8042ec823b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_i_geometry_implementation.html">IGeometryImplementation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a709019af322bef67d03a3d8042ec823b">mImplementation</a> = nullptr</td></tr>
+<tr class="memdesc:a709019af322bef67d03a3d8042ec823b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enthält die konkrete Implementierung der Geometry.  <a href="class_geometry_base.html#a709019af322bef67d03a3d8042ec823b">Mehr ...</a><br /></td></tr>
+<tr class="separator:a709019af322bef67d03a3d8042ec823b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a844719fcb9a9df3accb49f1628d321c1"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; QOpenGLVertexArrayObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#a844719fcb9a9df3accb49f1628d321c1">mCurrentVAO</a> = nullptr</td></tr>
+<tr class="memdesc:a844719fcb9a9df3accb49f1628d321c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speichert das in <a class="el" href="class_geometry_base.html#a6193b3eb4eddfb70e5c126333808dc8a" title="Buffer für das Rendern binden.">bindBuffer()</a> gebundene QOpenGLVertexArrayObject zwischen, um es in <a class="el" href="class_geometry_base.html#a8e7fa06e06f25dd2894fbe0b604a47fe" title="Buffer nach dem Rendern freigeben.">unbindBuffer()</a> wieder unbinden zu können.  <a href="class_geometry_base.html#a844719fcb9a9df3accb49f1628d321c1">Mehr ...</a><br /></td></tr>
+<tr class="separator:a844719fcb9a9df3accb49f1628d321c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
+Statische, geschützte Attribute</h2></td></tr>
+<tr class="memitem:ae55b89fe940a6eb69d8e1a129f01084e"><td class="memItemLeft" align="right" valign="top">static QSet&lt; entt::id_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_geometry_base.html#ae55b89fe940a6eb69d8e1a129f01084e">sRenderableGeometryClasses</a></td></tr>
+<tr class="memdesc:ae55b89fe940a6eb69d8e1a129f01084e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enthält die entt Typen aller von <a class="el" href="class_geometry_base.html" title="GeometryBase ist die Basisklasse für alle Objekte , die die geometrischen Daten eines zu zeichenenden...">GeometryBase</a> abgeleitenen Klassen, also aller Klassen, die eine Geometrie für ein <a class="el" href="class_renderable.html" title="Jede Entity, die gerendert werden kann, hat diese Component. Wichtig ist hier das Verständnis,...">Renderable</a> enthalten können.  <a href="class_geometry_base.html#ae55b89fe940a6eb69d8e1a129f01084e">Mehr ...</a><br /></td></tr>
+<tr class="separator:ae55b89fe940a6eb69d8e1a129f01084e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="af375d4b57e53946733243091afb85701" name="af375d4b57e53946733243091afb85701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af375d4b57e53946733243091afb85701">&#9670;&nbsp;</a></span>GeometryBase() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GeometryBase::GeometryBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a404c8443bc84d8467e7efc4fa33700" name="a2a404c8443bc84d8467e7efc4fa33700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a404c8443bc84d8467e7efc4fa33700">&#9670;&nbsp;</a></span>GeometryBase() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GeometryBase::GeometryBase </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_i_geometry_implementation.html">IGeometryImplementation</a> &gt;&#160;</td>
+          <td class="paramname"><em>pImplementation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6254a208c6f20567eee32c9161fd2e9" name="af6254a208c6f20567eee32c9161fd2e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6254a208c6f20567eee32c9161fd2e9">&#9670;&nbsp;</a></span>~GeometryBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GeometryBase::~GeometryBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a376ff6a4e0ee71b15c98de2c90cd7408" name="a376ff6a4e0ee71b15c98de2c90cd7408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a376ff6a4e0ee71b15c98de2c90cd7408">&#9670;&nbsp;</a></span>addRenderableClass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RenderableClass &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeometryBase::addRenderableClass</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="class_geometry_base.html" title="GeometryBase ist die Basisklasse für alle Objekte , die die geometrischen Daten eines zu zeichenenden...">GeometryBase</a> abgeleitete) Klasse aufgerufen werden, die gerendert werden soll </dd></dl>
+
+</div>
+</div>
+<a id="a6193b3eb4eddfb70e5c126333808dc8a" name="a6193b3eb4eddfb70e5c126333808dc8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6193b3eb4eddfb70e5c126333808dc8a">&#9670;&nbsp;</a></span>bindBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeometryBase::bindBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shader.html">Shader</a> &amp;&#160;</td>
+          <td class="paramname"><em>shader</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9bf97d5094d7ce803f768f2491c2c10" name="ab9bf97d5094d7ce803f768f2491c2c10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9bf97d5094d7ce803f768f2491c2c10">&#9670;&nbsp;</a></span>deInitGeometry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeometryBase::deInitGeometry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5657fbf29ed86046f0b47e950607d2c" name="ad5657fbf29ed86046f0b47e950607d2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5657fbf29ed86046f0b47e950607d2c">&#9670;&nbsp;</a></span>destroyVertexBuffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeometryBase::destroyVertexBuffers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation in <a class="el" href="class_geometry_indexed_base.html#a04ac74b569e179cb353be13e65ff234d">GeometryIndexedBase</a>.</p>
+
+</div>
+</div>
+<a id="a8a2a179495c51f4795ad1e42e3a173da" name="a8a2a179495c51f4795ad1e42e3a173da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a2a179495c51f4795ad1e42e3a173da">&#9670;&nbsp;</a></span>emplaceToEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GeometryBaseClass , typename IGeometryImplementationClass &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeometryBase::emplaceToEntity </td>
+          <td>(</td>
+          <td class="paramtype">entt::entity&#160;</td>
+          <td class="paramname"><em>pEnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IGeometryImplementationClass&#160;</td>
+          <td class="paramname"><em>pImplementation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1abac12803f60a8e1802301278bca8dd" name="a1abac12803f60a8e1802301278bca8dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1abac12803f60a8e1802301278bca8dd">&#9670;&nbsp;</a></span>getGeometry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_geometry_base.html">GeometryBase</a> * GeometryBase::getGeometry </td>
+          <td>(</td>
+          <td class="paramtype">entt::entity&#160;</td>
+          <td class="paramname"><em>pEnt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Findet im übergebenen Entity die (einzige!) Geometrie Also die Component an der Entity, die eine von <a class="el" href="class_geometry_base.html" title="GeometryBase ist die Basisklasse für alle Objekte , die die geometrischen Daten eines zu zeichenenden...">GeometryBase</a> abgeleitete Klasse hat Falls keine solche Component gefunden wird, wird nullptr zurückgegeben. </p>
+
+</div>
+</div>
+<a id="ae2e82c9b17656ad7dd482e9458c5f516" name="ae2e82c9b17656ad7dd482e9458c5f516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2e82c9b17656ad7dd482e9458c5f516">&#9670;&nbsp;</a></span>getImplementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::shared_ptr&lt; <a class="el" href="class_i_geometry_implementation.html">IGeometryImplementation</a> &gt; GeometryBase::getImplementation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1a2cfa779187c35f2f0544b1246dc4d" name="aa1a2cfa779187c35f2f0544b1246dc4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1a2cfa779187c35f2f0544b1246dc4d">&#9670;&nbsp;</a></span>getmodelTransformation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMatrix4x4 GeometryBase::getmodelTransformation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd41d40c05ac5ebd009598e0f026b67e" name="acd41d40c05ac5ebd009598e0f026b67e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd41d40c05ac5ebd009598e0f026b67e">&#9670;&nbsp;</a></span>getNormals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QVector&lt; QVector3D &gt; &amp; GeometryBase::getNormals </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed75d72e662136486dea45387ca0bbcf" name="aed75d72e662136486dea45387ca0bbcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed75d72e662136486dea45387ca0bbcf">&#9670;&nbsp;</a></span>getTextureCoordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QVector&lt; QVector2D &gt; &amp; GeometryBase::getTextureCoordinates </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a8dcfdb20c30a0b3457a4419a3381c6" name="a3a8dcfdb20c30a0b3457a4419a3381c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a8dcfdb20c30a0b3457a4419a3381c6">&#9670;&nbsp;</a></span>getTriangleList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt; QVector4D &gt; GeometryBase::getTriangleList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation in <a class="el" href="class_geometry_indexed_base.html#a479949c7c9ceb3cbe6d5f19b87221db8">GeometryIndexedBase</a>.</p>
+
+</div>
+</div>
+<a id="a56a8e65664c62f1ad4dc5275ca8603ba" name="a56a8e65664c62f1ad4dc5275ca8603ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56a8e65664c62f1ad4dc5275ca8603ba">&#9670;&nbsp;</a></span>getVertexColors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QVector&lt; QVector4D &gt; &amp; GeometryBase::getVertexColors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a147e7f0a1f424ac789402036eafd7182" name="a147e7f0a1f424ac789402036eafd7182"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a147e7f0a1f424ac789402036eafd7182">&#9670;&nbsp;</a></span>getVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QVector&lt; QVector4D &gt; &amp; GeometryBase::getVertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76ea763b67f9095edbe40714f30db91c" name="a76ea763b67f9095edbe40714f30db91c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76ea763b67f9095edbe40714f30db91c">&#9670;&nbsp;</a></span>initBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeometryBase::initBuffer </td>
+          <td>(</td>
+          <td class="paramtype">QOpenGLBuffer &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QVector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>elements</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c730016f5b5b6e48cb0a9189a56de7d" name="a3c730016f5b5b6e48cb0a9189a56de7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c730016f5b5b6e48cb0a9189a56de7d">&#9670;&nbsp;</a></span>initializeGeometryBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeometryBase::initializeGeometryBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21b49236f530cc7cb2dc1cc9fe229007" name="a21b49236f530cc7cb2dc1cc9fe229007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b49236f530cc7cb2dc1cc9fe229007">&#9670;&nbsp;</a></span>prepareVertexArrayObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeometryBase::prepareVertexArrayObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shader.html">Shader</a> &amp;&#160;</td>
+          <td class="paramname"><em>shader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QOpenGLVertexArrayObject &amp;&#160;</td>
+          <td class="paramname"><em>vao</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation in <a class="el" href="class_geometry_indexed_base.html#aba12ddac961a395b9c1c7babe8727ef5">GeometryIndexedBase</a>.</p>
+
+</div>
+</div>
+<a id="a7eee7d64669f1e0eb9d1efcec1cec77f" name="a7eee7d64669f1e0eb9d1efcec1cec77f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eee7d64669f1e0eb9d1efcec1cec77f">&#9670;&nbsp;</a></span>prepareVertexBuffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeometryBase::prepareVertexBuffers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation in <a class="el" href="class_geometry_indexed_base.html#ab14adfc22101bbcb928c633b5852aaed">GeometryIndexedBase</a>.</p>
+
+</div>
+</div>
+<a id="a06d302722e0b8dd706a326ebaa220ec0" name="a06d302722e0b8dd706a326ebaa220ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d302722e0b8dd706a326ebaa220ec0">&#9670;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeometryBase::render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0cd9137cd46cd7a25477452b69531bad" name="a0cd9137cd46cd7a25477452b69531bad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cd9137cd46cd7a25477452b69531bad">&#9670;&nbsp;</a></span>renderableGeometryClasses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const QSet&lt; entt::id_type &gt; GeometryBase::renderableGeometryClasses </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e802131ba4af3c20a88c952932c2795" name="a9e802131ba4af3c20a88c952932c2795"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e802131ba4af3c20a88c952932c2795">&#9670;&nbsp;</a></span>setImplementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeometryBase::setImplementation </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_i_geometry_implementation.html">IGeometryImplementation</a> &gt;&#160;</td>
+          <td class="paramname"><em>pImplementation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5aa0c0549284728cb967fd72e5b8ff77" name="a5aa0c0549284728cb967fd72e5b8ff77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa0c0549284728cb967fd72e5b8ff77">&#9670;&nbsp;</a></span>setModelTransformation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeometryBase::setModelTransformation </td>
+          <td>(</td>
+          <td class="paramtype">const QMatrix4x4 &amp;&#160;</td>
+          <td class="paramname"><em>pModelTransformation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e7fa06e06f25dd2894fbe0b604a47fe" name="a8e7fa06e06f25dd2894fbe0b604a47fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7fa06e06f25dd2894fbe0b604a47fe">&#9670;&nbsp;</a></span>unbindBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeometryBase::unbindBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a844719fcb9a9df3accb49f1628d321c1" name="a844719fcb9a9df3accb49f1628d321c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a844719fcb9a9df3accb49f1628d321c1">&#9670;&nbsp;</a></span>mCurrentVAO</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;QOpenGLVertexArrayObject&gt; GeometryBase::mCurrentVAO = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a709019af322bef67d03a3d8042ec823b" name="a709019af322bef67d03a3d8042ec823b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a709019af322bef67d03a3d8042ec823b">&#9670;&nbsp;</a></span>mImplementation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_i_geometry_implementation.html">IGeometryImplementation</a>&gt; GeometryBase::mImplementation = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69ecc288cf580c71b83253a1fb32c125" name="a69ecc288cf580c71b83253a1fb32c125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69ecc288cf580c71b83253a1fb32c125">&#9670;&nbsp;</a></span>mModelTransformation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMatrix4x4 GeometryBase::mModelTransformation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ab158e5289da0724fa7d52526500e03" name="a1ab158e5289da0724fa7d52526500e03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ab158e5289da0724fa7d52526500e03">&#9670;&nbsp;</a></span>mNormalBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QOpenGLBuffer GeometryBase::mNormalBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33e8aa2963f42a5f4891555cd5c2dad4" name="a33e8aa2963f42a5f4891555cd5c2dad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33e8aa2963f42a5f4891555cd5c2dad4">&#9670;&nbsp;</a></span>mTextureCoordinates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt;QVector2D&gt; GeometryBase::mTextureCoordinates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab23caead63eb051f94dccf0df547f9a3" name="ab23caead63eb051f94dccf0df547f9a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab23caead63eb051f94dccf0df547f9a3">&#9670;&nbsp;</a></span>mTextureCoordinatesBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QOpenGLBuffer GeometryBase::mTextureCoordinatesBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57ff94a2115effe0badaa788ec1bf928" name="a57ff94a2115effe0badaa788ec1bf928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57ff94a2115effe0badaa788ec1bf928">&#9670;&nbsp;</a></span>mVertexColorBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QOpenGLBuffer GeometryBase::mVertexColorBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af028246beee64526060a728c58ec3b5c" name="af028246beee64526060a728c58ec3b5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af028246beee64526060a728c58ec3b5c">&#9670;&nbsp;</a></span>mVertexColors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt;QVector4D&gt; GeometryBase::mVertexColors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4079cd39d0dbbfd58b7dcccb89cc5f3c" name="a4079cd39d0dbbfd58b7dcccb89cc5f3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4079cd39d0dbbfd58b7dcccb89cc5f3c">&#9670;&nbsp;</a></span>mVertexNormals</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt;QVector3D&gt; GeometryBase::mVertexNormals</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec656cdbacd07baa7c95237b8c501aa7" name="aec656cdbacd07baa7c95237b8c501aa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec656cdbacd07baa7c95237b8c501aa7">&#9670;&nbsp;</a></span>mVertexPositionBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QOpenGLBuffer GeometryBase::mVertexPositionBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae17a521a7025011543147cad6f270db2" name="ae17a521a7025011543147cad6f270db2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae17a521a7025011543147cad6f270db2">&#9670;&nbsp;</a></span>mVertices</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt;QVector4D&gt; GeometryBase::mVertices</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae55b89fe940a6eb69d8e1a129f01084e" name="ae55b89fe940a6eb69d8e1a129f01084e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae55b89fe940a6eb69d8e1a129f01084e">&#9670;&nbsp;</a></span>sRenderableGeometryClasses</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSet&lt; entt::id_type &gt; GeometryBase::sRenderableGeometryClasses</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien:<ul>
+<li>SORS/geometry/<a class="el" href="geometrybase_8hpp_source.html">geometrybase.hpp</a></li>
+<li>SORS/geometry/<a class="el" href="geometrybase_8cpp.html">geometrybase.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_geometry_base.html">GeometryBase</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

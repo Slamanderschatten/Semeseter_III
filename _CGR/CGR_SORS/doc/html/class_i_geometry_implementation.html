@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simple OpenGL Rendering System: IGeometryImplementation Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Simple OpenGL Rendering System
+   </div>
+   <div id="projectbrief">SORS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_i_geometry_implementation.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="#pro-attribs">Geschützte Attribute</a> &#124;
+<a href="class_i_geometry_implementation-members.html">Aufstellung aller Elemente</a>  </div>
+  <div class="headertitle"><div class="title">IGeometryImplementation Klassenreferenz<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Alle Implementierungen gehören zu einer der von <a class="el" href="class_geometry_base.html" title="GeometryBase ist die Basisklasse für alle Objekte , die die geometrischen Daten eines zu zeichenenden...">GeometryBase</a> abgeleiteten eigentlichen Geometrien. Bei der Initialisierung der Geometrien wird die Implementierung benutzt, um die Geometrie zu "befüllen". Folgt lose dem dependency injection Pattern.  
+</p>
+
+<p><code>#include &lt;<a class="el" href="igeometryimplementation_8hpp_source.html">igeometryimplementation.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Klassendiagramm für IGeometryImplementation:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_geometry_implementation__inherit__graph.png" border="0" usemap="#a_i_geometry_implementation_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_i_geometry_implementation_inherit__map" id="a_i_geometry_implementation_inherit__map">
+<area shape="rect" title="Alle Implementierungen gehören zu einer der von GeometryBase abgeleiteten eigentlichen Geometrien...." alt="" coords="138,5,310,32"/>
+<area shape="rect" href="class_heightmap.html" title=" " alt="" coords="5,80,91,107"/>
+<area shape="rect" href="class_i_geometry_indexed_implementation.html" title="Spezialisierung der Klasse IGeometryImplementation, um indexed geometries zu unterstützen." alt="" coords="115,80,333,107"/>
+<area shape="rect" href="class_simple_circle.html" title="Eine einfache Klasse zum Zeichnen eines Kreises um den Ursprung in der xy&#45;Ebene Zeigt auch die Verwen..." alt="" coords="357,80,453,107"/>
+<area shape="rect" href="class_simple_cube.html" title="Geometrie eines einfachen Würfels mit Normalen und Texturkoordinaten." alt="" coords="477,80,571,107"/>
+<area shape="rect" href="class_simple_plane.html" title="Einfache Fläche in parametrisierbarer Ausdehnung und Auflösung (mDivs)." alt="" coords="609,80,703,107"/>
+<area shape="rect" href="class_mesh_o_b_j.html" title="Sehr einfache Implementierung einer Mesh&#45;Klasse, die aus .obj&#45;Dateien (z.B. aus Blender) geladen wird..." alt="" coords="69,155,149,181"/>
+<area shape="rect" href="class_simple_sphere.html" title="Einfache Klasse zum Zeichnen einer tesselierten Kugel mit indexed geometry." alt="" coords="174,155,277,181"/>
+<area shape="rect" href="class_simple_sphere_occlusion.html" title=" " alt="" coords="145,229,306,256"/>
+<area shape="rect" href="class_simple_circle_filled.html" title=" " alt="" coords="303,155,430,181"/>
+<area shape="rect" href="class_simple_cube_c_r___o_c.html" title=" " alt="" coords="454,155,594,181"/>
+<area shape="rect" href="class_colored_plane.html" title=" " alt="" coords="618,155,718,181"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:a04469f87265616b2a0d45c7f16cf3ed4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a04469f87265616b2a0d45c7f16cf3ed4">IGeometryImplementation</a> ()</td></tr>
+<tr class="separator:a04469f87265616b2a0d45c7f16cf3ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affc33769a6c24c4af082d9bf2970e5f5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#affc33769a6c24c4af082d9bf2970e5f5">fillVertices</a> (QVector&lt; QVector4D &gt; &amp;vertices)</td></tr>
+<tr class="memdesc:affc33769a6c24c4af082d9bf2970e5f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Vertices beim Initialisieren der Geometrie zu erstellen.  <a href="class_i_geometry_implementation.html#affc33769a6c24c4af082d9bf2970e5f5">Mehr ...</a><br /></td></tr>
+<tr class="separator:affc33769a6c24c4af082d9bf2970e5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd6014712219f405be4c4e3abe971c8a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#afd6014712219f405be4c4e3abe971c8a">fillNormals</a> (QVector&lt; QVector3D &gt; &amp;normals, QVector&lt; QVector4D &gt; &amp;vertices)</td></tr>
+<tr class="memdesc:afd6014712219f405be4c4e3abe971c8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Normalen beim Initialisieren der Geometrie zu erstellen.  <a href="class_i_geometry_implementation.html#afd6014712219f405be4c4e3abe971c8a">Mehr ...</a><br /></td></tr>
+<tr class="separator:afd6014712219f405be4c4e3abe971c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a52d95e22a4e82fd991951dfe1d3451"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a3a52d95e22a4e82fd991951dfe1d3451">fillTexCoords</a> (QVector&lt; QVector2D &gt; &amp;texCoords)</td></tr>
+<tr class="memdesc:a3a52d95e22a4e82fd991951dfe1d3451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Textur-Koordinaten beim Initialisieren der Geometrie zu erstellen.  <a href="class_i_geometry_implementation.html#a3a52d95e22a4e82fd991951dfe1d3451">Mehr ...</a><br /></td></tr>
+<tr class="separator:a3a52d95e22a4e82fd991951dfe1d3451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1780855bd1702fa7a4fb1e3f47918d4f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a1780855bd1702fa7a4fb1e3f47918d4f">fillColors</a> (QVector&lt; QVector4D &gt; &amp;colors)</td></tr>
+<tr class="memdesc:a1780855bd1702fa7a4fb1e3f47918d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überschreiben um die Vertex-Farben beim Initialisieren der Geometrie zu erstellen.  <a href="class_i_geometry_implementation.html#a1780855bd1702fa7a4fb1e3f47918d4f">Mehr ...</a><br /></td></tr>
+<tr class="separator:a1780855bd1702fa7a4fb1e3f47918d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a625a44c86a1e7e81f3d9b2f5382d0089"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a625a44c86a1e7e81f3d9b2f5382d0089">needsInit</a> ()</td></tr>
+<tr class="memdesc:a625a44c86a1e7e81f3d9b2f5382d0089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muss von Implementierungen überschrieben werden, wenn init während des Renderloops gerufen werden muss.  <a href="class_i_geometry_implementation.html#a625a44c86a1e7e81f3d9b2f5382d0089">Mehr ...</a><br /></td></tr>
+<tr class="separator:a625a44c86a1e7e81f3d9b2f5382d0089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95974d825d2351df69d471e7ebd9c10e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a95974d825d2351df69d471e7ebd9c10e">init</a> ()</td></tr>
+<tr class="memdesc:a95974d825d2351df69d471e7ebd9c10e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wird vor dem Rendern gerufen, wenn needsInit true zurückgibt Alle Inits der Geometrien im preRender gesammelt durchgeführt.  <a href="class_i_geometry_implementation.html#a95974d825d2351df69d471e7ebd9c10e">Mehr ...</a><br /></td></tr>
+<tr class="separator:a95974d825d2351df69d471e7ebd9c10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a805ffeaafbc621c82b68ce2f839ef246"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a805ffeaafbc621c82b68ce2f839ef246">render</a> ()=0</td></tr>
+<tr class="memdesc:a805ffeaafbc621c82b68ce2f839ef246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objekt zeichnen.  <a href="class_i_geometry_implementation.html#a805ffeaafbc621c82b68ce2f839ef246">Mehr ...</a><br /></td></tr>
+<tr class="separator:a805ffeaafbc621c82b68ce2f839ef246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa4c8447434a0729273c0d3ce0edffe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#a9fa4c8447434a0729273c0d3ce0edffe">setNeedsInit</a> (bool pNeedsInit)</td></tr>
+<tr class="separator:a9fa4c8447434a0729273c0d3ce0edffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Geschützte Attribute</h2></td></tr>
+<tr class="memitem:abd49a4900d45b6e9dc8cbbc7a634d29a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_geometry_implementation.html#abd49a4900d45b6e9dc8cbbc7a634d29a">mNeedsInit</a> {true}</td></tr>
+<tr class="memdesc:abd49a4900d45b6e9dc8cbbc7a634d29a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sagt aus, ob die Geometrie neu initialisiert und die <a class="el" href="class_geometry_base.html" title="GeometryBase ist die Basisklasse für alle Objekte , die die geometrischen Daten eines zu zeichenenden...">GeometryBase</a> neu befüllt werden muss Nicht ganz "sauber" für ein Interface, aber sinnvoll.  <a href="class_i_geometry_implementation.html#abd49a4900d45b6e9dc8cbbc7a634d29a">Mehr ...</a><br /></td></tr>
+<tr class="separator:abd49a4900d45b6e9dc8cbbc7a634d29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="a04469f87265616b2a0d45c7f16cf3ed4" name="a04469f87265616b2a0d45c7f16cf3ed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04469f87265616b2a0d45c7f16cf3ed4">&#9670;&nbsp;</a></span>IGeometryImplementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IGeometryImplementation::IGeometryImplementation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a1780855bd1702fa7a4fb1e3f47918d4f" name="a1780855bd1702fa7a4fb1e3f47918d4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1780855bd1702fa7a4fb1e3f47918d4f">&#9670;&nbsp;</a></span>fillColors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGeometryImplementation::fillColors </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector4D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>colors</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation in <a class="el" href="class_heightmap.html#a60858771ffed3d55298455ce9959166b">Heightmap</a>, <a class="el" href="class_heightmap.html#a046a608f25c072b29ae765a22164be67">Heightmap</a>, <a class="el" href="class_heightmap.html#a046a608f25c072b29ae765a22164be67">Heightmap</a> und <a class="el" href="class_colored_plane.html#a6d3cb08a58f8c32944de83d439632258">ColoredPlane</a>.</p>
+
+</div>
+</div>
+<a id="afd6014712219f405be4c4e3abe971c8a" name="afd6014712219f405be4c4e3abe971c8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd6014712219f405be4c4e3abe971c8a">&#9670;&nbsp;</a></span>fillNormals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGeometryImplementation::fillNormals </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector3D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>normals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QVector&lt; QVector4D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation in <a class="el" href="class_heightmap.html#afe3c65b7a637c283dc70afd5af07e6e3">Heightmap</a>, <a class="el" href="class_heightmap.html#aef95ca887a1a6db18c41d2fb15658376">Heightmap</a>, <a class="el" href="class_mesh_o_b_j.html#abbd7fec6a3d88f10ea5cb031b1b3afed">MeshOBJ</a>, <a class="el" href="class_simple_cube.html#ae1b91a5aade6d394c576f4c0bddfd1e3">SimpleCube</a>, <a class="el" href="class_simple_plane.html#a6b84132fbe49901c5d8e71954c4f1847">SimplePlane</a> und <a class="el" href="class_simple_sphere.html#a29a4a9f5d2a626843b1cc3d0c87449d9">SimpleSphere</a>.</p>
+
+</div>
+</div>
+<a id="a3a52d95e22a4e82fd991951dfe1d3451" name="a3a52d95e22a4e82fd991951dfe1d3451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a52d95e22a4e82fd991951dfe1d3451">&#9670;&nbsp;</a></span>fillTexCoords()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGeometryImplementation::fillTexCoords </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector2D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>texCoords</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation in <a class="el" href="class_mesh_o_b_j.html#a6899d11cba7cc61457a1459e1aad032a">MeshOBJ</a>, <a class="el" href="class_simple_cube.html#ac52a703c2d9c93367733c19a95c0999b">SimpleCube</a>, <a class="el" href="class_simple_plane.html#a51c95fe52c885812708829cf122d2ea8">SimplePlane</a> und <a class="el" href="class_simple_sphere.html#a98a5d3efea915bd59ffc2cef67142218">SimpleSphere</a>.</p>
+
+</div>
+</div>
+<a id="affc33769a6c24c4af082d9bf2970e5f5" name="affc33769a6c24c4af082d9bf2970e5f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affc33769a6c24c4af082d9bf2970e5f5">&#9670;&nbsp;</a></span>fillVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGeometryImplementation::fillVertices </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector4D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation in <a class="el" href="class_heightmap.html#adda45cfb0f860cf0ec07fe1c37eeb962">Heightmap</a>, <a class="el" href="class_heightmap.html#acc1baef898ed275b731fdbfd67c6f273">Heightmap</a>, <a class="el" href="class_heightmap.html#acc1baef898ed275b731fdbfd67c6f273">Heightmap</a>, <a class="el" href="class_mesh_o_b_j.html#a487f316bcd57898744fef13169d6e672">MeshOBJ</a>, <a class="el" href="class_simple_circle.html#ad48d7f84db9161ed221248126a01e689">SimpleCircle</a>, <a class="el" href="class_simple_circle_filled.html#a5e31f762026ffa499361d89213bd755c">SimpleCircleFilled</a>, <a class="el" href="class_simple_cube.html#aa7053b5e85b44956f94941459130ce95">SimpleCube</a>, <a class="el" href="class_simple_plane.html#af349e0fd85d33d2936dce3578c37c306">SimplePlane</a> und <a class="el" href="class_simple_sphere.html#a5ee9e4624c4fe42b21ef12b12ad2ea55">SimpleSphere</a>.</p>
+
+</div>
+</div>
+<a id="a95974d825d2351df69d471e7ebd9c10e" name="a95974d825d2351df69d471e7ebd9c10e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95974d825d2351df69d471e7ebd9c10e">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGeometryImplementation::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation in <a class="el" href="class_mesh_o_b_j.html#ae3d717215b3f29f4d877e03f6352dfee">MeshOBJ</a>.</p>
+
+</div>
+</div>
+<a id="a625a44c86a1e7e81f3d9b2f5382d0089" name="a625a44c86a1e7e81f3d9b2f5382d0089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a625a44c86a1e7e81f3d9b2f5382d0089">&#9670;&nbsp;</a></span>needsInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IGeometryImplementation::needsInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a805ffeaafbc621c82b68ce2f839ef246" name="a805ffeaafbc621c82b68ce2f839ef246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a805ffeaafbc621c82b68ce2f839ef246">&#9670;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGeometryImplementation::render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementiert in <a class="el" href="class_heightmap.html#ad0a6add57b61e0c4efc3b2d5bdbf6a21">Heightmap</a>, <a class="el" href="class_simple_cube_c_r___o_c.html#a6e8ada893459bee60530a7f1b5e36ebc">SimpleCubeCR_OC</a>, <a class="el" href="class_simple_sphere_occlusion.html#a81173cfa65274f8c636b6d581b00dde9">SimpleSphereOcclusion</a>, <a class="el" href="class_heightmap.html#a3e74ffbae83f297284cdd1d2c4c010c8">Heightmap</a>, <a class="el" href="class_heightmap.html#a3e74ffbae83f297284cdd1d2c4c010c8">Heightmap</a>, <a class="el" href="class_i_geometry_indexed_implementation.html#a24686fc3d7f5b6bcb531efb53290b45c">IGeometryIndexedImplementation</a>, <a class="el" href="class_simple_circle.html#aa538d82c25bf00bb39a2ac17f10d5e54">SimpleCircle</a>, <a class="el" href="class_simple_circle_filled.html#af7e9640766c57144586951f5a1745912">SimpleCircleFilled</a>, <a class="el" href="class_simple_cube.html#a41ce09805436e42f7cc2c1313b930ef9">SimpleCube</a> und <a class="el" href="class_simple_plane.html#ac6a834c30f8f9350e6e520568da83088">SimplePlane</a>.</p>
+
+</div>
+</div>
+<a id="a9fa4c8447434a0729273c0d3ce0edffe" name="a9fa4c8447434a0729273c0d3ce0edffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fa4c8447434a0729273c0d3ce0edffe">&#9670;&nbsp;</a></span>setNeedsInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IGeometryImplementation::setNeedsInit </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pNeedsInit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="abd49a4900d45b6e9dc8cbbc7a634d29a" name="abd49a4900d45b6e9dc8cbbc7a634d29a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd49a4900d45b6e9dc8cbbc7a634d29a">&#9670;&nbsp;</a></span>mNeedsInit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IGeometryImplementation::mNeedsInit {true}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>SORS/geometry/<a class="el" href="igeometryimplementation_8hpp_source.html">igeometryimplementation.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_i_geometry_implementation.html">IGeometryImplementation</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

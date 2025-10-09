@@ -1,0 +1,5 @@
+<map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,112,57"/>
+<area shape="rect" id="node2" href="$class_g_lwith_widgets.html" title=" " alt="" coords="160,5,271,32"/>
+<area shape="rect" id="node3" href="$class_main_window.html" title="Ist der Startpunkt für die gesamte Applikation. Im Konstruktor muss die GUI und alle sonstigen Objekt..." alt="" coords="167,56,264,83"/>
+</map>
