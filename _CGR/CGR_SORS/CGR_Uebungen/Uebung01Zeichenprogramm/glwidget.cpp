@@ -72,13 +72,21 @@ void GLWidget::mousePressEvent(QMouseEvent *event)
     //Hier müssen Sie was tun...
 
     mPoints.append(QVector2D(event->pos().x() - static_cast<int>(mWidth)/2,
-                             event->pos().y() + static_cast<int>(mHeight)/2));
+                             static_cast<int>(mHeight)/2 - event->pos().y()));
+    if (mModus == Punkte)
+        mPoints.append(mPoints[mPoints.size()-1]);
+
     update();
 }
 void GLWidget::mouseReleaseEvent(QMouseEvent *event)
 {
     std::cout << "Mouse release at " << event->pos().x() << " " << event->pos().y() << std::endl;
     update();
+    if (mModus == Linien)
+    {
+        mPoints.append(QVector2D(event->pos().x() - static_cast<int>(mWidth)/2,
+                                 static_cast<int>(mHeight)/2 - event->pos().y()));
+    }
 }
 void GLWidget::mouseMoveEvent(QMouseEvent *event)
 {
@@ -86,8 +94,6 @@ void GLWidget::mouseMoveEvent(QMouseEvent *event)
 
     //Hier müssen Sie was tun...
 
-    mPoints.append(QVector2D(event->pos().x() - static_cast<int>(mWidth)/2,
-                             event->pos().y() + static_cast<int>(mHeight)/2));
 
     update();
 }
@@ -102,6 +108,9 @@ void GLWidget::modeToggled(bool points)
 {
     if (points)
         mModus = Punkte;
-    else
+    else {
         mModus = Linien;
+        if(mPoints.size() % 2 == 1)
+            mPoints.append(mPoints[mPoints.size()-1]);
+    }
 }

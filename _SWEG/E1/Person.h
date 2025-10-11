@@ -15,7 +15,7 @@ namespace hs_sweg {
     private:
         string name;
         string vorname;
-        Date geburtsdatum;
+        string geburtsdatum;
         int alter;
 
 
@@ -27,7 +27,7 @@ namespace hs_sweg {
 
 
 
-    class Kunde : Person {
+    class Kunde : public Person {
     private:
         int nr;
     };

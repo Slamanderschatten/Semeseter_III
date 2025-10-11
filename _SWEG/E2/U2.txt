@@ -1,0 +1,27 @@
+
+
+
+4:
+
+a) UML Klassendiagram
+b) Klasse Flugzeug hat mehrere Attribute, zwei einfache typen, eine liste und einen abgeleitetes und ein paar methoden
+    klasse Fluggesellschaft hab beinhaltet mehrere flugzeuge
+c) 1..* müsste bei fluggesellschaft stehen
+
+
+
+5:
+Das „Information Hiding“-Prinzip besagt, dass interne Implementierungsdetails einer Klasse (z. B. die Fabrikationsnummer des Flugzeugs) nicht öffentlich sichtbar sein sollen.
+→ Das Attribut Fabrikationsnummer sollte daher private Sichtbarkeit (- Fabrikationsnummer) haben und nur über Getter/Setter zugreifbar sein.
+
+f) Unterschied: Information Hiding vs. Kapselung
+
+Information Hiding: Verbergen von internen Details (z. B. Datenstrukturen, Implementierungslogik) vor außenstehenden Objekten.
+
+Kapselung: Sprachmechanismus (z. B. private/public), mit dem Information Hiding technisch umgesetzt wird.
+
+g) Objektzustand „Pilot Meier“
+
+Der Objektzustand beschreibt die konkreten Werte der Attribute eines Objekts zu einem bestimmten Zeitpunkt.
+Beispiel:
+Pilot Meier → Name = „Meier“, Fluglinie = „Lufthansa“, Status = „eingestellt“.
