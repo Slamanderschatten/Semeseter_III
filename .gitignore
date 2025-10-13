@@ -4,6 +4,7 @@
 /.idea/workspace.xml
 # CLion specific files
 /cmake-build-debug/
+/cmake-build-debug-visual-studio/
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files

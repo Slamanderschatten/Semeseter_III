@@ -3,8 +3,9 @@ project(${projectname})
 
 if(NOT DEFINED ${common_included})
     find_path(where_is_common NAMES "common.cmake" 
-    PATHS "${CMAKE_SOURCE_DIR}" 
-    "${CMAKE_SOURCE_DIR}/.." 
+    PATHS "${CMAKE_SOURCE_DIR}"
+    "${CMAKE_SOURCE_DIR}/_CGR/CGR_SORS/"
+    "${CMAKE_SOURCE_DIR}/.."
     "${CMAKE_SOURCE_DIR}/../.."
     "${CMAKE_SOURCE_DIR}/../../../")
     include("${where_is_common}/common.cmake")

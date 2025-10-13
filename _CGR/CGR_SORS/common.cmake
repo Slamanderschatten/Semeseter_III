@@ -22,7 +22,8 @@ function(setup_project projectname)
 
     #Library-Ordner finden und setzen, CMAKE Ordner ausschließen, sonst findet man unter Windows im build-Dir
     find_path(SORS_IncludePath NAMES "SORSLib"
-    PATHS 
+    PATHS
+        "${CMAKE_SOURCE_DIR}/_CGR/CGR_SORS/SORS/"
     "${CMAKE_SOURCE_DIR}/../../../SORS/"
     "${CMAKE_SOURCE_DIR}/../../SORS/"
     "${CMAKE_SOURCE_DIR}/../SORS/"

@@ -1,6 +1,6 @@
 project("SORSLib")
 
-set(CMAKE_PREFIX_PATH  "C:/Qt/6.2.0/msvc2019_64/lib/cmake")
+set(CMAKE_PREFIX_PATH  "C:/Qt/6.10.0/msvc2022_64/lib/cmake")
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -31,7 +31,8 @@ message("CMAKE: ${PROJECT_SOURCE_DIR}")
 
 #Zielordner finden und setzen, CMAKE Ordner ausschlie�en, sonst findet man unter Windows im build-Dir
 find_path(where_is_lib NAMES "SORSLib"
-PATHS 
+PATHS
+"${CMAKE_SOURCE_DIR}/_CGR/CGR_SORS/SORS"
 "${CMAKE_SOURCE_DIR}/../../../SORS/"
 "${CMAKE_SOURCE_DIR}/../../SORS/"
 "${CMAKE_SOURCE_DIR}/../SORS/"
