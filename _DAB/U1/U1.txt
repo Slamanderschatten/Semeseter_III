@@ -1,4 +1,4 @@
-2️⃣ Begründungen (b)
+ Begründungen (b)
 
 Warum Entitäten statt Attribute:
 
@@ -10,7 +10,7 @@ Einkaufsposten als Assoziationsklasse, da sie Attribute (Menge) der n:m‐Bezieh
 
 Verkäufer und Kunde sind Subentitäten von Person, da sie gemeinsame Personattribute besitzen, aber eigene zusätzliche Felder.
 
-3️⃣ Primärschlüssel (c)
+ Primärschlüssel (c)
 Entität	Primärschlüssel
 Person	PersonID
 Kunde	KundenID
@@ -21,7 +21,7 @@ Artikel	ArtikelID
 Einkauf	EinkaufID
 Einkaufsposten	(EinkaufID, ArtikelID)
 
-4️⃣ Beziehungen (d)
+ Beziehungen (d)
 Beziehung	Entitäten	Art	Beschreibung
 betreut	Verkäufer–Kunde	Assoziation (1:n)	Jeder Kunde wird genau von einem Verkäufer betreut
 hat	Person–Adresse	Komposition (1:n)	Eine Adresse existiert nur für eine Person
@@ -31,12 +31,12 @@ beteiligt an	Verkäufer–Einkauf	Assoziation (0..1:n)	Verkäufer kann an einem 
 enthält	Einkauf–Artikel (über Einkaufsposten)	Assoziationsklasse (n:m)	Einkauf umfasst mehrere Artikel mit Mengenangabe
 
 
-5️⃣ Generalisierung (e)
+Generalisierung (e)
 
-Hierarchie:
+???
 
 
-6️⃣ Klassifikation (f)
+Klassifikation (f)
 Entitätstyp	Klassifikation
 Person	stark
 Kunde	Subentität
