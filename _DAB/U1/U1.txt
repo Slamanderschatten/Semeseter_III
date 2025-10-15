@@ -1,0 +1,48 @@
+2️⃣ Begründungen (b)
+
+Warum Entitäten statt Attribute:
+
+Adresse als eigene Entität, weil eine Person mehrere Adressen haben kann (1:n).
+
+Bankverbindung als Entität, weil sie eigene Attribute (IBAN, BIC) besitzt und mehrfach vorkommen kann.
+
+Einkaufsposten als Assoziationsklasse, da sie Attribute (Menge) der n:m‐Beziehung „Einkauf – Artikel“ enthält.
+
+Verkäufer und Kunde sind Subentitäten von Person, da sie gemeinsame Personattribute besitzen, aber eigene zusätzliche Felder.
+
+3️⃣ Primärschlüssel (c)
+Entität	Primärschlüssel
+Person	PersonID
+Kunde	KundenID
+Verkäufer	VerkäuferID
+Adresse	AdresseID
+Bankverbindung	IBAN
+Artikel	ArtikelID
+Einkauf	EinkaufID
+Einkaufsposten	(EinkaufID, ArtikelID)
+
+4️⃣ Beziehungen (d)
+Beziehung	Entitäten	Art	Beschreibung
+betreut	Verkäufer–Kunde	Assoziation (1:n)	Jeder Kunde wird genau von einem Verkäufer betreut
+hat	Person–Adresse	Komposition (1:n)	Eine Adresse existiert nur für eine Person
+besitzt	Kunde–Bankverbindung	Komposition (1:n)	Bankverbindung gehört eindeutig zu einem Kunden
+führt aus	Kunde–Einkauf	Assoziation (1:n)	Kunde tätigt Einkäufe
+beteiligt an	Verkäufer–Einkauf	Assoziation (0..1:n)	Verkäufer kann an einem Einkauf beteiligt sein
+enthält	Einkauf–Artikel (über Einkaufsposten)	Assoziationsklasse (n:m)	Einkauf umfasst mehrere Artikel mit Mengenangabe
+
+
+5️⃣ Generalisierung (e)
+
+Hierarchie:
+
+
+6️⃣ Klassifikation (f)
+Entitätstyp	Klassifikation
+Person	stark
+Kunde	Subentität
+Verkäufer	Subentität
+Adresse	schwach (kompositionabhängig von Person)
+Bankverbindung	schwach (kompositionabhängig von Kunde)
+Artikel	stark
+Einkauf	stark
+Einkaufsposten	Assoziationsklasse

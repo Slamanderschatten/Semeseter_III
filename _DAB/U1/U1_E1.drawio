@@ -1,0 +1,63 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:143.0) Gecko/20100101 Firefox/143.0" version="28.2.7">
+  <diagram name="EER_VerkausSystem" id="diagram1">
+    <mxGraphModel dx="1426" dy="751" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="person" value="&lt;div&gt;Person --&amp;nbsp;&lt;/div&gt;&lt;div&gt;PersonID : Integer [PK]&amp;nbsp;&lt;/div&gt;&lt;div&gt;Name : String&amp;nbsp;&lt;/div&gt;&lt;div&gt;Vorname : String&lt;/div&gt;&lt;div&gt;&amp;nbsp;Geburtsdatum : Date&amp;nbsp;&lt;/div&gt;&lt;div&gt;Geschlecht : Char&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="kunde" value="&lt;div&gt;Kunde --&amp;nbsp;&lt;/div&gt;&lt;div&gt;KundenID :&amp;nbsp;Integer [PK]&amp;nbsp;&lt;/div&gt;&lt;div&gt;Status : String&amp;nbsp;&lt;/div&gt;&lt;div&gt;KundeSeit : Date&amp;nbsp;&lt;/div&gt;&lt;div&gt;VerkäuferID : Integer [FK]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="560" y="290" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="verkaeufer" value="&lt;div&gt;Verkäufer --&amp;nbsp;&lt;/div&gt;&lt;div&gt;VerkäuferID : Integer [PK]&lt;/div&gt;&lt;div&gt;Eintrittsdatum : Date&amp;nbsp;&lt;/div&gt;&lt;div&gt;Stellung : String&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="320" y="300" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Eew1Fc8U9zc_VB-O5_sB-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;dashed=1;" edge="1" parent="1" source="adresse" target="person">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="adresse" value="&lt;div&gt;Adresse --&lt;/div&gt;&lt;div&gt;&amp;nbsp;AdresseID : Integer [PK]&amp;nbsp;&lt;/div&gt;&lt;div&gt;Ort : String&amp;nbsp;&lt;/div&gt;&lt;div&gt;PLZ : String Straße : String&amp;nbsp;&lt;/div&gt;&lt;div&gt;PersonID : Integer [FK]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6F2FF;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="20" y="280" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bank" value="&lt;div&gt;Bankverbindung --&amp;nbsp;&lt;/div&gt;&lt;div&gt;IBAN : String [PK]&lt;/div&gt;&lt;div&gt;&amp;nbsp;BIC : String&amp;nbsp;&lt;/div&gt;&lt;div&gt;KundenID : Integer [FK]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6F2FF;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="850" y="300" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="artikel" value="&lt;div&gt;Artikel --&amp;nbsp;&lt;/div&gt;&lt;div&gt;ArtikelID : Integer [PK]&amp;nbsp;&lt;/div&gt;&lt;div&gt;Name : String&amp;nbsp;&lt;/div&gt;&lt;div&gt;Kurzbeschreibung : String&amp;nbsp;&lt;/div&gt;&lt;div&gt;Kategorie : String&amp;nbsp;&lt;/div&gt;&lt;div&gt;Preis : Double&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1150" y="610" width="240" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="einkauf" value="&lt;div&gt;Einkauf --&amp;nbsp;&lt;/div&gt;&lt;div&gt;EinkaufID : Integer [PK]&amp;nbsp;&lt;/div&gt;&lt;div&gt;Zeitpunkt : Timestamp&amp;nbsp;&lt;/div&gt;&lt;div&gt;Zahlungsart : String&amp;nbsp;&lt;/div&gt;&lt;div&gt;KundenID : Integer [FK]&amp;nbsp;&lt;/div&gt;&lt;div&gt;VerkäuferID : Integer [FK]&amp;nbsp;&lt;/div&gt;&lt;div&gt;IBAN : String [FK]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6FFE6;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="390" y="620" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="posten" value="&lt;div&gt;Einkaufsposten --&amp;nbsp;&lt;/div&gt;&lt;div&gt;EinkaufID : Integer [FK]&amp;nbsp;&lt;/div&gt;&lt;div&gt;ArtikelID : Integer [FK]&amp;nbsp;&lt;/div&gt;&lt;div&gt;Menge : Integer&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6FFE6;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="850" y="630" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_p_k" style="edgeStyle=orthogonalEdgeStyle;rounded=0;dashed=1;html=1;endArrow=none;endFill=0;" parent="1" source="person" target="kunde" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_p_v" style="edgeStyle=orthogonalEdgeStyle;rounded=0;dashed=1;html=1;endArrow=none;endFill=0;startArrow=block;startFill=0;" parent="1" source="person" target="verkaeufer" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_kunde_bank" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" parent="1" source="kunde" target="bank" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_kunde_einkauf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" parent="1" source="kunde" target="einkauf" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="515" />
+              <mxPoint x="540" y="515" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_v_einkauf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classicThin;endFill=0;" parent="1" source="verkaeufer" target="einkauf" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_einkauf_posten" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" parent="1" source="einkauf" target="posten" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_artikel_posten" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" parent="1" source="artikel" target="posten" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
