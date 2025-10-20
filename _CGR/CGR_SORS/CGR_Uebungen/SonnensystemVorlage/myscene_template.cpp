@@ -1,4 +1,4 @@
-#include "manager.hpp"
+/*#include "manager.hpp"
 #include "ecs.hpp"
 #include "geometry/geometryindexedbase.hpp"
 #include "geometry/simplesphere.hpp"
@@ -13,7 +13,7 @@ void Manager::initialize()
 {
     const float lMoonSpeed = 7.0, lSunSpeed = lMoonSpeed / 12.0f, lEarthSpeed = lMoonSpeed * 28.0f;
 
-    /** Sun */
+    // Sun
     auto lSun = addRenderable<GeometryIndexedBase, SimpleSphere>(SimpleSphere(5.f));
     //Achtung: Beim Aufruf get unterscheiden:
     //Mit "&" für Referenz ist die erhaltene Component änderbar, sonst nicht!
@@ -34,4 +34,4 @@ void Manager::initialize()
     ECS.get<Renderable>(lSun).addProperty(lColor);
 
 
-}
+}*/

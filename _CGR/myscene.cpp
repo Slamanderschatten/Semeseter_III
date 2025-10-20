@@ -41,7 +41,7 @@ void Manager::initialize()
     Relationship::addChild(entt::to_entity(ECS, lEarthOrbit), lEarth);
 
     //position
-    auto& transEarth = ECS.get<Transformation>(entt::to_entity(ECS, lEarthOrbit));
+    auto& transEarth = ECS.get<Transformation>(lEarth);
     transEarth.translate(8.f, 0.f, 0.f);
 
     //rotation
@@ -61,18 +61,12 @@ void Manager::initialize()
     /** Moon */
     auto lMoon = addRenderable<GeometryIndexedBase, SimpleSphere>(SimpleSphere(0.1f));
     auto& lMoonOrbit = addTransformationEntity();
-    auto lMoonKeyTrans = addController<KeyboardTransformationController>(entt::to_entity(ECS, lMoonOrbit));
-    Relationship::addChild(entt::to_entity(ECS, lEarthOrbit), entt::to_entity(ECS, lMoonOrbit));
+    Relationship::addChild(lEarth, entt::to_entity(ECS, lMoonOrbit));
     Relationship::addChild(entt::to_entity(ECS, lMoonOrbit), lMoon);
 
     //position
     auto& transMoon = ECS.get<Transformation>(lMoon);
     transMoon.translate(0.f, 0.f, 2.f);
-
-    //rotation
-    lMoonKeyTrans->setRotKeys(KeyboardTransformationController::NoKey, KeyboardTransformationController::NoKey, 'r', 'R',
-                               KeyboardTransformationController::NoKey, KeyboardTransformationController::NoKey);
-    lMoonKeyTrans->setRotspeed(lMoonSpeed);
 
     //visual properties
     auto lMoonFilled = std::make_shared<OpenGLStates>();
