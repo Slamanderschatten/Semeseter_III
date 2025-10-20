@@ -1,0 +1,39 @@
+A1:
+
+- Buch auf existenz prüfen
+- Ablageort des Buches finden
+- Buch hinzufügen
+- Buch Ablageort ändern
+- Buch ausleihen
+
+
+A2:
+
+- System muss für ungelernte Kunden nutzbar sein
+- Das System soll bei einer Buchanzahl bis 100 000 000 Büchern nie länger als 10 Sekunden für eine Buch-Suche benötigen
+
+
+A3:
+
+a)
+- Bibliothekar
+- Sponsor
+- Kunde (Ausleihender)
+
+b)
+Sponsor:
+- gesponsorte Bücher : string[]
+- ausgeliehene Bücher : string[]
+- name : string
+- sponsorennummer
+
+
+A4:
+
+- Ausleihen eines Buches soll über das Internet von Zuhause aus möglich sein
+- Ausleihen eines Buches soll in der Bibliothek an der Kasse über einen angestellten möglich sein
+- Zurückgeben eines Buches über die Post soll über das eintragen durch einen Mittarbeiter möglich sein
+- Zurückgeben eines Buches soll vom Kunden an einem Automaten in der Bib möglich sein
+- Das Aufnehmen von neuen Büchern soll für Mittarbeitern möglich sein
+
+
