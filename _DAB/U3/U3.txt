@@ -2,4 +2,31 @@
 A3:
 
 
-a)
+a) eine eindeutige id zur identifikation des elements in einer tabelle
+
+
+1=> ja
+2=> ja
+3=> nein primärschlüssel fehlt
+4=> nein primärschlüssel muss ein int sein
+
+b)
+nein weil es keinen zusammengesetzen primärschlüssel gibt
+
+c)
+eine datenbank ist eine datenbank und ein datenbankschema ist nur ein schema davon
+
+d)
+wenn ein in Ausleihen referenzeirtes Tuple in Buch gelöscht wird ist die datenbank inkonsistent.
+es kann im schlimmsten fall sogar einen neuen eintrag mit der BuchNr geben und eine falsche referenz entstehen
+
+e)
+???
+
+das ergebnis ist ein tuple aus der datenbank
+
+f)
+zur übersichtlichen darstellung der datenbank und ihrer verknüpfungen und abhängigkeiten
+
+g)
+Für gar nix

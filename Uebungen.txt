@@ -1,7 +1,7 @@
 CGR: 50%
 U1 : 0/3 : Durchgesprochen
 U2 : 2/4 : Durchgesprochen
-U3 :  : 
+U3 : 3/3 : 
 U4 :  : 
 U5 :  : 
 U6 :  : 
@@ -18,7 +18,7 @@ U12 :  :
 DAB: ?
 U1 : X : Durchgesprochen
 U2 : X : Durchgesprochen
-U3 :  : 
+U3 : X : 
 U4 :  : 
 U5 :  : 
 U6 :  : 

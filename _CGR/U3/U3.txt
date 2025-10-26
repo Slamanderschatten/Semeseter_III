@@ -1,0 +1,14 @@
+E1:
+
+T(-x,-y,-z) * Rx(-beta) * Ry(-alpha) * refx * Ry(alpha) * Rx(beta) * T(-x, -y, -z)
+
+v = richtungsvector der linie
+alpha = atan2(vz, vx)
+beta = atan2(vy, wurzel(vx^2 + vz^2)
+
+
+E2:
+
+Ebenen normalen vector: n = (P2 - P1) x (P3 - P1)
+
+wenn Px * n == 0 dann liegt der punkt in der ebene
