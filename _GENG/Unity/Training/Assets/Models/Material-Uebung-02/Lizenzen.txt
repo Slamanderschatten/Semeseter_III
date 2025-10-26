@@ -1,0 +1,7 @@
+Asset-Quellen in diesem Paket: 
+
+- Truck-Modell - Lizenz: CC0
+  Original von Majadroid, https://opengameart.org/content/3d-house-construction-site-lowpoly-cc0
+  Segmentiert und für Unity exportiert.
+
+- UV-Grid in Blender generiert und exportiert.

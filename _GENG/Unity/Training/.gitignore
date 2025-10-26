@@ -1,0 +1,55 @@
+﻿# =================================================
+# Unity generierte Ordner, die nicht versioniert werden sollen
+# =================================================
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+Recordings/
+
+# Meta-Dateien:  
+# Wir wollen .meta-Dateien behalten, da sie die Asset-GUIDs enthalten  
+# (sie sind notwendig für das korrekte Verknüpfen der Assets)
+!/[Aa]ssets/**/*.meta
+
+# =================================================
+# Projekt- und Editor-Spezifische Dateien / IDE
+# =================================================
+.vscode/
+.idea/
+*.sln
+*.csproj
+*.unityproj
+*.pidb
+*.user
+*.userprefs
+*.booproj
+*.suo
+*.tmp
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Crash / Report / Systembezogene Dateien
+sysinfo.txt
+crashlytics-build.properties
+
+# OS-spezifische Dateien
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# Sonstige
+.gradle/
+ExportedObj/
+.consulo/
