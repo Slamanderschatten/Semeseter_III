@@ -26,3 +26,5 @@ CMakeUserPresets.json
 /dataSources/
 /dataSources.local.xml
 /data/
+/out/
+/.vs/
