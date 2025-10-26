@@ -1,0 +1,66 @@
+CGR: 50%
+U1 : 0/3 : Durchgesprochen
+U2 : 2/4 : Durchgesprochen
+U3 :  : 
+U4 :  : 
+U5 :  : 
+U6 :  : 
+U7 :  : 
+U8 :  : 
+U9 :  : 
+U10 :  : 
+U11 :  : 
+U12 :  : 
+
+
+
+
+DAB: ?
+U1 : X : Durchgesprochen
+U2 : X : Durchgesprochen
+U3 :  : 
+U4 :  : 
+U5 :  : 
+U6 :  : 
+??
+
+
+
+
+GENG: 75%
+U1 : X : Durchgesprochen
+U2 : X : Durchgesprochen
+U3 : X : 
+U4 :  : 
+??
+
+
+
+
+SWEG: 75%
+U1 : 3/5 : Durchgesprochen
+U2 : 6/6 : Durchgesprochen
+U3 : 6/6 : Durchgesprochen
+U4 :  : 
+U5 :  : 
+U6 :  : 
+U7 :  : 
+U8 :  : 
+U9 :  : 
+U10 :  : 
+U11 :  : 
+U12 :  : 
+U13 :  : 
+
+
+
+
+DM:
+U1 : O : Durchgesprochen
+U2 : O : Durchgesprochen 
+U3 :  : 
+??
+
+
+
+

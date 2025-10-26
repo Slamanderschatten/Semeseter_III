@@ -39,6 +39,9 @@ namespace Truck
             moveEingabe = InputSystem.actions.FindAction("Move");
 
             trunks = GameObject.FindGameObjectsWithTag("Trunk").ToList();
+
+            foreach (GameObject trunk in trunks)
+                trunk.SetActive(false);
         }
 
 
@@ -58,7 +61,7 @@ namespace Truck
             if (trunkNumber >= trunks.Count)
                 return false;
 
-            trunks[trunkNumber++].GetComponent<Renderer>().enabled = true;
+            trunks[trunkNumber++].SetActive(true);
             return true;
         }
     }

@@ -1,0 +1,39 @@
+# Blender-spezifische Dateien
+*.blend1
+*.blend2
+*.blend@
+*.blend~
+
+# Cache und Backups
+__pycache__/
+*.pyc
+*.tmp
+*.bak
+
+# Blender Asset Browser / Thumbnails
+blender_assets.cats/
+*.blend_thumb.png
+
+# Export-/Render-Dateien
+*.png
+*.jpg
+*.jpeg
+*.exr
+*.tiff
+*.tga
+*.bmp
+*.avi
+*.mov
+*.mp4
+*.wav
+*.mp3
+*.ogg
+
+# Systemdateien
+.DS_Store
+Thumbs.db
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
