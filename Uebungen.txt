@@ -41,8 +41,8 @@ SWEG: 75%
 U1 : 3/5 : Durchgesprochen
 U2 : 6/6 : Durchgesprochen
 U3 : 6/6 : Durchgesprochen
-U4 :  : 
-U5 :  : 
+U4 : 6/6 :
+U5 : 2/2 :
 U6 :  : 
 U7 :  : 
 U8 :  : 
