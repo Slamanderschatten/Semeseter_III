@@ -1,0 +1,13 @@
+Asset-Quellen in diesem Paket: 
+
+- TV.fbx - Lizenz: CC0
+  von ghostcat, https://blendswap.com/blend/24857 
+  Texturkoordinaten gedreht und für Unity exportiert.
+  
+  Testbild-1280x960.png aus dem TV-Modell exportiert.
+
+- grunge_3-1K.png - Lizenz: CC0
+  von Share Textures, https://www.sharetextures.com/textures/other/grunge_3/
+  
+- pexels-koolshooters-7683153.mp4 - Lizenz: CC0
+  von KoolShooters, https://www.pexels.com/video/close-up-view-of-a-person-s-hand-and-a-dog-7683153/
