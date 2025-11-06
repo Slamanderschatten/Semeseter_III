@@ -1,5 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using avatar;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 namespace flora
 {
@@ -12,6 +16,10 @@ namespace flora
         public float scaleMin;
         public float scaleMax;
         public float groundScaleMultiplier;
+        public JumpingAvatar avatar;
+        public float autoReloadTime;
+
+        private float reloadTime;
 
         private readonly List<GameObject> objects = new();
 
@@ -25,10 +33,18 @@ namespace flora
         {
             if(Input.GetKeyDown(KeyCode.R))
                 Reload();
+            
+            if(autoReloadTime > 0 && Time.time > reloadTime + autoReloadTime)
+                Reload();
         }
 
         private void Reload()
         {
+            foreach (GameObject item in objects)
+            {
+                Destroy(item.gameObject);
+            }
+            reloadTime = Time.time;
             float sizeX = ground.transform.localScale.x * groundScaleMultiplier;
             float sizeZ = ground.transform.localScale.z * groundScaleMultiplier;
             if (instanceCount < 1)
@@ -47,5 +63,33 @@ namespace flora
                 objects.Add(obj);
             }
         }
+
+
+        private void OnMouseDown()
+        {
+            Vector3 targetPos = GetMouseHit(LayerMask.GetMask("Ground"));
+            avatar.JumpTo(targetPos);
+        }
+
+
+        private Vector3 GetMouseHit(LayerMask layerMask)
+        {
+            // Mausposition in Bildschirmkoordinaten
+            Vector2 mousePos = Mouse.current.position.ReadValue();
+
+            // Ray von Kamera durch Mausposition
+            Ray ray = Camera.main.ScreenPointToRay(mousePos);
+
+            if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
+            {
+                // Objekt auf Treffpunkt verschieben
+                return hit.point;
+            }
+            return Vector3.negativeInfinity;
+        }
+        
+        
+        
+        
     }
 }

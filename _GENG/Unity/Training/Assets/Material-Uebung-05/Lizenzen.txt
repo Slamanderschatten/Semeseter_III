@@ -1,0 +1,14 @@
+Asset-Quellen in diesem Paket: 
+
+- PlantA+Fruits.fbx - Lizenz: CC0
+  von Kay Lousberg, https://kaylousberg.itch.io/kay-kit-mini-game-variety-pack
+  erweitert um Früchte
+
+- iTween - Lizenz: MIT/BSD
+  von Bob Berkebile, http://itween.pixelplacement.com
+
+- KayKit Animated Character_v1.1.fbx - Lizenz: CC0
+  von Kay Lousberg, https://kaylousberg.itch.io/kaykit-animations
+  KayKit - Character Animations
+
+

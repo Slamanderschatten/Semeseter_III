@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace flora
 {
-    public class FloraItem : MonoBehaviour
+    public class TreeCollectible : MonoBehaviour
     {
 
         public float interactionDistance;
