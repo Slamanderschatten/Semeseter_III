@@ -9,6 +9,7 @@ namespace flora
         public float maxGrowingDuration;
         private float duration;
         private float progress;
+        private int mode;
 
         void Awake()
         {
@@ -20,7 +21,27 @@ namespace flora
         void Update()
         {
             progress += Time.deltaTime / duration;
-            transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, progress);
+            switch (mode)
+            {
+                case 0:
+                    break;
+                case 1:
+                    transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, progress);
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    transform.localScale = Vector3.Lerp(Vector3.one, Vector3.zero, progress);
+                    break;
+            }
+
+            if (progress >= 1)
+            {
+                progress = 0;
+                mode++;
+                if (mode > 3)
+                    mode = 0;
+            }
         }
 
     }
