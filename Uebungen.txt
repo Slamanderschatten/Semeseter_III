@@ -2,7 +2,7 @@ CGR: 50%
 U1 : 0/3 : Durchgesprochen
 U2 : 2/4 : Durchgesprochen
 U3 : 3/3 : Durchgesprochen
-U4 :  : 
+U4 : 1/1 : Durchgesprochen
 U5 :  : 
 U6 :  : 
 U7 :  : 
@@ -28,12 +28,12 @@ U6 :  :
 
 
 GENG: 75%
-U1 : X : Durchgesprochen
-U2 : X : Durchgesprochen
-U3 : X : Durchgesprochen
+U1 : X : Abgegeben
+U2 : X : Abgegeben
+U3 : X : Abgegeben
 U4 : X : 
+U5 : X : 
 ??
-
 
 
 
@@ -59,6 +59,7 @@ DM:
 U1 : O : Durchgesprochen
 U2 : O : Durchgesprochen 
 U3 : O : Durchgesprochen
+U4 : O : Durchgesprochen
 ??
 
 
