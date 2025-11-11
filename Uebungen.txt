@@ -42,8 +42,8 @@ U1 : 3/5 : Durchgesprochen
 U2 : 6/6 : Durchgesprochen
 U3 : 6/6 : Durchgesprochen
 U4 : 6/6 : Durchgesprochen
-U5 : 2/2 :
-U6 :  : 
+U5 : 2/2 : Durchgesprochen
+U6 : 2/2 : 
 U7 :  : 
 U8 :  : 
 U9 :  : 
