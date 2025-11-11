@@ -3,7 +3,7 @@ U1 : 0/3 : Durchgesprochen
 U2 : 2/4 : Durchgesprochen
 U3 : 3/3 : Durchgesprochen
 U4 : 1/1 : Durchgesprochen
-U5 :  : 
+U5 : 2/2 : 
 U6 :  : 
 U7 :  : 
 U8 :  : 
@@ -19,7 +19,7 @@ DAB: ?
 U1 : X : Durchgesprochen
 U2 : X : Durchgesprochen
 U3 : X : Durchgesprochen
-U4 :  : 
+U4 : O : Durchgesprochen
 U5 :  : 
 U6 :  : 
 ??
