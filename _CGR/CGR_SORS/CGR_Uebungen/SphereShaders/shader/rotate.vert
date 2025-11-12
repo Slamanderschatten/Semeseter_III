@@ -12,7 +12,7 @@ out vec4 vs_vPos;
 void main()
 {
     // Rotationsmatrix um die Y-Achse
-    float angle = Time*0.003; // Rotation über Zeit
+    float angle = Time*0.0003; // Rotation über Zeit
     mat4 rotationY = mat4(
         cos(angle), 0.0,  sin(angle), 0.0,
         0.0,        1.0,  0.0,        0.0,
