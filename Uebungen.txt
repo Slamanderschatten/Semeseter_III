@@ -31,9 +31,9 @@ GENG: 75%
 U1 : X : Abgegeben
 U2 : X : Abgegeben
 U3 : X : Abgegeben
-U4 : X : 
-U5 : X : 
-??
+U4 : X : Abgegeben
+U5 : X : Abgegeben
+U6 : X :
 
 
 
