@@ -1,0 +1,7 @@
+Asset-Quellen in diesem Paket: 
+
+- KayKit : potB.fbx - Lizenz: CC0
+  von Kay Lousberg, https://kaylousberg.itch.io/kaykit-dungeon
+  KayKit - Dungeon Pack
+
+
