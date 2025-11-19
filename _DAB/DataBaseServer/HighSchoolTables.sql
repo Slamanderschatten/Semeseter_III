@@ -1,3 +1,11 @@
+DROP TABLE IF EXISTS person;
+DROP TABLE IF EXISTS adresse;
+DROP TABLE IF EXISTS verkaeufer;
+DROP TABLE IF EXISTS kunde;
+DROP TABLE IF EXISTS bankverbindung;
+DROP TABLE IF EXISTS einkauf;
+DROP TABLE IF EXISTS artikel;
+DROP TABLE IF EXISTS artikelanzahl;
 
 
 
@@ -8,7 +16,7 @@ CREATE TABLE person (
     gebdat          DATE            NOT NULL,
     geschlecht      CHAR            NOT NULL,
 
-    CONSTRAINT pk_person PRIMARY KEY (persnr),
+    CONSTRAINT pk_person PRIMARY KEY (persnr)
 );
 
 
@@ -64,8 +72,7 @@ CREATE TABLE einkauf (
     verknr          INTEGER,
 
     CONSTRAINT pk_einkauf PRIMARY KEY (persnr, einkaufnr),
-    CONSTRAINT fk_einkaeufer FOREIGN KEY (persnr) REFERENCES person(persnr),
-    CONSTRAINT fk_bankv FOREIGN KEY (bankvnr) REFERENCES bankverbindung(bankvnr),
+    CONSTRAINT fk_einkaeufer FOREIGN KEY (persnr, bankvnr) REFERENCES bankverbindung(persnr, bankvnr),
     CONSTRAINT fk_verkaeufer FOREIGN KEY (verknr) REFERENCES verkaeufer(persnr)
 );
 
@@ -88,9 +95,8 @@ CREATE TABLE artikelanzahl (
                            CONSTRAINT anzahl_min CHECK(anzahl >= 1),
 
     CONSTRAINT pk_artikelanzahl PRIMARY KEY (persnr, einkaufnr, artikelnr),
-    CONSTRAINT fk_person FOREIGN KEY (persnr) REFERENCES einkauf(persnr),
-    CONSTRAINT fk_einkauf FOREIGN KEY (einkaufnr) REFERENCES einkauf(einkaufnr),
-    CONSTRAINT fk_artikel FOREIGN KEY (artikelnr) REFERENCES artikel(artikelnr),
+    CONSTRAINT fk_einkauf FOREIGN KEY (persnr, einkaufnr) REFERENCES einkauf(persnr, einkaufnr),
+    CONSTRAINT fk_artikel FOREIGN KEY (artikelnr) REFERENCES artikel(artikelnr)
 );
 
 
