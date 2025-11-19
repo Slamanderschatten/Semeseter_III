@@ -8,7 +8,7 @@ void Manager::initialize()
 {
     QString lPath = SRCDIR;
     auto lShader = ShaderManager::getShader(
-        QList<QString>({lPath + QString("shader_vorlagen/texture.vert"), lPath + QString("shader_vorlagen/texture_filter.frag")}));
+        QList<QString>({lPath + QString("shader_vorlagen/texture.vert"), lPath + QString("blurred.frag")}));
     auto lEnt1 = addRenderable<GeometryBase, SimplePlane>(SimplePlane(3.0f), lShader);
 
     auto lTexture = std::make_shared<Texture>(lPath + QString("data/logo.bmp"));
