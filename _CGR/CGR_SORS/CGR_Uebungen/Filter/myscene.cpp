@@ -3,6 +3,7 @@
 #include "shadermanager.hpp"
 #include "rendering/texture.hpp"
 #include "rendering/timeruniform.hpp"
+#include "filterMatrix.hpp"
 
 void Manager::initialize()
 {
@@ -15,6 +16,15 @@ void Manager::initialize()
     //Einkommentieren, um Bild aus dem Übungsblatt zu bekommen
     //lTexture->makeStripes(256, 10);
     ECS.get<Renderable>(lEnt1).addProperty(lTexture);
-    auto lTimer = std::make_shared<TimerUniform>(5000);
-    ECS.get<Renderable>(lEnt1).addProperty(lTimer);
+    float filterBlurred[9] = {
+            1,2,1,
+            2,4,2,
+            1,2,1
+    };
+    float filterX[9] = {
+            0,1,0,
+            1,-4,1,
+            0,1,0
+    };
+    ECS.get<Renderable>(lEnt1).addProperty(std::make_shared<FilterMatrix>(QMatrix3x3(filterX)));
 }

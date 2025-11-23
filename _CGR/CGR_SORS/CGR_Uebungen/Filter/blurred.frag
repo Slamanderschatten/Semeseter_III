@@ -1,44 +1,32 @@
-uniform bool hastextureMap=false;
+uniform bool hastextureMap = false;
 uniform sampler2D textureMap;
-uniform float Time=1;
+uniform mat3 Filter;     // 3×3 Kernel
 
 smooth in vec2 texCoords;
 out vec4 fragColor;
 
 void main()
 {
-    if(hastextureMap && texCoords.x != 0 && texCoords.x != tsize.x && texCoords.y != 0 && texCoords.y != tsize.y)
+    if (hastextureMap)
     {
         ivec2 tsize = textureSize(textureMap, 0);
-        float stepX = 1.0/tsize.x;
-        float stepY = 1.0/tsize.y;
+        vec2 texel = 1.0 / vec2(tsize);
 
-        vec2 uv = vec2(10.0, 5.0) * texelSize;
-        vec4 texel = texture(textureMap, uv);
+        float weightSum = 0.0;
+        vec4 blur = vec4(0.0);
 
-        mat3 filt = mat3(
-            1.0, 2.0, 1.0,
-            2.0, 4.0, 2.0,
-            1.0, 2.0, 1.0
-        );
-        mat3 text = mat3(
-            textureMap
-        );
-
-        float s = 0.0;
-        for (int r = 0; r < 3; r++)
+        for (int y = -1; y <= 1; y++)
         {
-            for (int c = 0; c < 3; c++)
+            for (int x = -1; x <= 1; x++)
             {
-                s += filt[r][c] * texture(textureMap, vec2());
+                vec2 offset = vec2(x, y) * texel;
+                float w = Filter[y+1][x+1];
+
+                blur += texture(textureMap, texCoords + offset) * w;
+                weightSum += w;
             }
         }
 
-        fragColor =
-        
-        fragColor = mix(texture(textureMap, texCoords), vec4(color,1.0), Time);
+        fragColor = blur / weightSum;
     }
-    else
-        fragColor = vec4(Time,Time,1.0,1.0);
-
 }
