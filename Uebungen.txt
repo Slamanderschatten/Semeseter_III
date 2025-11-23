@@ -3,8 +3,8 @@ U1 : 0/3 : Durchgesprochen
 U2 : 2/4 : Durchgesprochen
 U3 : 3/3 : Durchgesprochen
 U4 : 1/1 : Durchgesprochen
-U5 : 2/2 : 
-U6 :  : 
+U5 : 2/2 : Durchgesprochen
+U6 : /2 : 
 U7 :  : 
 U8 :  : 
 U9 :  : 
@@ -20,7 +20,7 @@ U1 : X : Durchgesprochen
 U2 : X : Durchgesprochen
 U3 : X : Durchgesprochen
 U4 : O : Durchgesprochen
-U5 :  : 
+U5 : 0 : Durchgesprochen
 U6 :  : 
 ??
 
@@ -33,7 +33,8 @@ U2 : X : Abgegeben
 U3 : X : Abgegeben
 U4 : X : Abgegeben
 U5 : X : Abgegeben
-U6 : X :
+U6 : X : Abgegeben
+U7 : X : 
 
 
 
@@ -43,7 +44,7 @@ U2 : 6/6 : Durchgesprochen
 U3 : 6/6 : Durchgesprochen
 U4 : 6/6 : Durchgesprochen
 U5 : 2/2 : Durchgesprochen
-U6 : 2/2 : 
+U6 : 2/2 : Durchgesprochen
 U7 :  : 
 U8 :  : 
 U9 :  : 

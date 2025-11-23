@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using avatar;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -15,6 +16,12 @@ namespace ground
         void OnMouseDown() {
             Vector3 targetPos = GetMouseHit(LayerMask.GetMask("Ground"));
             avatar.GotTo(targetPos);
+        }
+
+
+        private void OnMouseDrag()
+        {
+            throw new NotImplementedException();
         }
 
 
