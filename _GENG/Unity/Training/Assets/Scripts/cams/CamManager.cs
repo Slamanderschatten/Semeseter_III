@@ -101,6 +101,8 @@ namespace cams
                 
                 secondPersonCam.fieldOfView += scrollMultiplier * scrollIntensity;
                 secondPersonCam.fieldOfView = Mathf.Clamp(secondPersonCam.fieldOfView, minFieldOfView, maxFieldOfView);
+                secondPersonCam.orthographicSize += scrollMultiplier * scrollIntensity;
+                secondPersonCam.orthographicSize = Mathf.Clamp(secondPersonCam.orthographicSize, minFieldOfView, maxFieldOfView);
                     
             }
         }
