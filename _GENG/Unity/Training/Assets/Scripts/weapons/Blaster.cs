@@ -36,9 +36,9 @@ namespace weapons
                 hitPos = laserOrigin.position + laserOrigin.forward * maxLaserLength;
             }
             
-            laser.SetPosition(0, laserOrigin.position);
-            laser.SetPosition(1, hitPos);
-            targetPointLight.transform.position = hitPos;
+            laser.SetPosition(0, laserOrigin.localPosition);
+            laser.SetPosition(1, transform.InverseTransformPoint(hitPos));
+            targetPointLight.transform.position = hitPos + transform.forward * -0.01f;
         }
 
 
