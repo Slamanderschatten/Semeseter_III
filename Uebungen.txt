@@ -36,7 +36,8 @@ U4 : X : Abgegeben
 U5 : X : Abgegeben
 U6 : X : Abgegeben
 U7 : X : Abgegeben
-U8 : X : 
+U8 : X : Abgegeben
+U9 : X :
 
 
 
@@ -47,8 +48,8 @@ U3 : 6/6 : Durchgesprochen
 U4 : 6/6 : Durchgesprochen
 U5 : 2/2 : Durchgesprochen
 U6 : 2/2 : Durchgesprochen
-U7 : 3/3 : 
-U8 : 5/5 : 
+U7 : 3/3 : Durchgesprochen
+U8 : 5/5 : Durchgesprochen
 U9 :  : 
 U10 :  : 
 U11 :  : 
