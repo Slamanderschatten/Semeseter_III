@@ -80,7 +80,9 @@ vec3 phongKdKaColorWithAttCalc(vec3 unnormalizedLightViewDirection, vec3 viewNor
 vec3 phongKsColor(vec3 lightViewDirection, vec3 viewDirection, vec3 viewNormal, vec3 lightSpecular, float lightAttenuation)
 {
     //Vorsicht, GLSL reflect Funktion verlangt einfallenden Lichtvektor
-    return (phongKs(viewDirection, reflect(-lightViewDirection, viewNormal)) * lightAttenuation * (lightSpecular * material.specular.rgb));
+    vec3 H = normalize(lightViewDirection + viewDirection);
+    float spec = pow(max(dot(viewNormal, H), 0.0), material.shininess);
+    return spec * lightAttenuation * (lightSpecular * material.specular.rgb);
 }
 
 vec3 phong(vec3 unnormalizedLightViewDirection, vec3 viewDirection, vec3 viewNormal, vec3 lightAmbient, vec3 lightDiffuse, vec3 lightSpecular, vec2 lightAttenuations)
