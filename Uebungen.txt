@@ -1,4 +1,5 @@
-CGR: 50%
+CGR: 50%   
+GES 12/30
 U1 : 0/3 : Durchgesprochen
 U2 : 2/4 : Durchgesprochen
 U3 : 3/3 : Durchgesprochen
@@ -6,7 +7,7 @@ U4 : 1/1 : Durchgesprochen
 U5 : 2/2 : Durchgesprochen
 U6 : 2/2 : Durchgesprochen
 U7 : 2/2 : Durchgesprochen
-U8 : 1/5 : 
+U8 : 3/4 : 
 U9 :  : 
 U10 :  : 
 U11 :  : 
