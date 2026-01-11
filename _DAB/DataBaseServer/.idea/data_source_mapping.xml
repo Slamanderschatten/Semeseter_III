@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/Test.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
     <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/config/Variants.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
+    <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/get/GetBallInteractor.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
+    <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/get/GetInteractionsOfInteractor.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
+    <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/get/models/TemplateGetter.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
+    <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/get/scripts/GetUsagesOfScript.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
+    <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/get/scripts/TemplateGetter.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
+    <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/get/sounds/GetUsagesOfSound.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
+    <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/get/sounds/TemplateGetter.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
+    <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/set/AddBallInteraction.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
+    <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/set/AddBallInteractor.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
+    <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/set/AddInteractionImplementation.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
+    <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/set/AddSound.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
+    <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/set/AddSoundToInteraction.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
     <file url="file://$PROJECT_DIR$/Flipper/BallInteractor/shema/CreateTables.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
     <file url="file://$PROJECT_DIR$/HighSchool/shema/HighSchoolTables.sql" value="06f9ed60-7cd8-4cf3-a79b-3f11fec4f26f" />
   </component>
